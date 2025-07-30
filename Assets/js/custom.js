@@ -4,7 +4,7 @@ $(function() {
     let $img = $(this);
     let src = $img.attr("data-src") || $img.attr("src");
     if (src && !src.endsWith(".webp")) {
-      src = src.replace(/\.(jpg|jpeg|png)$/i, ".webp");
+      src = src.replace(/\.(jpg|jpeg|png|jfif|avif)$/i, ".webp");
       $img.attr("data-src") ? $img.attr("data-src", src) : $img.attr("src", src);
     }
     $img.attr("loading", "lazy");
