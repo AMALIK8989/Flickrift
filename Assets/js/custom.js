@@ -17,7 +17,17 @@ $(function() {
     const newBg = bgImg.replace(/\.(jpg|jpeg|png)(?=["')])/gi, ".webp");
     $moviePals.css("background-image", newBg);
   }
+$('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
+  const $meta = $(this);
+  const content = $meta.attr("content");
 
+  // Skip if already .webp or not an image
+  if (content && !content.endsWith(".webp") && /\.(jpg|jpeg|png)(?=$|\?)/i.test(content)) {
+    const webpURL = content.replace(/\.(jpg|jpeg|png)(?=$|\?)/i, ".webp");
+    $meta.attr("content", webpURL);
+  }
+});
+  
   // === WOW.js Animation ===
   if (typeof WOW === "function") { new WOW().init(); }
 
