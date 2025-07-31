@@ -1,10 +1,7 @@
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
 
 
@@ -2082,25 +2079,7 @@
     </div>
     <!-- Add more .item divs for more images -->
   </div>
-<script>
-  $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-      items: 1,
-      margin: 15,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      nav: true,
-      dots: true,
-      responsive: {
-        0: { items: 1 },
-        576: { items: 1 },
-        768: { items: 2 },
-        992: { items: 3 }
-      }
-    });
-  });
-</script>
+
   <div class="mt-2 small text-muted">
     For best results, add your screenshots in the <code>Screenshots/</code> folder and update the file paths accordingly.
   </div>
