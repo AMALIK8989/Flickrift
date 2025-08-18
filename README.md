@@ -2024,9 +2024,7 @@
     <div class="alert alert-success" role="alert">
       That’s it! Start streaming your favorite movies and shows on <strong>FlickRift</strong>.
     </div>
-    <a href="https://app.netlify.com/sites/flickrift/deploys" target="_blank">
-      <img src="https://api.netlify.com/api/v1/badges/822987fe-82e5-48d2-9268-95275d426a68/deploy-status" alt="Netlify Status" class="img-fluid mt-2">
-    </a>
+   [![Netlify Status](https://api.netlify.com/api/v1/badges/1f8dc801-81a1-4a51-9a11-bde2e0ee0bb8/deploy-status)](https://app.netlify.com/projects/flickrift/deploys)
   </section>
 
   <hr class="my-5">
