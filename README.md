@@ -108,12 +108,16 @@
 
   <hr class="my-5">
 
-  <section class="mb-5">
-    <h2><i class="fas fa-folder-open me-2"></i>Folder Structure</h2>
-    <pre class="bg-light p-3 rounded"><code>FlickRift/
-[![AMALIK8989/Flickrift context](https://badge.forgithub.com/AMALIK8989/Flickrift/tree/main)](https://uithub.com/AMALIK8989/Flickrift/tree/main)
---------------------------------------------------------------------------------
-</code></pre>
+<section class="mb-5">
+  <h2><i class="fas fa-folder-open me-2"></i>Folder Structure</h2>
+  <!-- GitHub Repo Badge -->
+  <p>
+    <a href="https://github.com/AMALIK8989/FlickRift/tree/main">
+      <img src="https://badge.fury.io/gh/AMALIK8989%2FFlickRift.svg" alt="GitHub Repo">
+    </a>
+  </p>
+</section>
+
   </section>
 
   <hr class="my-5">
