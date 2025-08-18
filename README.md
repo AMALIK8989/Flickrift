@@ -2009,23 +2009,30 @@
 
   <hr class="my-5">
 
-  <section class="mb-5">
-    <h2><i class="fas fa-play-circle me-2"></i>Getting Started</h2>
-    <h5 class="mt-4"><i class="fas fa-wrench me-2"></i>Installation</h5>
-    <ol class="mb-3">
-      <li><strong>Clone the repository</strong>
-        <pre class="bg-light p-2"><code>git clone https://github.com/AMALIK8989/FlickRift.git</code></pre>
-      </li>
-      <li><strong>Navigate to the project folder</strong>
-        <pre class="bg-light p-2"><code>cd FlickRift</code></pre>
-      </li>
-      <li><strong>Open <code>index.html</code> in your browser</strong></li>
-    </ol>
-    <div class="alert alert-success" role="alert">
-      That’s it! Start streaming your favorite movies and shows on <strong>FlickRift</strong>.
-    </div>
-   [![Netlify Status](https://api.netlify.com/api/v1/badges/1f8dc801-81a1-4a51-9a11-bde2e0ee0bb8/deploy-status)](https://app.netlify.com/projects/flickrift/deploys)
-  </section>
+<section class="mb-5">
+  <h2><i class="fas fa-play-circle me-2"></i>Getting Started</h2>
+  <h5 class="mt-4"><i class="fas fa-wrench me-2"></i>Installation</h5>
+  <ol class="mb-3">
+    <li><strong>Clone the repository</strong>
+      <pre class="bg-light p-2"><code>git clone https://github.com/AMALIK8989/FlickRift.git</code></pre>
+    </li>
+    <li><strong>Navigate to the project folder</strong>
+      <pre class="bg-light p-2"><code>cd FlickRift</code></pre>
+    </li>
+    <li><strong>Open <code>index.html</code> in your browser</strong></li>
+  </ol>
+  <div class="alert alert-success" role="alert">
+    That’s it! Start streaming your favorite movies and shows on <strong>FlickRift</strong>.
+  </div>
+
+  <!-- Netlify Badge -->
+  <p>
+    <a href="https://app.netlify.com/projects/flickrift/deploys">
+      <img src="https://api.netlify.com/api/v1/badges/1f8dc801-81a1-4a51-9a11-bde2e0ee0bb8/deploy-status" alt="Netlify Status">
+    </a>
+  </p>
+</section>
+
 
   <hr class="my-5">
 
