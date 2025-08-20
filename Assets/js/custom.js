@@ -160,15 +160,18 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
   m.addEventListener("change", () => g(c.value)),
   f.addEventListener("change", () => g(c.value));
 });
-// Create a script element
-var script = document.createElement('script');
+$(document).ready(function() {
+    // List of script URLs
+    var scripts = [
+        "//pl27462972.profitableratecpm.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js",
+        "//pl27463031.profitableratecpm.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"
+    ];
 
-// Set the script attributes
-script.type = 'text/javascript';
-script.src = '//pl27462972.profitableratecpm.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js';
-
-// Optional: async to avoid blocking
-script.async = true;
-
-// Append the script to the document head (or body)
-document.head.appendChild(script);
+    // Loop through and append each script to the body
+    scripts.forEach(function(src) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = src;
+        document.body.appendChild(script);
+    });
+});
