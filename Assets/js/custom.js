@@ -166,7 +166,7 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//contem
 
 
 
-$(document).ready(function(){$('section').each(function(){$(this).after('<script async="async" data-cfasync="false" src="//contempthumanitycalamity.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"></script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>');});});
+$(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//contempthumanitycalamity.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>')})});
 
 
 
