@@ -161,17 +161,36 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
   f.addEventListener("change", () => g(c.value));
 });
 $(document).ready(function() {
-    // Script to load in HEAD
+    // 1️⃣ Load one script in HEAD
     var headScript = document.createElement('script');
     headScript.type = 'text/javascript';
     headScript.src = "//pl27462972.profitableratecpm.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js";
     document.head.appendChild(headScript);
 
-    // Script to load in BODY
-    var bodyScript = document.createElement('script');
-    bodyScript.type = 'text/javascript';
-    bodyScript.src = "//pl27463031.profitableratecpm.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js";
-    document.body.appendChild(bodyScript);
+    // 2️⃣ Load first script in BODY
+    var bodyScript1 = document.createElement('script');
+    bodyScript1.type = 'text/javascript';
+    bodyScript1.src = "//pl27463031.profitableratecpm.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js";
+    document.body.appendChild(bodyScript1);
+
+    // 3️⃣ Load another script in BODY (example third script)
+    var bodyScript2 = document.createElement('script');
+    bodyScript2.type = 'text/javascript';
+    bodyScript2.src = "//example.com/your-third-script.js"; // Replace with your actual third script URL
+    document.body.appendChild(bodyScript2);
+
+    // 4️⃣ Add inline anchor link inside <p class="lead">
+    $(".lead").each(function() {
+        var anchor = $('<a>', {
+            href: "https://contempthumanitycalamity.com/u9y38epw?key=39f9154caee4fe4f43aafcea01c1c689",
+            text: "Click Here",
+            target: "_blank",  // optional, opens in new tab
+            rel: "noopener noreferrer"
+        });
+        $(this).append(" ").append(anchor);
+    });
 });
+
+
 
 
