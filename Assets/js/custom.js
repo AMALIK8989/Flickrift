@@ -167,33 +167,25 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caress
 (function() {
   function addAds() {
     try {
-      // Select the first section inside <main> that is not #hero
-      const section = document.querySelector("main section:not(#hero)");
-      if (!section) return setTimeout(addAds, 100); // retry if DOM not ready
+      var $section = $("main section:not(#hero)").first();
+      if ($section.length === 0) return setTimeout(addAds, 100); // retry if DOM not ready
 
-      // 1️⃣ Append the ad script first (but prevent execution)
-      if (!document.getElementById("ad-script")) {
-        const script = document.createElement("script");
-        script.id = "ad-script";
-        script.async = true;
-        script.setAttribute("data-cfasync", "false");
-        script.type = "text/plain"; // prevent auto execution
-        script.src = "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js";
-        document.body.appendChild(script);
+      // 1️⃣ Append ad script first (once)
+      if ($("#ad-script").length === 0) {
+        var $script = $('<script>', {
+          id: "ad-script",
+          async: true,
+          'data-cfasync': "false",
+          src: "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"
+        });
+        $section.after($script);
       }
 
-      // 2️⃣ Create the container div
-      const divId = "container-77d22fe3b85a47162f3d142b61b8c66f";
-      if (!document.getElementById(divId)) {
-        const div = document.createElement("div");
-        div.id = divId;
-        section.insertAdjacentElement("afterend", div);
-      }
-
-      // 3️⃣ Activate the script by changing type
-      const scriptEl = document.getElementById("ad-script");
-      if (scriptEl && scriptEl.type === "text/plain") {
-        scriptEl.type = "text/javascript"; // now the script runs
+      // 2️⃣ Immediately create the container div
+      var divId = "container-77d22fe3b85a47162f3d142b61b8c66f";
+      if ($("#" + divId).length === 0) {
+        var $div = $("<div>", { id: divId });
+        $section.after($div);
       }
 
     } catch(e) {
@@ -201,7 +193,5 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caress
     }
   }
 
-  document.addEventListener("DOMContentLoaded", addAds);
+  $(document).ready(addAds);
 })();
-
-
