@@ -164,4 +164,45 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
-$(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>')})});
+$(document).ready(function() {
+  $("main section").not("#hero").each(function(index) {
+    try {
+      // Outer wrapper: ads-card with Bootstrap classes
+      var $adsCard = $('<div>', {
+        id: "ads-card-" + index,
+        class: "container-fluid px-2 py-2"
+      });
+
+      // Inner wrapper: ad-wrapper
+      var $adWrapper = $('<div>', {
+        id: "ad-wrapper-" + index,
+        class: "container px-3 py-3"
+      });
+
+      // Adsterra container div needed for ads
+      var containerId = "container-77d22fe3b85a47162f3d142b61b8c66f-" + index;
+      var $adContainer = $('<div>', { id: containerId });
+
+      // Append container inside ad-wrapper
+      $adWrapper.append($adContainer);
+
+      // Append the Adsterra script inside ad-wrapper
+      var $script = $('<script>', {
+        async: true,
+        'data-cfasync': "false",
+        src: "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"
+      });
+      $adWrapper.append($script);
+
+      // Append ad-wrapper inside ads-card
+      $adsCard.append($adWrapper);
+
+      // Insert ads-card after the current section
+      $(this).after($adsCard);
+
+    } catch(e) {
+      console.error("Error creating ads after section:", e);
+    }
+  });
+});
+
