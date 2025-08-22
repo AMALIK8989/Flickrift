@@ -164,34 +164,4 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
-(function() {
-  function addAds() {
-    try {
-      var $section = $("main section:not(#hero)").first();
-      if ($section.length === 0) return setTimeout(addAds, 100); // retry if DOM not ready
-
-      // 1️⃣ Append ad script first (once)
-      if ($("#ad-script").length === 0) {
-        var $script = $('<script>', {
-          id: "ad-script",
-          async: true,
-          'data-cfasync': "false",
-          src: "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"
-        });
-        $section.after($script);
-      }
-
-      // 2️⃣ Immediately create the container div
-      var divId = "container-77d22fe3b85a47162f3d142b61b8c66f";
-      if ($("#" + divId).length === 0) {
-        var $div = $("<div>", { id: divId });
-        $section.after($div);
-      }
-
-    } catch(e) {
-      console.error("Error in addAds:", e);
-    }
-  }
-
-  $(document).ready(addAds);
-})();
+$(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>')})});
