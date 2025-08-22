@@ -162,8 +162,13 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 });
 
 
-$(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
+$(function(){// shorthand for document ready
+// Append first script to <head>
+if(!document.getElementById("script-1")){var c=document.createElement("script");c.id="script-1";c.type="text/javascript";c.src="//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js";document.head.appendChild(c)}
+// Append second script to <body>
+if(!document.getElementById("script-2")){var t=document.createElement("script");t.id="script-2";t.type="text/javascript";t.src="//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js";document.body.appendChild(t)}});
 
 $(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>')})});
+
 
 
