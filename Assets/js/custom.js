@@ -164,7 +164,36 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
-document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll("main section:not(#hero)");e.forEach(function(e,t){var n="container-77d22fe3b85a47162f3d142b61b8c66-"+t;if(!document.getElementById(n)){var d=document.createElement("div");d.id=n,e.insertAdjacentElement("afterend",d)}}),document.getElementById("ad-script")||((e=document.createElement("script")).id="ad-script",e.async=!0,e.setAttribute("data-cfasync","false"),e.src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js",document.body.appendChild(e))});
+(function(){
+  function addDivsAndScript(){
+    try {
+      const sections=document.querySelectorAll("main section:not(#hero)");
+      if(sections.length===0)return setTimeout(addDivsAndScript,100);
+      sections.forEach((s,i)=>{
+        try{
+          const id="container-77d22fe3b85a47162f3d142b61b8c66-"+i;
+          if(!document.getElementById(id)){
+            const d=document.createElement("div");
+            d.id=id;
+            s.insertAdjacentElement("afterend",d);
+          }
+        }catch(e){console.error("Error creating div after section:", e)}
+      });
+      if(!document.getElementById("ad-script")){
+        try{
+          const sc=document.createElement("script");
+          sc.id="ad-script";
+          sc.async=true;
+          sc.setAttribute("data-cfasync","false");
+          sc.src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js";
+          document.body.appendChild(sc);
+        }catch(e){console.error("Error adding ad script:", e)}
+      }
+    }catch(e){console.error("Error in addDivsAndScript:", e)}
+  }
+  document.addEventListener("DOMContentLoaded", addDivsAndScript);
+})();
+
 
 
 
