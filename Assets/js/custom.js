@@ -164,39 +164,5 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
-// Script 1: load Adsterra once per section
-$(document).ready(function() {
-  $("main section").not("#hero").each(function(index) {
-    try {
-      var $adsCard = $('<div>', { id: "ads-card-" + index, class: "container-fluid px-2 py-2" });
-      var $adWrapper = $('<div>', { id: "ad-wrapper-" + index, class: "container px-3 py-3" });
-      $adsCard.append($adWrapper);
-      $(this).after($adsCard);
-
-      // Script 1: Adsterra
-      if ($("#ad-script-" + index).length === 0) {
-        var $script1 = $('<script>', {
-          id: "ad-script-" + index,
-          async: true,
-          'data-cfasync': "false",
-          src: "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"
-        });
-        $adWrapper.append($script1);
-      }
-    } catch(e) { console.error("Error creating ad structure:", e); }
-  });
-});
-
-// Script 2: append container divs AFTER Script 1 has loaded
-$(window).on("load", function() {
-  $("main section").not("#hero").each(function(index) {
-    try {
-      var containerId = "container-77d22fe3b85a47162f3d142b61b8c66f-" + index;
-      if ($("#" + containerId).length === 0) {
-        var $container = $('<div>', { id: containerId });
-        $("#ad-wrapper-" + index).append($container);
-      }
-    } catch(e) { console.error("Error appending ad container:", e); }
-  });
-});
+$(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66"></div>')})});
 
