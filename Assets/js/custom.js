@@ -165,39 +165,36 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
 (function() {
-  function addAds() {
+  function addAd() {
     try {
-      const sections = document.querySelectorAll("main section:not(#hero)");
-      if(sections.length === 0) return setTimeout(addAds, 100);
+      const main = document.querySelector("main");
+      if (!main) return setTimeout(addAd, 100); // retry if main not loaded
 
-      // 1️⃣ Create all container divs first
-      sections.forEach((s, i) => {
-        try {
-          const divId = "container-77d22fe3b85a47162f3d142b61b8c66-" + i;
-          if(!document.getElementById(divId)) {
-            const div = document.createElement("div");
-            div.id = divId;
-            s.insertAdjacentElement("afterend", div);
-          }
-        } catch(e) {
-          console.error("Error creating ad container:", e);
-        }
-      });
+      const firstSection = main.querySelector("section");
+      if (!firstSection) return setTimeout(addAd, 100); // retry if no section yet
 
-      // 2️⃣ Append the ad script AFTER all divs are created
-      if(!document.getElementById("ad-script")) {
+      const divId = "container-77d22fe3b85a47162f3d142b61b8c66f";
+      if (!document.getElementById(divId)) {
+        const div = document.createElement("div");
+        div.id = divId;
+        firstSection.insertAdjacentElement("afterend", div); // insert after first section
+      }
+
+      if (!document.getElementById("ad-script")) {
         const script = document.createElement("script");
         script.id = "ad-script";
         script.async = true;
         script.setAttribute("data-cfasync","false");
         script.src = "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js";
-        document.body.appendChild(script);
+        div.parentNode.insertBefore(script, div.nextSibling); // insert script immediately after the div
       }
 
     } catch(e) {
-      console.error("Error in addAds:", e);
+      console.error("Error adding Adsterra ad:", e);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", addAds);
+  document.addEventListener("DOMContentLoaded", addAd);
 })();
+
+
