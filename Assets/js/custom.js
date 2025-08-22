@@ -165,36 +165,36 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
 (function() {
-  function addAd() {
+  function addAds() {
     try {
-      const main = document.querySelector("main");
-      if (!main) return setTimeout(addAd, 100); // retry if main not loaded
+      // Select the first section inside <main> that is not #hero
+      const section = document.querySelector("main section:not(#hero)");
+      if (!section) return setTimeout(addAds, 100); // retry if DOM not ready
 
-      const firstSection = main.querySelector("section");
-      if (!firstSection) return setTimeout(addAd, 100); // retry if no section yet
-
-      const divId = "container-77d22fe3b85a47162f3d142b61b8c66f";
+      // Create a single container div after that section
+      const divId = "container-77d22fe3b85a47162f3d142b61b8c66";
       if (!document.getElementById(divId)) {
         const div = document.createElement("div");
         div.id = divId;
-        firstSection.insertAdjacentElement("afterend", div); // insert after first section
+        section.insertAdjacentElement("afterend", div);
       }
 
+      // Append the ad script once after the container exists
       if (!document.getElementById("ad-script")) {
         const script = document.createElement("script");
         script.id = "ad-script";
         script.async = true;
-        script.setAttribute("data-cfasync","false");
+        script.setAttribute("data-cfasync", "false");
         script.src = "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js";
-        div.parentNode.insertBefore(script, div.nextSibling); // insert script immediately after the div
+        document.body.appendChild(script);
       }
 
     } catch(e) {
-      console.error("Error adding Adsterra ad:", e);
+      console.error("Error in addAds:", e);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", addAd);
+  document.addEventListener("DOMContentLoaded", addAds);
 })();
 
 
