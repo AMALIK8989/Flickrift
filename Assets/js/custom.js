@@ -167,20 +167,23 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caress
 
 $(document).ready(function () {
   $("section").not("#hero").each(function (index) {
-    // Create <script> dynamically
-    var script = document.createElement("script");
-    script.async = true;
-    script.dataset.cfasync = "false";
-    script.src = "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js";
-
     // Create unique container <div>
     var divId = "container-77d22fe3b85a47162f3d142b61b8c66-" + index;
-    var div = $('<div id="' + divId + '"></div>');
+    var div = document.createElement("div");
+    div.id = divId;
 
-    // Inject script + div after each section
-    $(this).after(div[0], script);
+    // Create <script>
+    var script = document.createElement("script");
+    script.async = true;
+    script.setAttribute("data-cfasync", "false");
+    script.src = "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js";
+
+    // Insert both AFTER the section
+    this.parentNode.insertBefore(div, this.nextSibling);
+    this.parentNode.insertBefore(script, div.nextSibling);
   });
 });
+
 
 
 
