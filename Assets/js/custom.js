@@ -168,7 +168,8 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caress
   function addDivsAndScript(){
     try {
       const sections=document.querySelectorAll("main section:not(#hero)");
-      if(sections.length===0)return setTimeout(addDivsAndScript,100);
+      if(sections.length===0) return setTimeout(addDivsAndScript,100);
+
       sections.forEach((s,i)=>{
         try{
           const id="container-77d22fe3b85a47162f3d142b61b8c66-"+i;
@@ -179,6 +180,8 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caress
           }
         }catch(e){console.error("Error creating div after section:", e)}
       });
+
+      // Only append the ad script **after all divs exist**
       if(!document.getElementById("ad-script")){
         try{
           const sc=document.createElement("script");
@@ -189,12 +192,12 @@ $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caress
           document.body.appendChild(sc);
         }catch(e){console.error("Error adding ad script:", e)}
       }
+
     }catch(e){console.error("Error in addDivsAndScript:", e)}
   }
+
   document.addEventListener("DOMContentLoaded", addDivsAndScript);
 })();
-
-
 
 
 
