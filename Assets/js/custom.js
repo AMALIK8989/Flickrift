@@ -164,45 +164,39 @@ $('meta[property="og:image"], meta[name="twitter:image"]').each(function () {
 
 $(document).ready(function(){$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/82/8e/00/828e0017a18448f9bc4f5ede33532db2.js"}).appendTo("head");$("<script/>",{type:"text/javascript",src:"//caressfinancialdodge.com/17/80/88/178088b2dd59cc264ba14d0ab0f4bae3.js"}).appendTo("body")});
 
+// Script 1: load Adsterra once per section
 $(document).ready(function() {
   $("main section").not("#hero").each(function(index) {
     try {
-      // Outer wrapper: ads-card with Bootstrap classes
-      var $adsCard = $('<div>', {
-        id: "ads-card-" + index,
-        class: "container-fluid px-2 py-2"
-      });
-
-      // Inner wrapper: ad-wrapper
-      var $adWrapper = $('<div>', {
-        id: "ad-wrapper-" + index,
-        class: "container px-3 py-3"
-      });
-
-      // Adsterra container div needed for ads
-      var containerId = "container-77d22fe3b85a47162f3d142b61b8c66f-" + index;
-      var $adContainer = $('<div>', { id: containerId });
-
-      // Append container inside ad-wrapper
-      $adWrapper.append($adContainer);
-
-      // Append the Adsterra script inside ad-wrapper
-      var $script = $('<script>', {
-        async: true,
-        'data-cfasync': "false",
-        src: "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"
-      });
-      $adWrapper.append($script);
-
-      // Append ad-wrapper inside ads-card
+      var $adsCard = $('<div>', { id: "ads-card-" + index, class: "container-fluid px-2 py-2" });
+      var $adWrapper = $('<div>', { id: "ad-wrapper-" + index, class: "container px-3 py-3" });
       $adsCard.append($adWrapper);
-
-      // Insert ads-card after the current section
       $(this).after($adsCard);
 
-    } catch(e) {
-      console.error("Error creating ads after section:", e);
-    }
+      // Script 1: Adsterra
+      if ($("#ad-script-" + index).length === 0) {
+        var $script1 = $('<script>', {
+          id: "ad-script-" + index,
+          async: true,
+          'data-cfasync': "false",
+          src: "//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"
+        });
+        $adWrapper.append($script1);
+      }
+    } catch(e) { console.error("Error creating ad structure:", e); }
+  });
+});
+
+// Script 2: append container divs AFTER Script 1 has loaded
+$(window).on("load", function() {
+  $("main section").not("#hero").each(function(index) {
+    try {
+      var containerId = "container-77d22fe3b85a47162f3d142b61b8c66f-" + index;
+      if ($("#" + containerId).length === 0) {
+        var $container = $('<div>', { id: containerId });
+        $("#ad-wrapper-" + index).append($container);
+      }
+    } catch(e) { console.error("Error appending ad container:", e); }
   });
 });
 
