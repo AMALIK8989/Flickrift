@@ -1,0 +1,116 @@
+/* =========================
+   CAST SECTION GLASS BACKDROP
+========================= */
+#casts {
+  background: transparent !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  padding: 3.5rem 0 !important;
+  color: #fff !important;
+}
+
+/* =========================
+   ENSURE CARDS DON'T SHRINK
+========================= */
+.cast-container {
+  width: 100% !important;
+}
+
+
+.casted-card {
+  width: 100% !important;
+  max-width: 420px !important;  /* stops shrinking */
+  display: flex !important;
+  flex-direction: column !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+
+}
+
+/* =========================
+   GLASSMORPH CARD STYLE
+========================= */
+.casted-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.35) !important;
+  transition: box-shadow 0.35s ease, border 0.35s ease !important;
+}
+
+/* =========================
+   GLOW HOVER (NO SCALE)
+========================= */
+.casted-card:hover {
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.65),
+    0 0 40px rgba(255, 0, 255, 0.45),
+    0 0 55px rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+}
+
+/* =========================
+   CARD IMAGE
+========================= */
+.card-img-container {
+  width: 100% !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+.card-img-top-pf {
+  width: 100% !important;
+  height: 480px !important;
+  object-fit: cover !important;
+  border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+}
+
+/* =========================
+   TEXT STYLING
+========================= */
+.card-body {
+  padding: 1rem 0.8rem !important;
+}
+
+.card-details h3 {
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.card-details p {
+  font-size: 1rem !important;
+  color: #d6d6d6 !important;
+  margin: 0 !important;
+}
+.card-title {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  margin-bottom: 0.3rem !important;
+}
+.card-text {
+  font-size: 1rem !important;
+  color: #d6d6d6 !important;
+  margin: 0 !important;
+}
+/* =========================
+   RESPONSIVE IMAGE FIX
+========================= */
+@media (max-width: 768px) {
+  .card-img-top-pf {
+    height: 380px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img-top-pf {
+    height: 300px !important;
+  }
+ 
+}

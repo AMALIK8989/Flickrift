@@ -1,0 +1,137 @@
+/* ====== FOOTER STYLING ====== */
+#section-footer {
+  background: linear-gradient(135deg, #1e2a78 0%, #5328a1 50%, #1b1b2f 100%);
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+#section-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.04) 0%, transparent 70%);
+  animation: footer-glow 14s infinite linear;
+  z-index: 0;
+}
+
+@keyframes footer-glow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#section-footer footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* Main flex layout */
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Left section (logo + about text stacked) */
+.footer-left {
+  flex: 1 1 45%;
+  max-width: 420px;
+}
+
+.footer-logo-img {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px 0;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Right section (links + socials inline) */
+.footer-right {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffb347;
+}
+
+/* Socials */
+.footer-social-links {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-links a {
+  color: #ffffffcc;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social-links a:hover {
+  color: #ff5f6d;
+  transform: scale(1.15);
+}
+
+/* Bottom bar */
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #bdbdbd;
+  margin-top: 20px;
+}
+
+.footer-bottom a.nex {
+  color: #ffb347;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-bottom a.nex:hover {
+  color: #ff5f6d;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-right {
+    justify-content: center;
+  }
+  .footer-links {
+    margin-bottom: 15px;
+  }
+}
+
