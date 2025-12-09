@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlickRift | Watch Free, No Strings Attached</title>
+
+<!-- 1. Bootstrap CSS -->
+<link rel="preload" href="./Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/bootstrap.min.css"></noscript>
+
+<!-- 2. Theme CSS -->
+<link rel="preload" href="./Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/theme2.css"></noscript>
+
+<link rel="preload" href="./Assets/css/movie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/movie.css"></noscript>
+
+<link rel="preload" href="./Assets/css/pagination.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/pagination.css"></noscript>
+
+<!-- 3. Font Awesome v7 -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
+
+<!-- 4. AOS CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"></noscript>
+
+
+
+<link rel="preload" href="./Assets/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/footer.css"></noscript>
+
+<!-- 6. jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 7. Bootstrap JS (first bundle) -->
+<script src="./Assets/js/bootstrap.bundle.min.js" defer></script>
+
+
+
+<!-- 9. Font Awesome 7 JS (defer) -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
+        integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- 9. AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+
+<!-- 10. Your custom JS -->
+<script src="./Assets/js/custom.js" defer></script>
+<script src="./Assets/js/custom2.js" defer></script>
+
+
+  </head>
+  <body>
+   <header id="nav-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="./Assets/Logo.webp" alt="Logo" class="img-logo">
+      </a>
+
+      <!-- Mobile Offcanvas Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Navbar Links -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="bi bi-search"></i> Search
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="bi bi-search"></i> Search
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genres
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasDropdown">
+            <li><a class="dropdown-item" href="./Action.html">Action</a></li>
+            <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
+            <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
+            <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
+            <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
+            <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
+            <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
+            <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+            <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
+            <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
+            <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
+            <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+    <main>
+<section class="container-fluid px-2 py-2" id="Card-hold">
+   <div class="container movie-para-container" id="movie-container">
+ <p class="text-center text-white">
+    FlickRift offers a vibrant collection of Animated movies for viewers of all ages. From heartwarming family favorites and magical adventures to creative storytelling and visually stunning masterpieces, our curated selection brings imagination to life. Stream your favorite animated films in HD online and experience worlds full of color, fun, and wonder.
+</p>
+</div>
+  <div class="container" id="card-container">
+    <div class="row justify-content-center g-4" id="card-place">
+
+      <!-- Son Of Batman -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-1">
+        <div class="card h-100" id="movie-card-1">
+          <div class="card-img-container ">
+            <a href="./Animated/Son-Of-Batman.html" class="d-block">
+              <img src="./Assets/Img/Son Of Batman Info-card.jpg" alt="Son Of Batman" class="card-img-top w-100 card-img-top-af" id="movie-img-1">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Son Of Batman</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">6.7/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman: Hush -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-2">
+        <div class="card h-100" id="movie-card-2">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-Hush.html" class="d-block">
+              <img src="./Assets/Img/Batman-Hush-Info-Card.jpg" alt="Batman Hush" class="card-img-top w-100 card-img-top-af" id="movie-img-2">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman: Hush</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">6.8/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman: Assault On Arkham -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-3">
+        <div class="card h-100" id="movie-card-3">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-Assault-On-Arkham.html" class="d-block">
+              <img src="./Assets/Img/Batman-Assault-On-Arkham-Info-Card.jpg" alt="Batman Assault On Arkham" class="card-img-top w-100 card-img-top-af" id="movie-img-3">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman: Assault On Arkham</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">7.4/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman: The Doom That Came To Gotham -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-4">
+        <div class="card h-100" id="movie-card-4">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-The-Doom-That-Came-To-Gotham.html" class="d-block">
+              <img src="./Assets/Img/Batman-The-Doom-That-Came-To-Gotham-Info-Card.jpg" alt="Batman The Doom That Came To Gotham" class="card-img-top w-100 card-img-top-af" id="movie-img-4">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman: The Doom That Came To Gotham</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">6.6/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Justice League vs Teen Titans -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-5">
+        <div class="card h-100" id="movie-card-5">
+          <div class="card-img-container ">
+            <a href="./Animated/Justice-League-Vs-Teen-Titans.html" class="d-block">
+              <img src="./Assets/Img/Justice-League-Vs-Teen-Titans.jpg" alt="Justice League Vs Teen Titans" class="card-img-top w-100 card-img-top-af" id="movie-img-5">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Justice League vs Teen Titans</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">7.0/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Justice League Dark: Apokolips War -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-6">
+        <div class="card h-100" id="movie-card-6">
+          <div class="card-img-container ">
+            <a href="./Animated/Justice-League-Dark-Apokolips-War.html" class="d-block">
+              <img src="./Assets/Img/Justice League Dark Apokolips War Info-card.jpg" alt="Justice League Dark Apokolips War" class="card-img-top w-100 card-img-top-af" id="movie-img-6">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Justice League Dark: Apokolips War</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">7.7/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Justice League: Doom -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-7">
+        <div class="card h-100" id="movie-card-7">
+          <div class="card-img-container ">
+            <a href="./Animated/Justice-League-Doom.html" class="d-block">
+              <img src="./Assets/Img/Justice-League-Doom.jpg" alt="Justice League Doom" class="card-img-top w-100 card-img-top-af" id="movie-img-7">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Justice League: Doom</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">7.5/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman: The Killing Joke -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-8">
+        <div class="card h-100" id="movie-card-8">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-The-Killing-Joke.html" class="d-block">
+              <img src="./Assets/Img/Batman-The-Killing-Joke Info - Card .jpg" alt="Batman The Killing Joke" class="card-img-top w-100 card-img-top-af" id="movie-img-8">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman: The Killing Joke</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">6.4/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman and Harley Quinn -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-9">
+        <div class="card h-100" id="movie-card-9">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-And-Harley-Quinn.html" class="d-block">
+              <img src="./Assets/Img/Batman-And-Harley-Quinn Info- Card.jpg" alt="Batman And Harley Quinn" class="card-img-top w-100 card-img-top-af" id="movie-img-9">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman and Harley Quinn</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">5.9/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman: Under The Red Hood -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-10">
+        <div class="card h-100" id="movie-card-10">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-Under-The-Red-Hood.html" class="d-block">
+              <img src="./Assets/Img/Batman-Under-The-Red-Hood Info-Card.jpg" alt="Batman Under The Red Hood" class="card-img-top w-100 card-img-top-af" id="movie-img-10">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman: Under The Red Hood</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">8.0/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batman: Soul Of The Dragon -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-11">
+        <div class="card h-100" id="movie-card-11">
+          <div class="card-img-container ">
+            <a href="./Animated/Batman-Soul-Of-The-Dragon.html" class="d-block">
+              <img src="./Assets/Img/Batman- The-Soul-Of-The-Dragon Info-Card.jpg" alt="Batman Soul Of The Dragon" class="card-img-top w-100 card-img-top-af" id="movie-img-11">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Batman: Soul Of The Dragon</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">6.1/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spider-Man: Into The Spider-Verse -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-12">
+        <div class="card h-100" id="movie-card-12">
+          <div class="card-img-container ">
+            <a href="./Animated/Spiderman-Into-The-Spiderverse.html" class="d-block">
+              <img src="./Assets/Img6/Spiderman-Into-The-Spiderverse-Info-Card.jpg" alt="Spiderman Into The Spiderverse" class="card-img-top w-100 card-img-top-af" id="movie-img-12">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Spider-Man: Into The Spider-Verse</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">8.9/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spider-Man: Across The Spider-Verse -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-13">
+        <div class="card h-100" id="movie-card-13">
+          <div class="card-img-container ">
+            <a href="./Animated/Spiderman-Across-The-Spiderverse.html" class="d-block">
+              <img src="./Assets/Img6/Spiderman-Across-The-Spiderverse-Info-Card.jpg" alt="Spiderman Across The Spiderverse" class="card-img-top w-100 card-img-top-af" id="movie-img-13">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Spider-Man: Across The Spider-Verse</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">9.0/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ne Zha 2 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-14">
+        <div class="card h-100" id="movie-card-14">
+          <div class="card-img-container ">
+            <a href="./Animated/Nezha-2.html" class="d-block">
+              <img src="./Assets/Img9/Nezha-2-Info-Card.webp" alt="Ne Zha 2" class="card-img-top w-100 card-img-top-af" id="movie-img-14">
+              <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                <h3 class="movie-title text-white mb-2">Ne Zha 2</h3>
+                <div class="movie-rating d-flex align-items-center">
+                  <div class="rating-stars text-warning me-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-value text-white-50">7.4/10</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End row -->
+  </div> <!-- End container -->
+</section>
+
+   <section class="container-fluid px-2 py-2">
+    <div class="container">
+      <!-- Pagination -->
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <!-- Previous Page -->
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <!-- Page Numbers -->
+    <li class="page-item"><a class="page-link" href="./Animated.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="./pages/Animated/2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <!-- Next Page -->
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+   </section>
+      </main>
+      <footer class="container-fluid">
+        <div class="foot row">
+          <!-- Footer Logo -->
+          <div class="col-12 col-md-4 footer-logo text-center text-md-start">
+            <img src="./Assets/Logo.png" alt="I-Flixx Logo" class="img-fluid">
+          </div>
+          <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
+      
+          </div>
+          <!-- Footer Links -->
+          <div class="col-12 col-md-4 footer-links text-center text-md-start">
+            <ul class="list-unstyled">
+              <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="./terms-of-services.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          
+          <!-- Footer Social Links -->
+          <div class="col-12 col-md-4 footer-social-link text-center text-md-start">
+            <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
+              <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
+              <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
+              <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Footer Copyright -->
+        <div class="foot-cpyrht text-center">
+          <p>all ©️ reserved by I-Flixx 
+            <span id="power">Powered by <a class="nex" href="https://nexonix.netlify.app/">Nexonix</a></span>
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

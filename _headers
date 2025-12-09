@@ -1,0 +1,15 @@
+# HTML files - always fresh
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS files - revalidated every visit
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+# JS files - revalidated every visit
+/*.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# WebP images in assets subfolders - long cache, immutable
+/assets/*/*.webp
+  Cache-Control: public, max-age=31536000, immutable

@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlickRift | Watch Free, No Strings Attached</title>
+  
+ <!-- 1. Bootstrap CSS -->
+<link rel="preload" href="./Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/bootstrap.min.css"></noscript>
+
+<!-- 2. Theme CSS -->
+<link rel="preload" href="./Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/theme2.css"></noscript>
+
+<link rel="preload" href="./Assets/css/movie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/movie.css"></noscript>
+
+<link rel="preload" href="./Assets/css/pagination.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/pagination.css"></noscript>
+
+<!-- 3. Font Awesome v7 -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
+
+<!-- 4. AOS CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"></noscript>
+
+
+
+<link rel="preload" href="./Assets/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/footer.css"></noscript>
+
+<!-- 6. jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 7. Bootstrap JS (first bundle) -->
+<script src="./Assets/js/bootstrap.bundle.min.js" defer></script>
+
+
+
+<!-- 9. Font Awesome 7 JS (defer) -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
+        integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- 9. AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+
+<!-- 10. Your custom JS -->
+<script src="./Assets/js/custom.js" defer></script>
+<script src="./Assets/js/custom2.js" defer></script>
+
+
+  </head>
+  <body>
+   <header id="nav-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="./Assets/Logo.webp" alt="Logo" class="img-logo">
+      </a>
+
+      <!-- Mobile Offcanvas Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Navbar Links -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="bi bi-search"></i> Search
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="bi bi-search"></i> Search
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genres
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasDropdown">
+            <li><a class="dropdown-item" href="./Action.html">Action</a></li>
+            <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
+            <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
+            <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
+            <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
+            <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
+            <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
+            <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+            <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
+            <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
+            <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
+            <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <section class="container-fluid px-2 py-2" id="Card-hold">
+         <div class="container movie-para-container" id="movie-container">
+        <p class="text-center text-white">
+    FlickRift showcases the finest Drama movies that move, inspire, and captivate. From powerful performances and emotional journeys to compelling stories of love, loss, and triumph, our curated collection brings unforgettable tales to life. Stream your favorite drama films in HD online and experience stories that touch the heart and soul.
+</p>
+</div>
+    <div class="container" id="card-container">
+        <div class="row justify-content-center g-4" id="card-place">
+            
+            <!-- Kiss Me -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-1">
+                <div class="card h-100" id="movie-card-1">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Kiss-Me.html" class="d-block">
+                            <img src="./Assets/Img/Kiss Me Info-card.jpg" alt="Kiss Me" class="card-img-top w-100 card-img-top-af" id="movie-img-1">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Kiss Me</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.8/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ammonite -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-2">
+                <div class="card h-100" id="movie-card-2">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Ammonite.html" class="d-block">
+                            <img src="./Assets/Img/Ammonite Info-card.jpg" alt="Ammonite" class="card-img-top w-100 card-img-top-af" id="movie-img-2">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Ammonite</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.4/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The World Unseen -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-3">
+                <div class="card h-100" id="movie-card-3">
+                    <div class="card-img-container ">
+                        <a href="./Drama/The-World-Unseen.html" class="d-block">
+                            <img src="./Assets/Img/The World Unseen Info card.jpg" alt="The World Unseen" class="card-img-top w-100 card-img-top-af" id="movie-img-3">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">The World Unseen</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.2/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Love -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-4">
+                <div class="card h-100" id="movie-card-4">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Love.html" class="d-block">
+                            <img src="./Assets/Img/Love Info card.jpg" alt="Love" class="card-img-top w-100 card-img-top-af" id="movie-img-4">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Love</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.3/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blue Is The Warmest Color -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-5">
+                <div class="card h-100" id="movie-card-5">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Blue-Is-The-Warmest-Color.html" class="d-block">
+                            <img src="./Assets/Img/Blue is the warmest color info-card.jpg" alt="Blue Is The Warmest Color" class="card-img-top w-100 card-img-top-af" id="movie-img-5">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Blue Is The Warmest Color</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.7/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Joyland -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-6">
+                <div class="card h-100" id="movie-card-6">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Joyland.html" class="d-block">
+                            <img src="./Assets/Img/Joyland Info-card.jpg" alt="Joyland" class="card-img-top w-100 card-img-top-af" id="movie-img-6">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Joyland</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.6/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Colette -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-7">
+                <div class="card h-100" id="movie-card-7">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Colette.html" class="d-block">
+                            <img src="./Assets/Img/Colette - Info - card.png" alt="Colette" class="card-img-top w-100 card-img-top-af" id="movie-img-7">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Colette</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.9/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kill For Me -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-8">
+                <div class="card h-100" id="movie-card-8">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Kill-For-Me.html" class="d-block">
+                            <img src="./Assets/Img/KillForMe-Info-card.jpg" alt="Kill For Me" class="card-img-top w-100 card-img-top-af" id="movie-img-8">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Kill For Me</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.4/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Anatomy Of A Love Seen -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-9">
+                <div class="card h-100" id="movie-card-9">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Anatomy-Of-A-Love-Seen.html" class="d-block">
+                            <img src="./Assets/Img/Anatomy Of A Love Seen Info card.jpg" alt="Anatomy Of A Love Seen" class="card-img-top w-100 card-img-top-af" id="movie-img-9">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Anatomy Of A Love Seen</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.2/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elena Undone -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-10">
+                <div class="card h-100" id="movie-card-10">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Elena-Undone.html" class="d-block">
+                            <img src="./Assets/Img/Elena Undone Info card.jpg" alt="Elena Undone" class="card-img-top w-100 card-img-top-af" id="movie-img-10">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Elena Undone</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.6/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lost And Delirious -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-11">
+                <div class="card h-100" id="movie-card-11">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Lost-And-Derlious.html" class="d-block">
+                            <img src="./Assets/Img/Lost and Delirious Info-card.jpg" alt="Lost And Delirious" class="card-img-top w-100 card-img-top-af" id="movie-img-11">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Lost And Delirious</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.5/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- My Days Of Mercy -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-12">
+                <div class="card h-100" id="movie-card-12">
+                    <div class="card-img-container ">
+                        <a href="./Drama/My-Days-Of-Mercy.html" class="d-block">
+                            <img src="./Assets/Img/My Days Of Mercy Info-card.jpg" alt="My Days Of Mercy" class="card-img-top w-100 card-img-top-af" id="movie-img-12">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">My Days Of Mercy</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.8/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- My Fault -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-13">
+                <div class="card h-100" id="movie-card-13">
+                    <div class="card-img-container ">
+                        <a href="./Drama/My-Fault.html" class="d-block">
+                            <img src="./Assets/Img/My Fault Info card.jpg" alt="My Fault" class="card-img-top w-100 card-img-top-af" id="movie-img-13">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">My Fault</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.7/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thirteen -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-14">
+                <div class="card h-100" id="movie-card-14">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Thirteen.html" class="d-block">
+                            <img src="./Assets/Img/Thirteen Info card.jpg" alt="Thirteen" class="card-img-top w-100 card-img-top-af" id="movie-img-14">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Thirteen</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.8/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vita & Virginia -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-15">
+                <div class="card h-100" id="movie-card-15">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Vita-And-Virginia.html" class="d-block">
+                            <img src="./Assets/Img/Vita-And-Virginia-Info-Card.jpg" alt="Vita & Virginia" class="card-img-top w-100 card-img-top-af" id="movie-img-15">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Vita & Virginia</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.3/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cocaine Godmother -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-16">
+                <div class="card h-100" id="movie-card-16">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Cocaine-Godmother.html" class="d-block">
+                            <img src="./Assets/Img/Cocaine-Godmother-Info-Card.jpg" alt="Cocaine Godmother" class="card-img-top w-100 card-img-top-af" id="movie-img-16">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Cocaine Godmother</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.5/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imagine Me & You -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-17">
+                <div class="card h-100" id="movie-card-17">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Imagine-Me-And-You.html" class="d-block">
+                            <img src="./Assets/Img2/Imagine-Me-And-You-Info-Card.jpg" alt="Imagine Me & You" class="card-img-top w-100 card-img-top-af" id="movie-img-17">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Imagine Me & You</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.9/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Reluctant Fundamentalist -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-18">
+                <div class="card h-100" id="movie-card-18">
+                    <div class="card-img-container ">
+                        <a href="./Drama/The-Reluctant-Fundamentalist.html" class="d-block">
+                            <img src="./Assets/Img/The-Reluctant-Fundamentalist-Info-Card.webp" alt="The Reluctant Fundamentalist" class="card-img-top w-100 card-img-top-af" id="movie-img-18">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">The Reluctant Fundamentalist</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.8/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Your Fault -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-19">
+                <div class="card h-100" id="movie-card-19">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Your-Fault.html" class="d-block">
+                            <img src="./Assets/Img/Your-Fault-Info-Card.jpg" alt="Your Fault" class="card-img-top w-100 card-img-top-af" id="movie-img-19">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Your Fault</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.6/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unfreedom -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-20">
+                <div class="card h-100" id="movie-card-20">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Unfreedom.html" class="d-block">
+                            <img src="./Assets/Img/Unfreedom info-Card.jpg" alt="Unfreedom" class="card-img-top w-100 card-img-top-af" id="movie-img-20">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Unfreedom</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.8/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Say You Will -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-21">
+                <div class="card h-100" id="movie-card-21">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Say-You-Will.html" class="d-block">
+                            <img src="./Assets/Img/Say You Will Info-Card.jpg" alt="Say You Will" class="card-img-top w-100 card-img-top-af" id="movie-img-21">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Say You Will</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.7/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Like Sunday Like Rain -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-22">
+                <div class="card h-100" id="movie-card-22">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Like-Sunday-Like-Rain.html" class="d-block">
+                            <img src="./Assets/Img/Like-Sunday-Like-Rain-Info-card.jpg" alt="Like Sunday Like Rain" class="card-img-top w-100 card-img-top-af" id="movie-img-22">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Like Sunday Like Rain</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.1/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Adam -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-23">
+                <div class="card h-100" id="movie-card-23">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Adam.html" class="d-block">
+                            <img src="./Assets/Img2/Adam-Info-Card.jpg" alt="Adam" class="card-img-top w-100 card-img-top-af" id="movie-img-23">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Adam</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.9/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ambrosia -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-24">
+                <div class="card h-100" id="movie-card-24">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Ambrosia.html" class="d-block">
+                            <img src="./Assets/Img2/Ambrosia-Info-Card.jpg" alt="Ambrosia" class="card-img-top w-100 card-img-top-af" id="movie-img-24">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Ambrosia</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">5.3/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mosquita Y Mari -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-25">
+                <div class="card h-100" id="movie-card-25">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Mosquita-Y-Mari.html" class="d-block">
+                            <img src="./Assets/Img2/Mosquita-Y-Mari-Info-Card.jpg" alt="Mosquita Y Mari" class="card-img-top w-100 card-img-top-af" id="movie-img-25">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Mosquita Y Mari</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.5/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Maid -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-26">
+                <div class="card h-100" id="movie-card-26">
+                    <div class="card-img-container ">
+                        <a href="./Drama/The-Maid.html" class="d-block">
+                            <img src="./Assets/Img/The Maid Info-card_.jpg" alt="The Maid" class="card-img-top w-100 card-img-top-af" id="movie-img-26">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">The Maid</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.0/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Disobedience -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-27">
+                <div class="card h-100" id="movie-card-27">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Disobedience.html" class="d-block">
+                            <img src="./Assets/Img/Disobedience-Info-card.jpeg" alt="Disobedience" class="card-img-top w-100 card-img-top-af" id="movie-img-27">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Disobedience</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.9/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- On Swift Horses -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-28">
+                <div class="card h-100" id="movie-card-28">
+                    <div class="card-img-container ">
+                        <a href="./Drama/On-Swift-Horses.html" class="d-block">
+                            <img src="./Assets/Img2/On-Swift-Horses-Info-Card.jpg" alt="On Swift Horses" class="card-img-top w-100 card-img-top-af" id="movie-img-28">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">On Swift Horses</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.6/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fifty Shades Of Grey -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-29">
+                <div class="card h-100" id="movie-card-29">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Fifty-Shades-Of-Grey.html" class="d-block">
+                            <img src="./Assets/Img/Fifty Shades Of Grey Info card.jpg" alt="Fifty Shades Of Grey" class="card-img-top w-100 card-img-top-af" id="movie-img-29">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Fifty Shades Of Grey</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">4.1/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fifty Shades Darker -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-30">
+                <div class="card h-100" id="movie-card-30">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Fifty-Shades-Darker.html" class="d-block">
+                            <img src="./Assets/Img/Fifty Shades Darker Info card.jpg" alt="Fifty Shades Darker" class="card-img-top w-100 card-img-top-af" id="movie-img-30">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Fifty Shades Darker</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">4.6/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fifty Shades Freed -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-31">
+                <div class="card h-100" id="movie-card-31">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Fifty-Shades-Freed.html" class="d-block">
+                            <img src="./Assets/Img/Fifty Shades Freed Info card.jpg" alt="Fifty Shades Freed" class="card-img-top w-100 card-img-top-af" id="movie-img-31">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Fifty Shades Freed</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">4.5/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Fallout -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-32">
+                <div class="card h-100" id="movie-card-32">
+                    <div class="card-img-container ">
+                        <a href="./Drama/The-Fallout.html" class="d-block">
+                            <img src="./Assets/Img2/The-Fallout-Info-Card.jpg" alt="The Fallout" class="card-img-top w-100 card-img-top-af" id="movie-img-32">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">The Fallout</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.8/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hot Milk -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-33">
+                <div class="card h-100" id="movie-card-33">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Hot-Milk.html" class="d-block">
+                            <img src="./Assets/Img2/Hot-Milk-Info-Card.jpg" alt="Hot Milk" class="card-img-top w-100 card-img-top-af" id="movie-img-33">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">Hot Milk</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">6.3/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Hours -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-34">
+                <div class="card h-100" id="movie-card-34">
+                    <div class="card-img-container ">
+                        <a href="./Drama/The-Hours.html" class="d-block">
+                            <img src="./Assets/Img4/The-Hours-Info-Card.jpg" alt="The Hours" class="card-img-top w-100 card-img-top-af" id="movie-img-34">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">The Hours</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.5/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+              <!-- The Hours -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-34">
+                <div class="card h-100" id="movie-card-34">
+                    <div class="card-img-container ">
+                        <a href="./Drama/Sex-Party-And-Lies.html" class="d-block">
+                            <img src="./Assets/Img10/Sex-Party-And-Lies-Info-Card.webp" alt="The Hours" class="card-img-top w-100 card-img-top-af" id="movie-img-34">
+                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                                <h3 class="movie-title text-white mb-2">The Hours</h3>
+                                <div class="movie-rating d-flex align-items-center">
+                                    <div class="rating-stars text-warning me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value text-white-50">7.5/10</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid px-2 py-2" id="pagination-section">
+  <div class="container">
+    <!-- Pagination -->
+    <nav aria-label="Movie Page Navigation" id="pagination-nav">
+      <ul class="pagination justify-content-center" id="pagination-list">
+
+        <!-- Previous Page -->
+        <li class="page-item" id="pagination-prev">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+
+        <!-- Page Numbers -->
+        <li class="page-item" id="page-1">
+          <a class="page-link" href="./Drama.html">1</a>
+        </li>
+        <li class="page-item active" id="page-2">
+          <a class="page-link" href="./pages/Drama/2.html">2</a>
+        </li>
+        <li class="page-item" id="page-3">
+          <a class="page-link" href="#">3</a>
+        </li>
+
+        <!-- Next Page -->
+        <li class="page-item" id="pagination-next">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</section>
+
+      </main>
+      <footer class="container-fluid">
+        <div class="foot row">
+          <!-- Footer Logo -->
+          <div class="col-12 col-md-4 footer-logo text-center text-md-start">
+            <img src="./Assets/Logo.png" alt="I-Flixx Logo" class="img-fluid">
+          </div>
+          <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
+      
+          </div>
+          <!-- Footer Links -->
+          <div class="col-12 col-md-4 footer-links text-center text-md-start">
+            <ul class="list-unstyled">
+              <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="./terms-of-services.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          
+          <!-- Footer Social Links -->
+          <div class="col-12 col-md-4 footer-social-link text-center text-md-start">
+            <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
+              <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
+              <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
+              <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Footer Copyright -->
+        <div class="foot-cpyrht text-center">
+          <p>all ©️ reserved by I-Flixx 
+            <span id="power">Powered by <a class="nex" href="https://nexonix.netlify.app/">Nexonix</a></span>
+          </p>
+        </div>
+      </footer>
+</body>
+</html>
