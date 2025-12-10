@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+
+
+
+    <!-- 1. Bootstrap CSS -->
+<link rel="preload" href="../Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+</noscript>
+
+<!-- 2. Theme CSS -->
+<link rel="preload" href="../Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/theme2.css">
+</noscript>
+
+<!-- 3. Font Awesome 7 CSS (preload) -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</noscript>
+
+<!-- 4. AOS CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
+</noscript>
+
+<!-- 5. Additional page CSS -->
+<link rel="preload" href="../Assets/css/cast.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/cast.css">
+</noscript>
+
+<link rel="preload" href="../Assets/css/feature-slide.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/feature-slide.css">
+</noscript>
+
+<!-- 6. jQuery (before custom scripts) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+<!-- 7. Bootstrap JS -->
+<script src="../Assets/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- 8. AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+
+<!-- 9. Font Awesome 7 JS (defer) -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
+        integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- 10. Your custom JS -->
+<script src="../Assets/js/custom.js" defer></script>
+<script src="../Assets/js/custom2.js" defer></script>
+
+</head>
+<body>
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="../Assets/Logo.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block align-text-top img-logo"
+            />
+          </a>
+
+          <!-- Navbar Toggler for small screens -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+              <!-- Dropdown for Genres -->
+              <li class="nav-item dropdown">
+                <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      aria-expanded="false"
+                  >
+                      Genres
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="../Action.html">Action</a></li>
+                    <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
+                    <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
+                    <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
+                    <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
+                    <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
+                    <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
+                    <li><a class="dropdown-item" href="../Thriller.html">Thriller</a></li>
+                    <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
+                    <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
+                    <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
+                    <li> <a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
+                    <!-- Add more genres as needed -->
+                    <!-- Add more genres as needed -->
+                  </ul>
+              </li>
+
+              <!-- TV Shows Link -->
+            </ul>
+          </div>
+        </div>
+</nav>
+      
+  </header>
+  <main>
+    <!-- <section id="movie-pals" class="container-fluid text-center text-white" style="background-image: url('../Assets/Img/The\ reluctant\ fundamentalist\ cover.jpg'); background-size: cover;">
+        <h2 class="display-4"> The Reluctant Fundamentalist  : 2012 </h2>
+        <div id="movie-player" class="container mt-4">
+            <iframe src="https://short.icu/Ijj9np5QZ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="description" class="container-fluid py-5 px-5">
+        <div class="description-content container">
+            <h2 class="text-center mb-4">Description</h2>
+            <p class="lead">Post 9/11, a Pakistani man wants to achieve corporate success on Wall Street. However, he finds himself embroiled in a conflict between his dream and his beliefs.
+        </p>
+            </div>
+    </section> -->
+
+      <section id="movie-pals" class="container-fluid text-center text-white" style="background-image: url('../Assets/Img/The-Reluctant-Fundamentalist-Cover.jpg'); background-repeat: no-repeat; background-size: cover;">
+           <div class="container" id="main-wrapper">
+      <div class="container head-container">
+            <h2 class="display-4">  The Reluctant Fundamentalist  : 2012 </h2>
+            </div>
+            <div id="movie-player" class="container mt-4">
+                <iframe src="https://short.icu/Ijj9np5QZ" frameborder="0" scrolling="0" allowfullscreen width="710px"></iframe>
+            </div>
+            </div>
+        </section>
+        
+        <section id="description" class="container-fluid py-5 px-5">
+            <h2 class="text-center mb-4">Description</h2>
+            <div class="description-content container">
+              
+                <div class="container para-container">
+                <p class="lead">
+          Post 9/11, a Pakistani man wants to achieve corporate success on Wall Street. However, he finds himself embroiled in a conflict between his dream and his beliefs.
+                </div>
+            </div>
+        </section>
+
+
+   <section id="casts" class="container-fluid px-2 py-2">
+    <div class="cast-head-container container">
+        <h3 class="text-center cast-heading mb-4">Cast</h3>
+    </div>
+
+    <div class="cast-container container">
+        <div class="row justify-content-center g-4">
+
+            <!-- Riz Ahmed -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img/Riz Ahmed.jpg" alt="Riz Ahmed" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Riz Ahmed</h3>
+                            <p class="card-text">as Changez</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kate Hudson -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img/Kate hudson.jpeg" alt="Kate Hudson" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Kate Hudson</h3>
+                            <p class="card-text">as Erica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kiefer Sutherland -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img/Keifer sutherland.jpeg" alt="Kiefer Sutherland" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Kiefer Sutherland</h3>
+                            <p class="card-text">as Jim Cross</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liev Schreiber -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img/Liev Schreiber.jpg" alt="Liev Schreiber" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Liev Schreiber</h3>
+                            <p class="card-text">as Bobby Lincoln</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Om Puri -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img12/Om-Puri.jpg" alt="Om Puri" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Om Puri</h3>
+                            <p class="card-text">as Abbu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shabana Azmi -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img10/Shabana-Azmi.jpg" alt="Shabana Azmi" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Shabana Azmi</h3>
+                            <p class="card-text">as Ammi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  </main>
+  <footer class="container-fluid">
+    <div class="foot row">
+      <!-- Footer Logo -->
+      <div class="col-12 col-md-4 footer-logo text-center text-md-start">
+        <img src="../Assets/Logo.png" alt="I-Flixx Logo" class="img-fluid">
+      </div>
+      <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
+  
+      </div>
+      <!-- Footer Links -->
+      <div class="col-12 col-md-4 footer-links text-center text-md-start">
+        <ul class="list-unstyled">
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-services.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <!-- Footer Social Links -->
+      <div class="col-12 col-md-4 footer-social-link text-center text-md-start">
+        <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
+          <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
+          <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Footer Copyright -->
+    <div class="foot-cpyrht text-center">
+      <p>all ©️ reserved by I-Flixx 
+        <span id="power">Powered by <a class="nex" href="https://nexonix.netlify.app/">Nexonix</a></span>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
