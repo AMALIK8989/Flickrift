@@ -210,6 +210,10 @@ main{
 }
 
 .offcanvas .dropdown-menu {
+    position: static !important;
+}
+
+.offcanvas .dropdown-menu {
     position: relative;
     top: 0;
     left: 0;
@@ -456,4 +460,5 @@ main{
   color: white !important;
   font-weight: bold !important;
 }
+
 
