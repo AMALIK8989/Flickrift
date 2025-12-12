@@ -181,4 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }, 100);
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".offcanvas-body").forEach(function (el) {
+        el.setAttribute("data-bs-scroll", "true");
+    });
 });
