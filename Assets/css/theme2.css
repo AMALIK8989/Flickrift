@@ -170,11 +170,16 @@ main{
    FIXED OFFCANVAS (BOOTSTRAP-SAFE)
 ======================= */
 
+/* =======================
+   OFFCANVAS (BOOTSTRAP SAFE)
+======================= */
+
 .offcanvas {
     background-color: transparent;
+    color: var(--text-color);
 }
 
-/* Background overlay using pseudo-element */
+/* Blurred background */
 .offcanvas::before {
     content: "";
     position: absolute;
@@ -182,43 +187,98 @@ main{
     background-image: var(--offcanvs-bg-image);
     background-size: cover;
     background-position: center;
-    filter: brightness(0.6) blur(2px);
+    filter: brightness(0.55) blur(3px);
     z-index: 0;
 }
 
-/* Content must stay above background */
+/* Content layer */
 .offcanvas-header,
 .offcanvas-body {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+/* Heading */
+.offcanvas-title {
+    color: #fff;
+    font-weight: 600;
 }
 
 /* Links */
 .offcanvas .nav-link {
     color: var(--text-color);
-    padding: 10px 15px;
+    padding: 12px 16px;
+    transition: color 0.3s ease;
 }
 
-/* Dropdown FIX (this part matters) */
+.offcanvas .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+/* IMPORTANT: allow dropdown to expand */
+.offcanvas-body {
+    overflow-y: visible !important;
+    overflow-x: hidden;
+}
+
+/* Dropdown menu */
 .offcanvas .dropdown-menu {
     position: static !important;
     transform: none !important;
-    float: none;
     width: 100%;
-    margin-top: .5rem;
-    background-color: #222;
-    border-radius: 6px;
+    margin-top: 6px;
+    padding: 8px 0;
+    background-color: rgba(34, 34, 34, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    display: none;
+    z-index: 3;
 }
 
 /* Show dropdown */
 .offcanvas .dropdown-menu.show {
     display: block;
+    animation: dropdownFade 0.3s ease forwards;
+}
+
+/* Dropdown items */
+.offcanvas .dropdown-item {
+    color: var(--text-color);
+    padding: 10px 18px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.offcanvas .dropdown-item:hover {
+    background-color: rgba(255,255,255,0.08);
+    color: var(--secondary-color);
 }
 
 /* Close button */
 .offcanvas .btn-close {
     filter: invert(1);
 }
+
+/* Dropdown animation */
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================
+   Mobile Adjustments
+======================= */
+@media (max-width: 991px) {
+    .offcanvas .dropdown-item {
+        text-align: left;
+    }
+}
+
 
 
 
@@ -435,6 +495,7 @@ main{
   color: white !important;
   font-weight: bold !important;
 }
+
 
 
 
