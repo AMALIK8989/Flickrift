@@ -167,29 +167,18 @@ main{
 }
 
 /* =======================
-   Offcanvas Mobile Menu
+   FIXED OFFCANVAS (BOOTSTRAP-SAFE)
 ======================= */
-/* Offcanvas base */
+
 .offcanvas {
-    position: fixed;       
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;      
-    color: var(--text-color);
-    z-index: 1050;
-    background-color: transparent; /* handled by pseudo-element */
+    background-color: transparent;
 }
 
-/* Blurred background overlay */
+/* Background overlay using pseudo-element */
 .offcanvas::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: var(--offcanvs-bg-image);
     background-size: cover;
     background-position: center;
@@ -197,8 +186,9 @@ main{
     z-index: 0;
 }
 
-/* Offcanvas children */
-.offcanvas > * {
+/* Content must stay above background */
+.offcanvas-header,
+.offcanvas-body {
     position: relative;
     z-index: 1;
 }
@@ -209,41 +199,27 @@ main{
     padding: 10px 15px;
 }
 
-.offcanvas .nav-link:hover {
-    color: var(--secondary-color);
-}
-
-/* Dropdown menu inside offcanvas */
+/* Dropdown FIX (this part matters) */
 .offcanvas .dropdown-menu {
-    position: static;      /* lets dropdowns open properly */
+    position: static !important;
+    transform: none !important;
+    float: none;
     width: 100%;
+    margin-top: .5rem;
     background-color: #222;
     border-radius: 6px;
-    padding: 10px 0;
 }
 
-/* Ensure dropdown shows correctly */
+/* Show dropdown */
 .offcanvas .dropdown-menu.show {
     display: block;
 }
 
 /* Close button */
-.btn-close {
-    color: white !important;
+.offcanvas .btn-close {
+    filter: invert(1);
 }
 
-
-/* =======================
-   Responsive Adjustments
-======================= */
-@media (max-width: 991px) {
-   
-
-    .offcanvas .dropdown-item {
-        text-align: left;
-        padding: 10px 15px;
-    }
-}
 
 
 /* ---------- Movie Player Section ---------- */
@@ -459,6 +435,7 @@ main{
   color: white !important;
   font-weight: bold !important;
 }
+
 
 
 
