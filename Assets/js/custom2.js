@@ -1,87 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // --- Casted Cards ---
-  const castedCards = document.querySelectorAll(".casted-card-wrapper");
-  castedCards.forEach((card, index) => {
-    card.setAttribute("data-aos", "fade-up");
-    card.setAttribute("data-aos-delay", index * 100);
-    card.setAttribute("data-aos-duration", "1000");
-    card.setAttribute("data-aos-easing", "ease-in-out");
-  });
 
-  // --- Movie Pals Section ---
-  const moviePals = document.querySelector("#movie-pals");
-  if (moviePals) {
-    moviePals.setAttribute("data-aos", "fade-zoom-in");
-    moviePals.setAttribute("data-aos-easing", "ease-in-back");
-    moviePals.setAttribute("data-aos-delay", "200");
-
-    const title = moviePals.querySelector("h2");
-    if (title) {
-      title.setAttribute("data-aos", "zoom-in-up");
-      title.setAttribute("data-aos-delay", "400");
-      title.setAttribute("data-aos-duration", "1200");
-    }
-
-    const player = moviePals.querySelector("#movie-player");
-    if (player) {
-      player.setAttribute("data-aos", "fade-up");
-      player.setAttribute("data-aos-delay", "600");
-      player.setAttribute("data-aos-duration", "1500");
-    }
-  }
-
-  // --- Description Section ---
-  const description = document.querySelector("#description");
-  if (description) {
-    description.setAttribute("data-aos", "fade-up");
-    description.setAttribute("data-aos-delay", "200");
-    description.setAttribute("data-aos-duration", "1200");
-
-    const descTitle = description.querySelector("h2");
-    if (descTitle) {
-      descTitle.setAttribute("data-aos", "fade-down");
-      descTitle.setAttribute("data-aos-delay", "400");
-      descTitle.setAttribute("data-aos-duration", "1000");
-    }
-
-    const descPara = description.querySelector("p");
-    if (descPara) {
-      descPara.setAttribute("data-aos", "fade-right");
-      descPara.setAttribute("data-aos-delay", "600");
-      descPara.setAttribute("data-aos-duration", "1200");
-    }
-  }
-
-  // --- Genre Sections ---
-  const genreSections = document.querySelectorAll(".genre-section");
-  genreSections.forEach(section => {
-    const sectionTitle = section.querySelector(".genre-title");
-    if (sectionTitle) {
-      sectionTitle.setAttribute("data-aos", "zoom-in");
-      sectionTitle.setAttribute("data-aos-delay", "200");
-      sectionTitle.setAttribute("data-aos-duration", "1000");
-    }
-
-    const cards = section.querySelectorAll(".genre-card");
-    cards.forEach((card, index) => {
-      card.setAttribute("data-aos", "fade-up");
-      card.setAttribute("data-aos-delay", 300 + index * 150);
-      card.setAttribute("data-aos-duration", "800");
-      card.setAttribute("data-aos-easing", "ease-in-out");
-    });
-  });
-
-  // --- INIT AOS *after* all attributes are set ---
-  AOS.init({
-    offset: 120,
-    duration: 1000,
-    easing: "ease-in-out",
-    once: false,
-    mirror: true,
-  });
-
-  AOS.refresh();
-});
 document.addEventListener("DOMContentLoaded", () => {
   const assetsFolderName = "Assets";
   const footerLinksData = [
@@ -184,8 +101,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".offcanvas-body").forEach(function (el) {
-        el.setAttribute("data-bs-scroll", "true");
+document.addEventListener("shown.bs.offcanvas", function (e) {
+  const offcanvas = e.target;
+
+  offcanvas.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+    // destroy any broken instance
+    const existing = bootstrap.Dropdown.getInstance(toggle);
+    if (existing) existing.dispose();
+
+    // recreate dropdown correctly for offcanvas
+    new bootstrap.Dropdown(toggle, {
+      boundary: offcanvas,
+      popperConfig: {
+        strategy: "fixed"
+      }
     });
+  });
 });
+
+
