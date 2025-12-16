@@ -131,3 +131,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+(function () {
+  // Load gtag.js asynchronously
+  const gtagScript = document.createElement('script');
+  gtagScript.async = true;
+  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FHWE40JF73';
+  document.head.appendChild(gtagScript);
+
+  // Inline GA configuration script
+  const inlineScript = document.createElement('script');
+  inlineScript.text = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FHWE40JF73');
+  `;
+  document.head.appendChild(inlineScript);
+})();
+
+
