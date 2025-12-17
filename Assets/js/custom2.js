@@ -1,4 +1,18 @@
-
+ document.addEventListener('DOMContentLoaded', function () {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        once: false,          // animation runs once
+        duration: 900,       // smooth but not sleepy
+        easing: 'ease-out-cubic',
+        offset: 120,         // triggers slightly before view
+        delay: 0,
+        mirror: false,       // no rewind on scroll up
+        anchorPlacement: 'top-bottom'
+      });
+    } else {
+      console.warn('AOS is not loaded');
+    }
+  });
 document.addEventListener("DOMContentLoaded", () => {
   const assetsFolderName = "Assets";
   const footerLinksData = [
@@ -149,5 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(inlineScript);
 })();
+
 
 
