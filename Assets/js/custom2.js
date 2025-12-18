@@ -1,18 +1,13 @@
- document.addEventListener('DOMContentLoaded', function () {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        once: false,          // animation runs once
-        duration: 900,       // smooth but not sleepy
-        easing: 'ease-out-cubic',
-        offset: 120,         // triggers slightly before view
-        delay: 0,
-        mirror: false,       // no rewind on scroll up
-        anchorPlacement: 'top-bottom'
-      });
-    } else {
-      console.warn('AOS is not loaded');
-    }
-  });
+// Create and append the Google site verification meta tag
+(() => {
+    const metaTag = document.createElement('meta');
+    metaTag.name = "google-site-verification";
+    metaTag.content = "XyvTF__tzxT7DSSXzQ46ylJdXPsFm5bMDU8HgYxjFIE";
+    document.head.appendChild(metaTag);
+
+    console.log("Meta tag added to head successfully!");
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const assetsFolderName = "Assets";
   const footerLinksData = [
@@ -163,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(inlineScript);
 })();
+
 
 
 
