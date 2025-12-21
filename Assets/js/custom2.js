@@ -1,13 +1,3 @@
-// Create and append the Google site verification meta tag
-(() => {
-    const metaTag = document.createElement('meta');
-    metaTag.name = "google-site-verification";
-    metaTag.content = "XyvTF__tzxT7DSSXzQ46ylJdXPsFm5bMDU8HgYxjFIE";
-    document.head.appendChild(metaTag);
-
-    console.log("Meta tag added to head successfully!");
-})();
-
 document.addEventListener("DOMContentLoaded", () => {
   const assetsFolderName = "Assets";
   const footerLinksData = [
@@ -107,58 +97,182 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }, 100);
-
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const offcanvas = document.getElementById("mobileMenu");
+let swiperAssetsLoaded = false;
+let swiperInitialized = false;
 
-  offcanvas.querySelectorAll(".dropdown-toggle").forEach(toggle => {
-    toggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+/* ===============================
+   LOAD SWIPER ASSETS
+================================ */
+function loadSwiperAssets() {
+  if (swiperAssetsLoaded) {
+    console.log("ℹ️ Swiper assets already loaded");
+    return Promise.resolve();
+  }
 
-      const menu = toggle.nextElementSibling;
-      if (!menu) return;
+  const cssUrl = "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css";
+  const jsUrl = "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js";
 
-      // Close any other open dropdowns inside this offcanvas
-      offcanvas.querySelectorAll(".dropdown-menu.show").forEach(openMenu => {
-        if (openMenu !== menu) openMenu.classList.remove("show");
-      });
+  const cssPromise = new Promise((resolve, reject) => {
+    if (document.querySelector(`link[href="${cssUrl}"]`)) return resolve();
 
-      // Toggle the clicked dropdown
-      menu.classList.toggle("show");
-    });
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssUrl;
+    link.onload = resolve;
+    link.onerror = reject;
+    document.head.appendChild(link);
   });
 
-  // Close dropdowns if you click outside
-  document.addEventListener("click", (e) => {
-    offcanvas.querySelectorAll(".dropdown-menu.show").forEach(menu => {
-      if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
-        menu.classList.remove("show");
-      }
-    });
+  const jsPromise = new Promise((resolve, reject) => {
+    if (typeof Swiper !== "undefined") return resolve();
+
+    const script = document.createElement("script");
+    script.src = jsUrl;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
   });
+
+  return Promise.all([cssPromise, jsPromise])
+    .then(() => {
+      swiperAssetsLoaded = true;
+      console.log("✅ Swiper assets loaded");
+    })
+    .catch(err => console.error("❌ Swiper load failed", err));
+}
+
+/* ===============================
+   INIT HERO + THUMB SWIPERS
+================================ */
+async function initHeroSwiper() {
+  if (swiperInitialized) return;
+
+  await loadSwiperAssets();
+
+  const mainEl = document.querySelector(".mainSwiper");
+  const thumbEl = document.querySelector(".thumbSwiper");
+
+  if (!mainEl || !thumbEl) {
+    console.warn("⚠️ Swiper containers not found");
+    return;
+  }
+
+  swiperInitialized = true;
+
+  const thumbSwiper = new Swiper(thumbEl, {
+    slidesPerView: 4,
+    spaceBetween: 12,
+    watchSlidesProgress: true,
+    breakpoints: {
+      320: { slidesPerView: 2 },
+      576: { slidesPerView: 3 },
+      992: { slidesPerView: 4 }
+    }
+  });
+
+  new Swiper(mainEl, {
+    loop: true,
+    spaceBetween: 20,
+    autoHeight: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    thumbs: {
+      swiper: thumbSwiper
+    },
+    observer: true,
+    observeParents: true
+  });
+
+  console.log("✅ Hero & Thumb Swipers initialized");
+}
+
+/* ===============================
+   SLIDE DATA + RENDERING
+================================ */
+document.addEventListener("DOMContentLoaded", async () => {
+  const slides = [
+    {
+      title: "Atomic Blonde",
+      description: "MI6 agent Lorraine Broughton dives into Cold-War Berlin where betrayal is currency.",
+      heroImage: "https://ntvb.tmsimg.com/assets/p12985371_v_h10_ak.jpg?w=1280&h=720",
+      thumbImage: "./Assets/Img/Atomic Blonde Info Image.webp",
+      watchLink: "./Atomic-Blonde.html",
+      trailerLink: "https://www.youtube.com/watch?v=JIqcMl0hzXs"
+    },
+    {
+      title: "Arrow",
+      description: "A billionaire returns forged by hell and becomes Star City’s shadow.",
+      heroImage: "./Assets/Img/Arrow Cover.webp",
+      thumbImage: "./Assets/Img/Arrow Info-card.webp",
+      watchLink: "./Tv-shows/Arrow.html",
+      trailerLink: "https://www.youtube.com/watch?v=_a3dNB2riKE"
+    },
+    {
+      title: "Blue Beetle",
+      description: "An alien scarab chooses Jaime Reyes—and nothing stays normal again.",
+      heroImage: "./Assets/Img/Blue Beetle .webp",
+      thumbImage: "./Assets/Img/Blue Beetle info-card.webp",
+      watchLink: "./Action/Blue-Beetle.html",
+      trailerLink: "https://www.youtube.com/watch?v=MaCllutk0_w"
+    },
+    {
+      title: "Mission Impossible",
+      description: "Ethan Hunt is framed, hunted, and forced to trust no one.",
+      heroImage: "https://thecosmiccircus.com/wp-content/uploads/2023/11/ethan-2.png",
+      thumbImage: "./Assets/Img/Mission Impossible 1.webp",
+      watchLink: "./Mission-Impossible-1.html",
+      trailerLink: "https://www.youtube.com/watch?v=L8Pbjh4EZRk"
+    },
+    {
+      title: "Oppenheimer",
+      description: "The mind behind the bomb—and the weight of what it unleashed.",
+      heroImage: "https://cdn.theplaylist.net/wp-content/uploads/2023/05/08064650/Oppenheimer-Christopher-Nolan.jpg",
+      thumbImage: "./Assets/Img10/Oppenheimer-Info-Card.webp",
+      watchLink: "./Drama/Oppenheimer.html",
+      trailerLink: "https://www.youtube.com/watch?v=uYPbbksJxIg"
+    }
+  ];
+
+  await loadSwiperAssets();
+
+  const mainWrapper = document.querySelector(".main-swiper-wrapper");
+  const thumbWrapper = document.querySelector(".thumb-swiper-wrapper");
+
+  mainWrapper.innerHTML = "";
+  thumbWrapper.innerHTML = "";
+
+  slides.forEach(item => {
+    mainWrapper.insertAdjacentHTML("beforeend", `
+      <div class="swiper-slide">
+        <img src="${item.heroImage}" alt="${item.title}" class="img-fluid w-100 hero-img">
+        <div class="hero-overlay">
+          <div class="overlay-content">
+            <h2>${item.title}</h2>
+            <p>${item.description}</p>
+            <div class="cta-group">
+              <a href="${item.watchLink}" class="btn btn-in">
+                <i class="fas fa-play"></i> Watch Now
+              </a>
+              <a href="${item.trailerLink}" class="btn btn-out">
+                <i class="fas fa-film"></i> Trailer
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `);
+
+    thumbWrapper.insertAdjacentHTML("beforeend", `
+      <div class="swiper-slide thumb-slide">
+        <img src="${item.thumbImage}" alt="${item.title}" class="thumb-img">
+        <div class="thumb-overlay"><h6>${item.title}</h6></div>
+      </div>
+    `);
+  });
+
+  initHeroSwiper();
 });
-
-(function () {
-  // Load gtag.js asynchronously
-  const gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FHWE40JF73';
-  document.head.appendChild(gtagScript);
-
-  // Inline GA configuration script
-  const inlineScript = document.createElement('script');
-  inlineScript.text = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FHWE40JF73');
-  `;
-  document.head.appendChild(inlineScript);
-})();
-
-
-
-
