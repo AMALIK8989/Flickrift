@@ -102,7 +102,8 @@
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"></noscript>
 
-    <link rel="preload" 
+
+<link rel="preload" 
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" 
       as="style" 
       onload="this.onload=null;this.rel='stylesheet'"
@@ -123,7 +124,7 @@
 <noscript><link rel="stylesheet" href="./Assets/css/footer.css"></noscript>
 
 <!-- 6. jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
 
 <!-- 7. Bootstrap JS (first bundle) -->
 <script src="./Assets/js/bootstrap.bundle.min.js" defer></script>
@@ -226,17 +227,33 @@
   </div>
 </header>
     <main>
-<section class="hero-slider" id="hero-slider">
-  <div class="swiper mainSwiper">
-    <div class="swiper-wrapper main-swiper-wrapper"></div>
-  </div>
+      
+<section class="hero-slider container-fluid py-5" id="hero-slider">
+  <div class="container-fluid position-relative" id="main-wrapper">
+   
+    <!-- MAIN SWIPER -->
+    <div class="swiper mainSwiper">
+      <div class="swiper-wrapper main-swiper-wrapper">
+        <!-- Slides injected dynamically via JS -->
+      </div>
 
-  <div class="thumbs-container">
-    <div class="swiper thumbSwiper">
-      <div class="swiper-wrapper thumb-swiper-wrapper"></div>
+      <!-- Navigation Buttons -->
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </div>
+
+    <!-- THUMB SWIPER (BOTTOM OVERLAY) -->
+    <div class="thumbs-container position-absolute w-100">
+      <div class="swiper thumbSwiper">
+        <div class="swiper-wrapper thumb-swiper-wrapper">
+          <!-- Thumbs injected dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 
 
@@ -809,7 +826,7 @@
                   <a href="#" class="overlay-btn trailer" title="Watch Trailer">
                     <i class="bi bi-play-circle"></i>
                   </a>
-                  <a href="./Horror/Terrifier-1.html" class="overlay-btn watch" title="Watch Movie">
+                  <a href="./Horror/Terrifier.html" class="overlay-btn watch" title="Watch Movie">
                     <i class="bi bi-film"></i>
                   </a>
                 </div>
