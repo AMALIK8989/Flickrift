@@ -146,8 +146,50 @@
   color: #fff;
 }
 
-/* ===== MOBILE FIXES ===== */
-@media (max-width: 768px) {
+/* ===================================================== */
+/* BOOTSTRAP XS — Mobile phones (<576px) */
+/* ===================================================== */
+@media (max-width: 575.98px) {
+
+  #main-wrapper {
+    height: 65vh;
+  }
+
+  .hero-overlay {
+    align-items: flex-end;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.55) 60%,
+      transparent 100%
+    );
+  }
+
+  .overlay-content {
+    max-width: 100%;
+  }
+
+  .cta-group {
+    justify-content: center;
+  }
+
+  .btn-in,
+  .btn-out {
+    width: 100%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+/* ===================================================== */
+/* BOOTSTRAP SM — Large phones (≥576px and <768px) */
+/* ===================================================== */
+@media (min-width: 576px) and (max-width: 767.98px) {
 
   #main-wrapper {
     height: 70vh;
@@ -156,10 +198,11 @@
   .hero-overlay {
     align-items: flex-end;
     text-align: center;
+    padding: 1.5rem;
     background: linear-gradient(
       180deg,
       rgba(0,0,0,0.8) 0%,
-      rgba(0,0,0,0.5) 55%,
+      rgba(0,0,0,0.45) 60%,
       transparent 100%
     );
   }
@@ -176,5 +219,30 @@
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+  }
+}
+
+/* ===================================================== */
+/* BOOTSTRAP MD — Tablets (≥768px and <992px) */
+/* ===================================================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  #main-wrapper {
+    height: 80vh;
+  }
+
+  .hero-overlay {
+    align-items: center;
+    padding: 2.5rem;
+    background: linear-gradient(
+      90deg,
+      rgba(0,0,0,0.65) 35%,
+      rgba(0,0,0,0.3) 65%,
+      transparent 100%
+    );
+  }
+
+  .cta-group {
+    gap: 1rem;
   }
 }
