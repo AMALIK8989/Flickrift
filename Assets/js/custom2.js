@@ -276,3 +276,36 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   initHeroSwiper();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const offcanvas = document.getElementById("mobileMenu");
+
+  offcanvas.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const menu = toggle.nextElementSibling;
+      if (!menu) return;
+
+      // Close any other open dropdowns inside this offcanvas
+      offcanvas.querySelectorAll(".dropdown-menu.show").forEach(openMenu => {
+        if (openMenu !== menu) openMenu.classList.remove("show");
+      });
+
+      // Toggle the clicked dropdown
+      menu.classList.toggle("show");
+    });
+  });
+
+  // Close dropdowns if you click outside
+  document.addEventListener("click", (e) => {
+    offcanvas.querySelectorAll(".dropdown-menu.show").forEach(menu => {
+      if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  });
+});
+
+
