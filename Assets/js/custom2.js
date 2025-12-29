@@ -308,4 +308,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+if (!document.querySelector('link[href*="fonts.googleapis.com/css2?family=Space+Grotesk"]')) {
+  document.head.insertAdjacentHTML(
+    "beforeend",
+    '<link rel="preconnect" href="https://fonts.googleapis.com">' +
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">'
+  );
+}
+
+
 
