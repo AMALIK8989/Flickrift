@@ -288,6 +288,7 @@ main{
     padding: 80px 20px;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 70vh;
     background-position: center;
     text-align: center; /* ensures inline-block heading centers */
     overflow: hidden; /* ensures pseudo-element blur does not overflow */
@@ -346,15 +347,15 @@ main{
 /* Movie player container */
 #movie-player {
     display: flex;
+    max-width: 1024px;
     justify-content: center;
     padding: 20px 0;
+    aspect-ratio: 16 / 9;
 }
 
 #movie-player iframe {
     width: 100%;
-    max-width: 1024px;
-    aspect-ratio: 16 / 9;
-    border: none;
+    height: 100%;
 }
 
 /* ---------- Description Section ---------- */
@@ -495,6 +496,7 @@ main{
   color: white !important;
   font-weight: bold !important;
 }
+
 
 
 
