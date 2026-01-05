@@ -1,3 +1,4 @@
+ @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -38,13 +39,12 @@ main{
     left: 0;
     background-color: var(--background-color);
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    height: auto;
+    height: auto;       /* fit content */
     min-height: 0;
     padding: 0;
     position: relative;
-    z-index: 1100; /* <-- correct syntax */
+    z-index: 1100;
 }
-
 /* =======================
    Navbar
 ======================= */
@@ -166,119 +166,80 @@ main{
 }
 
 /* =======================
-   FIXED OFFCANVAS (BOOTSTRAP-SAFE)
+   Offcanvas Mobile Menu
 ======================= */
-
-/* =======================
-   OFFCANVAS (BOOTSTRAP SAFE)
-======================= */
-
 .offcanvas {
-    background-color: transparent;
+    position: fixed !important;       /* overlay, doesn’t push content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;      /* scroll if content exceeds screen */
     color: var(--text-color);
+    z-index: 1050;
+    background-color: transparent; /* handled by pseudo-element */
 }
 
-/* Blurred background */
 .offcanvas::before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: var(--offcanvs-bg-image);
     background-size: cover;
     background-position: center;
-    filter: brightness(0.55) blur(3px);
+    filter: brightness(0.6) blur(2px);
     z-index: 0;
 }
 
-/* Content layer */
-.offcanvas-header,
-.offcanvas-body {
+.offcanvas * {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* Heading */
-.offcanvas-title {
-    color: #fff;
-    font-weight: 600;
-}
-
-/* Links */
 .offcanvas .nav-link {
     color: var(--text-color);
-    padding: 12px 16px;
-    transition: color 0.3s ease;
+    padding: 10px 15px;
 }
 
 .offcanvas .nav-link:hover {
     color: var(--secondary-color);
 }
 
-/* IMPORTANT: allow dropdown to expand */
-.offcanvas-body {
-    overflow-y: visible !important;
-    overflow-x: hidden;
-}
-
-/* Dropdown menu */
 .offcanvas .dropdown-menu {
-    position: static !important;
-    transform: none !important;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-top: 6px;
-    padding: 8px 0;
-    background-color: rgba(34, 34, 34, 0.95);
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    display: none;
-    z-index: 3;
+    grid-template-columns: 1fr;
+    border-radius: 6px;
+    background-color: #222;
+    padding: 10px 0;
+    display: none; /* hidden by default */
 }
 
-/* Show dropdown */
 .offcanvas .dropdown-menu.show {
-    display: block;
-    animation: dropdownFade 0.3s ease forwards;
+    display: block !important; /* force visible */
+    position: relative;        /* relative so it stacks inside offcanvas */
+    width: 100%;
 }
-
-/* Dropdown items */
-.offcanvas .dropdown-item {
-    color: var(--text-color);
-    padding: 10px 18px;
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.offcanvas .dropdown-item:hover {
-    background-color: rgba(255,255,255,0.08);
-    color: var(--secondary-color);
-}
-
-/* Close button */
-.offcanvas .btn-close {
-    filter: invert(1);
-}
-
-/* Dropdown animation */
-@keyframes dropdownFade {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-close{
+    color: white !important;
 }
 
 /* =======================
-   Mobile Adjustments
+   Responsive Adjustments
 ======================= */
 @media (max-width: 991px) {
+   
+
     .offcanvas .dropdown-item {
         text-align: left;
+        padding: 10px 15px;
     }
 }
-
-
 
 
 /* ---------- Movie Player Section ---------- */
@@ -359,7 +320,7 @@ main{
 
 /* ---------- Description Section ---------- */
 #description {
-    color: #da8735;
+    color: #ffffff;
     padding: 60px 20px;
 }
 
@@ -367,7 +328,7 @@ main{
     font-weight: 700;
     margin-bottom: 30px;
     text-align: center;
-    color: #ff9999;
+    color: #ff2525c5;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
@@ -383,7 +344,7 @@ main{
 }
 
 .description-content p strong {
-    color: #e91b1b;
+    color: #ffffff;
 }
 
 /* ---------- Responsive adjustments ---------- */
@@ -495,10 +456,3 @@ main{
   color: white !important;
   font-weight: bold !important;
 }
-
-
-
-
-
-
-
