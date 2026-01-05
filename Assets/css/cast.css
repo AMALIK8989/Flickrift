@@ -16,7 +16,10 @@
   width: 100% !important;
 }
 
-
+.cast-heading{
+   text-align: center;
+    color: #ff2525c5 !important;
+}
 .casted-card {
   width: 100% !important;
   max-width: 420px !important;  /* stops shrinking */
