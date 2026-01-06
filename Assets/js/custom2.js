@@ -51,13 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul class="footer-links list-unstyled me-md-5 mb-3 mb-md-0 text-center text-md-start">
               ${generatedLinksHtml}
             </ul>
-            <ul class="footer-social-links list-unstyled d-flex gap-3 justify-content-center justify-content-md-start">
+             <ul class="footer-social-links list-unstyled d-flex gap-3 justify-content-center justify-content-md-start">
               <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
               <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
               <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
               <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
               <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+              <li></li><a href="https://www.youtube.com/@gamerden3065" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+
             </ul>
           </div>
         </div>
@@ -316,6 +318,7 @@ if (!document.querySelector('link[href*="fonts.googleapis.com/css2?family=Space+
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">'
   );
 }
+
 
 
 
