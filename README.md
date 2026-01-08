@@ -7720,6 +7720,7 @@ https://raw.githubusercontent.com/AMALIK8989/Flickrift/main/Horror/Haunted-Hotel
     <a href="https://app.netlify.com/projects/flickrift/deploys">
       <img src="https://api.netlify.com/api/v1/badges/1f8dc801-81a1-4a51-9a11-bde2e0ee0bb8/deploy-status" alt="Netlify Status">
     </a>
+    [![Netlify Status](https://api.netlify.com/api/v1/badges/261092b2-28d3-410f-baba-7342b282ad94/deploy-status)](https://app.netlify.com/projects/flickrift/deploys)
   </p>
 </section>
 
@@ -7883,3 +7884,4 @@ FlickRift now talks to Firebase—serving up movies/shows in real time and letti
      appId: "YOUR_APP_ID"
    };
    
+
