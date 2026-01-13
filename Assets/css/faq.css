@@ -1,0 +1,76 @@
+/* ===== FAQ SECTION WRAPPER ===== */
+#movie-faq-section {
+  background: transparent;
+  padding: 2rem;
+}
+
+/* ===== FAQ TITLE ===== */
+#faq-movie-title {
+  color: #e03838 !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ===== ACCORDION ITEM ===== */
+#movie-faq-section .movie-item {
+  background: transparent;
+  border: 1.5px solid #d32f2f;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* ===== ACCORDION HEADER BUTTON ===== */
+#movie-faq-section .accordion-button {
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Remove Bootstrap default arrow background */
+#movie-faq-section .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #ff5252;
+}
+
+/* ===== ACCORDION BODY ===== */
+#movie-faq-section .accordion-body {
+  background: transparent;
+  color: #e0e0e0;
+  line-height: 1.7;
+  border-top: 1px solid rgba(211, 47, 47, 0.4);
+}
+
+/* ===== LINKS INSIDE FAQ ===== */
+#movie-faq-section a {
+  color: #ff5252;
+  text-decoration: none;
+}
+
+#movie-faq-section a:hover {
+  text-decoration: underline;
+  color: #ff1744;
+}
+
+/* ===== OPTIONAL: SMOOTHER TRANSITIONS ===== */
+#movie-faq-section .accordion-collapse {
+  transition: all 0.25s ease-in-out;
+}
+/* ===== COLLAPSE ARROW ICON ===== */
+#movie-faq-section .accordion-button::after {
+  filter: invert(27%) sepia(91%) saturate(6000%) hue-rotate(345deg) brightness(100%) contrast(100%);
+  /* alternative: simply use red */
+  border: solid #ff5252;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Rotate arrow when expanded */
+#movie-faq-section .accordion-button:not(.collapsed)::after {
+  transform: rotate(135deg); /* arrow points down when open */
+  border-color: #ff1744;
+}
