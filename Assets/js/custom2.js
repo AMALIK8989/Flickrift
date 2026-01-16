@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul class="footer-links list-unstyled me-md-5 mb-3 mb-md-0 text-center text-md-start">
               ${generatedLinksHtml}
             </ul>
-             <ul class="footer-social-links list-unstyled d-flex gap-3 justify-content-center justify-content-md-start">
+            <ul class="footer-social-links list-unstyled d-flex gap-3 justify-content-center justify-content-md-start">
               <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
               <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
               <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       description: "A billionaire returns forged by hell and becomes Star City’s shadow.",
       heroImage: "./Assets/Img/Arrow Cover.webp",
       thumbImage: "./Assets/Img/Arrow Info-card.webp",
-      watchLink: "./Tv-shows/Arrow.html",
+      watchLink: "./Tv-Shows/Arrow.html",
       trailerLink: "https://www.youtube.com/watch?v=_a3dNB2riKE"
     },
     {
@@ -278,7 +278,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   initHeroSwiper();
 });
-
 document.addEventListener("DOMContentLoaded", () => {
   const offcanvas = document.getElementById("mobileMenu");
 
@@ -309,16 +308,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-if (!document.querySelector('link[href*="fonts.googleapis.com/css2?family=Space+Grotesk"]')) {
-  document.head.insertAdjacentHTML(
-    "beforeend",
-    '<link rel="preconnect" href="https://fonts.googleapis.com">' +
-    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
-    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">'
-  );
-}
-
-
-
-
