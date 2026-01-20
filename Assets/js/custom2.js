@@ -308,3 +308,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+  (function() {
+    // Create a new script element
+    var script = document.createElement('script');
+
+    // Set its attributes
+    script.async = true;
+    script.src = "https://js.mbidadm.com/static/scripts.js";
+    script.setAttribute('data-admpid', '416517');
+
+    // Append it to the <head>
+    document.head.appendChild(script);
+  })();
+
