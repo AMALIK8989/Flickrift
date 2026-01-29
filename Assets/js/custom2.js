@@ -322,4 +322,14 @@ document.addEventListener("DOMContentLoaded", () => {
   //   document.head.appendChild(script);
   // })();
 
+ // Get the movie player div
+const playerDiv = document.getElementById("movie-player");
+
+// Target the iframe inside it
+const iframe = playerDiv.querySelector("iframe");
+
+// Add required attributes
+iframe.setAttribute("allowfullscreen", "");
+iframe.setAttribute("allowtransparency", "true");
+iframe.setAttribute("allow", "autoplay");
 
