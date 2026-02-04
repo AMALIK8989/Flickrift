@@ -333,3 +333,227 @@ iframe.setAttribute("allowfullscreen", "");
 iframe.setAttribute("allowtransparency", "true");
 iframe.setAttribute("allow", "autoplay");
 
+// Get today's date in MM-DD
+const today = new Date().toISOString().slice(5, 10);
+
+// Festival theme definitions
+const festivalThemes = {
+  "12-25": { // Christmas
+    "--festival-secondary-color": "#FF0000",
+    "--festival-background-color": "#001F3F",
+    "--festival-text-color": "#FFFFFF",
+    "--festival-offcanvs-bg-image": "url('../festivals/christmas-bg.webp')",
+    "--festival-font-family": "'Garamond', serif",
+    "effects": "confetti"
+  },
+  "10-31": { // Halloween
+    "--festival-secondary-color": "#FF7518",
+    "--festival-background-color": "#000000",
+    "--festival-text-color": "#FFA500",
+    "--festival-offcanvs-bg-image": "url('../festivals/halloween-bg.webp')",
+    "--festival-font-family": "'Creepster', cursive",
+    "effects": "spooky-glow"
+  },
+  "04-10": { // Eid
+    "--festival-secondary-color": "#4CAF50",
+    "--festival-background-color": "#000000",
+    "--festival-text-color": "#FFD700",
+    "--festival-offcanvs-bg-image": "url('../festivals/eid-bg.webp')",
+    "--festival-font-family": "'Amiri', serif",
+    "effects": "subtle-glow"
+  },
+  "11-12": { // Diwali
+    "--festival-secondary-color": "#FFAA00",
+    "--festival-background-color": "#2E0854",
+    "--festival-text-color": "#FFE066",
+    "--festival-offcanvs-bg-image": "url('../festivals/diwali-bg.webp')",
+    "--festival-font-family": "'Roboto', sans-serif",
+    "effects": "fireworks"
+  },
+  "04-17": { // Easter
+    "--festival-secondary-color": "#FF69B4",
+    "--festival-background-color": "#FFF0F5",
+    "--festival-text-color": "#6A5ACD",
+    "--festival-offcanvs-bg-image": "url('../festivals/easter-bg.webp')",
+    "--festival-font-family": "'Pacifico', cursive",
+    "effects": "bunny-animation"
+  },
+  "12-18": { // Hanukkah
+    "--festival-secondary-color": "#1E90FF",
+    "--festival-background-color": "#000080",
+    "--festival-text-color": "#FFFFFF",
+    "--festival-offcanvs-bg-image": "url('../festivals/hanukkah-bg.webp')",
+    "--festival-font-family": "'Cardo', serif",
+    "effects": "candle-glow"
+  },
+  "03-08": { // Holi
+    "--festival-secondary-color": "#FF1493",
+    "--festival-background-color": "#FFFF00",
+    "--festival-text-color": "#008000",
+    "--festival-offcanvs-bg-image": "url('../festivals/holi-bg.webp')",
+    "--festival-font-family": "'Comic Sans MS', cursive",
+    "effects": "color-splash"
+  },
+  "06-28": { // Pride
+    "--festival-secondary-color": "#FF69B4",
+    "--festival-background-color": "linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)",
+    "--festival-text-color": "#FFFFFF",
+    "--festival-offcanvs-bg-image": "url('../festivals/pride-bg.webp')",
+    "--festival-font-family": "'Fredoka One', sans-serif",
+    "effects": "rainbow-glow"
+  },
+  "04-07": { // Health Day
+    "--festival-secondary-color": "#32CD32",
+    "--festival-background-color": "#F0FFF0",
+    "--festival-text-color": "#006400",
+    "--festival-offcanvs-bg-image": "url('../festivals/health-bg.webp')",
+    "--festival-font-family": "'Lato', sans-serif",
+    "effects": "pulse-glow"
+  }
+};
+
+// Apply festival theme if today matches
+if (festivalThemes[today]) {
+  const root = document.documentElement;
+  const theme = festivalThemes[today];
+  
+  // Apply CSS variables
+  for (let varName in theme) {
+    if (varName.startsWith('--')) {
+      root.style.setProperty(varName, theme[varName]);
+    }
+  }
+
+  // Add festival-theme class
+  document.body.classList.add("festival-theme");
+
+  // Optional effects
+  const effect = theme.effects;
+  switch(effect){
+    case "confetti":
+      loadConfetti(); break;
+    case "fireworks":
+      loadFireworks(); break;
+    case "spooky-glow":
+    case "subtle-glow":
+    case "candle-glow":
+    case "pulse-glow":
+    case "rainbow-glow":
+      applyGlowEffect(effect); break;
+    case "color-splash":
+      loadColorSplash(); break;
+    case "bunny-animation":
+      loadBunnyAnimation(); break;
+  }
+}
+
+// Minimal lightweight effect functions (examples)
+function loadConfetti(){ console.log("🎉 Confetti effect loaded"); }
+function loadFireworks(){ console.log("✨ Fireworks effect loaded"); }
+function applyGlowEffect(type){ console.log(`💡 ${type} effect applied`); }
+function loadColorSplash(){ console.log("🌈 Color splash effect loaded"); }
+function loadBunnyAnimation(){ console.log("🐰 Bunny animation loaded"); }
+
+// Function to dynamically append a script to <head>
+function loadScript(src) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.defer = true;
+    document.head.appendChild(script);
+}
+
+// Map festival effects to scripts
+const festivalScripts = {
+    "confetti": "https://app.embed.im/confetti.js",
+    "snow": "https://app.embed.im/snow.js",
+    "sparkles": "https://app.embed.im/sparkles.js",
+    "balloons": "https://app.embed.im/balloons.js",
+    "accessibility": "https://app.embed.im/accessibility.js" // always optional
+};
+
+// Example usage with your festival theme logic
+if (festivalThemes[today]) {
+    const theme = festivalThemes[today];
+    document.body.classList.add("festival-theme");
+
+    // Load main effect script
+    switch(theme.effects){
+        case "confetti":
+            loadScript(festivalScripts.confetti); break;
+        case "snow":
+            loadScript(festivalScripts.snow); break;
+        case "sparkles":
+            loadScript(festivalScripts.sparkles); break;
+        case "balloons":
+            loadScript(festivalScripts.balloons); break;
+    }
+
+    // Load accessibility script for all festivals (optional)
+    loadScript(festivalScripts.accessibility);
+}
+
+// Select all elements that have the data-aos attribute
+const elements = document.querySelectorAll('[data-aos]');
+
+// Loop through each element and remove the attribute
+elements.forEach(el => {
+    el.removeAttribute('data-aos');
+});
+
+console.log('All data-aos attributes removed ✅');
+
+document.addEventListener("DOMContentLoaded", () => {
+    const logoImg = document.querySelector(".navbar-brand .img-logo");
+    if (!logoImg) {
+        console.error("❌ Logo image not found!");
+        return;
+    }
+
+    // Remove old src and hide temporarily to force repaint
+    logoImg.removeAttribute("src");
+    logoImg.removeAttribute("srcset");
+    logoImg.removeAttribute("sizes");
+    logoImg.style.display = "none";
+
+    // URLs to try, in order
+    const urls = [
+        "https://flickrift.netlify.app/Assets/Logo.webp",
+        "https://flickrift-v1.netlify.app/Assets/Logo.webp"
+    ];
+
+    let index = 0;
+
+    // Function to try loading a URL
+    function tryLoad() {
+        if (index >= urls.length) {
+            console.error("❌ All logo URLs failed to load!");
+            return;
+        }
+
+        logoImg.src = urls[index];
+        logoImg.style.display = ""; // show logo
+        console.log(`⏳ Trying logo URL: ${urls[index]}`);
+
+        // Listen for load/error
+        logoImg.onerror = () => {
+            console.warn(`⚠️ Failed to load logo from: ${urls[index]}`);
+            index++;
+            tryLoad(); // try next URL
+        };
+
+        logoImg.onload = () => {
+            console.log(`✅ Navbar logo loaded from: ${urls[index]}`);
+            // remove handlers
+            logoImg.onerror = null;
+            logoImg.onload = null;
+        };
+    }
+
+    // Force repaint, then start loading
+    requestAnimationFrame(() => {
+        requestAnimationFrame(tryLoad);
+    });
+});
+
+
+
