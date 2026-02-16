@@ -374,7 +374,16 @@ main{
     }
 }
 
+/* For tablets and smaller */
 @media (max-width: 768px) {
+    #movie-pals {
+        padding: 0 !important;
+        background-size: cover !important; /* ensures the image fills the container */
+        background-position: center !important;
+        width: 100vw !important; /* force full viewport width */
+        margin-left: calc(-50vw + 50%); /* cancel any container padding/margin */
+    }
+
     #movie-player iframe {
         height: 360px;
     }
@@ -392,8 +401,13 @@ main{
     }
 }
 
+/* For phones */
 @media (max-width: 480px) {
-   
+    #movie-pals {
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%);
+    }
+
     #description {
         padding: 40px 10px;
     }
@@ -475,6 +489,7 @@ main{
   color: white !important;
   font-weight: bold !important;
 }
+
 
 
 
