@@ -555,5 +555,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Select all headings inside the container with class 'btn-head-wrapper'
+const containers = document.querySelectorAll('.container.btn-head-wrapper');
+
+containers.forEach(container => {
+    const heading = container.querySelector('h2'); // get the h2 inside this container
+    if (heading && !heading.id) {                 // check if heading exists and has no id
+        heading.id = 'episode-header';           // add the id
+        console.log('ID added to heading:', heading.textContent);
+    }
+});
 
 
