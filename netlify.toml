@@ -1,0 +1,7 @@
+[[plugins]]
+package = "atta-netlify-image-optimizer"
+
+[plugins.inputs]
+resizeWidth = 1200
+quality = 80
+convertToWebP = true
