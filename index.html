@@ -1,242 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 1. Bootstrap CSS -->
+<link rel="preload" href="./Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+</noscript>
 
+<!-- 2. Theme CSS -->
+<link rel="preload" href="./Assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="./Assets/css/theme.css">
+</noscript>
 
-<link rel="preload" as="image" fetchpriority="high" href="./Assets/marques-kaspbrak-n1amn-SHKzw-unsplash.jpg" />
-<link rel="icon" type="image/svg+xml" href="./Assets/favicon.svg">
+<!-- 3. Font Awesome 7 CSS -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</noscript>
 
-<link rel="preload" href="./Assets/css/bootstrap.min.css"" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/bootstrap.min.css""></noscript>
+<!-- 4. AOS CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
+</noscript>
 
-<script src="./Assets/js/bootstrap.bundle.min.js" defer ></script>
-
-
-<title>FlickRift – Free HD Movies & TV Shows Online | No Signup, Minimal Ads</title>
-
-<!-- Primary Meta Description -->
-<meta name="description" content="Watch free HD movies and binge the latest TV shows without sign-up or subscriptions. Instant streaming, minimal ads, fast loading, and safe access on any device.">
-
-<!-- Meta Keywords (High Intent + Non-Branded Focus) -->
-<meta name="keywords" content="free TV shows online, free action movies HD, watch movies without signup, HD movie streaming, global free movie site, Bollywood and Hollywood streaming, anime in HD free, safe kids shows online, binge full series free, minimal ads streaming platform">
-
-<meta name="keywords" content="powered by FlickRift free streaming">
-
-<!-- Robots / Crawlers -->
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="googlebot" content="index, follow">
-<meta name="bingbot" content="index, follow">
-<meta name="DuckDuckBot" content="index, follow">
-<meta name="Yandex" content="index, follow">
-<meta name="Baiduspider" content="index, follow">
-
-<!-- International Targeting (No Hard Geo-Restrictions) -->
-<link rel="alternate" hreflang="en" href="https://flickrift.netlify.app/">
-<link rel="alternate" hreflang="x-default" href="https://flickrift.netlify.app/">
-
-<!-- Open Graph / Social Sharing -->
-<meta property="og:title" content="Free HD Movies & TV Shows Online | No Signup Needed">
-<meta property="og:description" content="Stream your favorite movies and series for free with minimal ads and instant access across all devices.">
-<meta property="og:image" content="https://flickrift.netlify.app/Assets/Logo.png">
-<meta property="og:url" content="https://flickrift.netlify.app/">
-<meta property="og:type" content="website">
-
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free HD Movies & TV Shows | Stream Instantly">
-<meta name="twitter:description" content="Watch and stream movies & TV series in HD instantly. No sign-up — minimal ads.">
-<meta name="twitter:image" content="https://flickrift.netlify.app/Assets/Logo.png">
-<meta name="twitter:url" content="https://flickrift.netlify.app/">
-
-<!-- Canonical & Sitemap -->
-<link rel="canonical" href="https://flickrift.netlify.app/">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="https://flickrift.netlify.app/sitemap.xml">
-
-<!-- Schema.org JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "FlickRift",
-  "url": "https://flickrift.netlify.app/",
-  "description": "Watch free HD movies and popular TV shows with minimal ads and no signup required.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://flickrift.netlify.app/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "FlickRift",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://flickrift.netlify.app/Assets/Logo.png"
-    }
-  }
-}
-</script>
-
-<!-- Urdu -->
-<meta name="description" lang="ur" content="مفت HD فلمیں اور ٹی وی شوز دیکھیں بغیر سائن اپ کے۔ تیز رفتار اسٹریم، کم اشتہارات، اور محفوظ رسائی ہر ڈیوائس پر۔">
-<meta name="keywords" lang="ur" content="مفت فلمیں آن لائن, HD ٹی وی شوز, بغیر سائن اپ کے فلمیں, کم اشتہارات اسٹریمنگ, FlickRift">
-
-<!-- Hindi -->
-<meta name="description" lang="hi" content="मुफ्त HD फिल्में और टीवी शोज़ बिना साइन-अप के देखें। तेज़ स्ट्रीमिंग, कम विज्ञापन, और किसी भी डिवाइस पर सुरक्षित एक्सेस।">
-<meta name="keywords" lang="hi" content="फ्री मूवीज़ ऑनलाइन, HD टीवी शोज़, बिना साइन-अप फिल्में, कम एड्स स्ट्रीमिंग, FlickRift">
-
-<!-- Bengali -->
-<meta name="description" lang="bn" content="মুক্ত HD সিনেমা এবং টিভি শো কোনো সাইন-আপ ছাড়াই দেখুন। দ্রুত স্ট্রিমিং, কম বিজ্ঞাপন, এবং যেকোনো ডিভাইসে নিরাপদ অ্যাক্সেস।">
-<meta name="keywords" lang="bn" content="ফ্রি সিনেমা অনলাইন, HD টিভি শো, সাইন-আপ ছাড়া ফ্রি, কম বিজ্ঞাপন, FlickRift">
-
-<!-- Japanese -->
-<meta name="description" lang="ja" content="サインアップ不要で無料HD映画やテレビ番組を視聴。高速ストリーミング、広告少なめ、すべてのデバイスで安全にアクセス可能。">
-<meta name="keywords" lang="ja" content="無料映画, HDテレビ番組, サインアップ不要, 少ない広告, FlickRift">
-
-<!-- Korean -->
-<meta name="description" lang="ko" content="회원가입 없이 무료 HD 영화 및 TV 쇼를 시청하세요. 빠른 스트리밍, 최소 광고, 모든 기기에서 안전하게 접속 가능.">
-<meta name="keywords" lang="ko" content="무료 영화, HD TV 프로그램, 가입 없이 보기, 광고 최소화, FlickRift">
-
-<!-- Simplified Chinese -->
-<meta name="description" lang="zh-CN" content="免费观看HD电影和热门电视剧，无需注册。快速播放，广告少，任何设备安全访问。">
-<meta name="keywords" lang="zh-CN" content="免费视频, HD电视剧, 无需注册, 少广告播放, FlickRift">
-
-<!-- Traditional Chinese -->
-<meta name="description" lang="zh-TW" content="免費觀看HD電影和熱門影集，無需註冊。快速串流，廣告少，任何裝置安全存取。">
-<meta name="keywords" lang="zh-TW" content="免費電影, HD影集, 無需註冊, 廣告少, FlickRift">
-
-<!-- Thai -->
-<meta name="description" lang="th" content="ชมภาพยนตร์ HD และซีรีส์ทีวีฟรีโดยไม่ต้องสมัครสมาชิก สตรีมได้ทันที มีโฆษณาน้อย และเข้าถึงได้ปลอดภัยบนทุกอุปกรณ์">
-<meta name="keywords" lang="th" content="ภาพยนตร์ฟรี, ซีรีส์ทีวี HD, ดูหนังออนไลน์ไม่ต้องสมัคร, สตรีมโฆษณาน้อย, FlickRift">
-
-<!-- Indonesian -->
-<meta name="description" lang="id" content="Tonton film HD dan serial TV gratis tanpa perlu mendaftar. Streaming cepat, iklan minimal, aman di semua perangkat.">
-<meta name="keywords" lang="id" content="film gratis online, serial TV HD, tanpa daftar, streaming minim iklan, FlickRift">
-
-<!-- Spanish -->
-<meta name="description" lang="es" content="Mira películas HD y series de TV gratis sin registro. Transmisión rápida, pocos anuncios y acceso seguro en cualquier dispositivo.">
-<meta name="keywords" lang="es" content="películas gratis, series HD, sin registro, streaming con pocos anuncios, FlickRift">
-
-<!-- French -->
-<meta name="description" lang="fr" content="Regardez des films HD et des séries TV gratuitement sans inscription. Streaming rapide, peu de publicités, accès sécurisé sur tous les appareils.">
-<meta name="keywords" lang="fr" content="films gratuits, séries HD, sans inscription, streaming avec peu de pubs, FlickRift">
-
-<!-- German -->
-<meta name="description" lang="de" content="Kostenlose HD-Filme und TV-Shows ohne Anmeldung ansehen. Schnelles Streaming, minimale Werbung, sicherer Zugriff auf allen Geräten.">
-<meta name="keywords" lang="de" content="kostenlose Filme, HD-Serien, ohne Anmeldung, werbefreies Streaming, FlickRift">
-
-<!-- Portuguese (Brazil) -->
-<meta name="description" lang="pt-BR" content="Assista filmes HD e séries de TV grátis sem cadastro. Streaming rápido, poucos anúncios, acesso seguro em qualquer dispositivo.">
-<meta name="keywords" lang="pt-BR" content="filmes grátis, séries HD, sem cadastro, streaming com poucos anúncios, FlickRift">
-
-<link rel="alternate" hreflang="en" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="ur" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="hi" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="bn" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="ja" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="ko" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="zh-CN" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="zh-TW" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="th" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="id" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="es" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="fr" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="de" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="pt-BR" href="https://flickrift.netlify.app/" />
-<link rel="alternate" hreflang="x-default" href="https://flickrift.netlify.app/" />
+<!-- 5. Swiper CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css">
+</noscript>
 
 
 
-    <link rel="icon" type="image/x-icon" href="./Assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./Assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./Assets/favicon-16x16.png">
-<link rel="manifest" href="./Assets/site.webmanifest">
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
-    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-   defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- 7. jQuery (before custom scripts) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
-<!--   <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-  /> -->
+<!-- 8. Bootstrap JS -->
+<script src="../Assets/js/bootstrap.bundle.min.js" defer></script>
 
-<!---  <script src="./assets/js/all.js"></script> -->
+<!-- 9. AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
 
-<!---  <link rel="stylesheet" href="./assets/css/all.css"> -->
+<!-- 10. Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.js" defer></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+<!-- 11. Font Awesome 7 JS -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
+        integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <style>
-#contact-us {
-    background: transparent !important;
-}
-
-#contact-container {
-    width: 100% !important;
-    height: auto;
-}
-
-.contact-card {
-    background: wheat !important; 
-}
-
-.contact-card h3,
-#contact-head {
-    color: white !important;
-}
-
-.contact-card p {
-    color: white !important;
-}
-
-.contact-card .btn {
-    background-color: red !important;
-    width: 130px !important;
-    height: 50px !important;
-    font-size: 0.7rem !important;
-    white-space: nowrap; /* text-wrap none */
-    padding: 13px 12px;
-    font-weight: 600;
-    border: none;
-}
-
-
-
-  </style>
-
-   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
-  
-
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript>
-
- 
-
-   <script src="./Assets/js/custom.js" defer></script>
-
-  <link rel="preload" href="./Assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/theme.css"></noscript>
-
+<!-- 12. Your custom JS -->
+<script src="./Assets/js/custom.js" defer></script>
+<script src="./Assets/js/hero-swiper.js" defer></script>
+<script src="./Assets/js/custom2.js" defer></script>
+<style>
     
-   <script src="./Assets/js/custom2.js" defer></script>
-    
-  <link rel="preload" href="./Assets/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/footer.css"></noscript>
-    
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="HRGHi8Fp2/rvdZWfoveiLw" async></script>
+</style>
 </head>
-<body>
-  
 <header>
-    <!-- Navbar -->
+  <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
@@ -267,532 +93,278 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="d-flex justify-content-center align-items-center text-center">
-        <div class="hero-content">
-            <h1 class="display-4 animate__animated animate__fadeInUp wow animate__delay-1s">
-                Welcome to FlickRift – Free HD Movies & TV Shows
-            </h1>
-            <p class="lead animate__animated animate__fadeInUp wow animate__delay-2s">
-                Stream your favorite <strong>HD movies</strong>, binge-worthy <strong>TV shows</strong>, and fun kids content instantly — 100% free, with minimal ads, and no login required. FlickRift brings endless entertainment to your screen anytime, anywhere.
-            </p>
-            <a href="./App.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp wow animate__delay-3s">
-                Start Streaming Now
-            </a>
-        </div>
-    </section>
 </header>
+ <section class="container-fluid px-2 py-2 d-flex align-items-center" 
+         id="hero-section"
+         style="background: url('./Assets/marques-kaspbrak-n1amn-SHKzw-unsplash.webp') center/cover no-repeat; min-height: 100vh;">
 
-<main>
-   <section class="about-us container-fluid py-5" id="about-us">
-    <div class="container">
-        <!-- About Us Section -->
-        <h2 class="text-center mb-4 animate__animated animate__fadeInUp wow animate__delay-1s" id="about-head">About FlickRift</h2>
-        <div class="row align-items-center mb-5" id="about-sect">
-            <div class="col-lg-5 text-center mb-4 mb-lg-0 animate__animated animate__fadeInUp wow animate__delay-1s" id="about-img">
-                <img src="./Assets/Logo.jpeg" alt="FlickRift Free Movies & TV Shows" class="img-fluid rounded">
-            </div>
-            <div class="col-lg-7 animate__animated animate__fadeInUp wow animate__delay-1s" id="about-para">
-                <p><strong>FlickRift</strong> is your premier destination for <strong>free HD movies</strong> and <strong>TV shows online</strong>. With a diverse library spanning genres, cultures, and eras, FlickRift delivers seamless entertainment without any signup or subscription—just pure, instant streaming.
-
-                Our mission is to make high-quality entertainment accessible to everyone. By curating both classic favorites and the latest releases, we bring the world’s stories to your screen, connecting audiences across cultures and communities.
-
-               FlickRift continuously updates its library with fresh content, ensuring viewers always find something new—whether you crave action-packed blockbusters, indie gems, or binge-worthy series.
-
-               We combine human-curated selections with data-driven recommendations, blending organic discovery with trending content. This hybrid approach ensures you enjoy both critically acclaimed hits and the latest viral sensations.
-
-               From nostalgic 90s classics to global cinematic experiences, FlickRift empowers you to explore films and series beyond the mainstream. With <strong>free movies</strong> and <strong>free TV shows</strong>, zero sign-ups, and minimal ads, we provide a frictionless entertainment experience for every type of viewer.
-
-                Whether you’re in the mood for mainstream hits or hidden gems from around the world, FlickRift evolves with your interests, helping you discover new favorites every day.</p>
-            </div>
-        </div>
-
-        <hr class="my-5">
-
-       <!-- Our Vision Section -->
-<div class="our-vision container py-5 animate__animated animate__fadeInUp wow animate__delay-1s">
-    <h2 class="text-center mb-4">Our Vision</h2>
-
-    <p class="animate__animated animate__fadeInUp wow animate__delay-1s">
-        At FlickRift, our vision is to create a platform where entertainment is simple, accessible, and enjoyable for everyone. We aim to provide unlimited access to the latest movies and TV shows, allowing viewers to explore a vast library of content from around the world.
-    </p>
-
-    <p class="animate__animated animate__fadeInUp wow animate__delay-1s">
-        We focus on delivering a personalized streaming experience that adapts to each viewer’s tastes, ensuring seamless access across all devices. Safety and reliability are at the core of our platform, giving users a secure environment to enjoy their favorite films and series.
-    </p>
-
-    <p class="animate__animated animate__fadeInUp wow animate__delay-1s">
-        FlickRift is committed to constantly updating its library with fresh releases, trending titles, and timeless classics, so there is always something new to discover. Our advanced streaming technology ensures smooth playback, fast loading, and minimal interruptions.
-    </p>
-
-    <p class="animate__animated animate__fadeInUp wow animate__delay-1s">
-        Sustainability and responsible digital practices are also important to us. We strive to make online streaming efficient and environmentally conscious, providing a high-quality entertainment experience while minimizing our digital footprint.
-    </p>
-</div>
-
-    </div>
-</section>
-
-  <hr>
-
-<section id="why-us" class="container-fluid px-3 py-3 mx-2 my-2">
-    <div class="why container animate__animated animate__fadeInUp wow animate__delay-1s">
-        <h2 class="text-center mb-4 animate__animated animate__fadeInUp wow animate__delay-1s" id="why-head">Why Choose FlickRift?</h2>
-        
-        <div class="row  g-4 justify-content-center animate__animated animate__fadeInUp wow animate__delay-1s" >
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-film fa-3x mb-3"></i>
-                    <h3>Free Streaming</h3>
-                    <p>Enjoy unlimited <strong>HD movies</strong> and <strong>TV shows</strong> online for free, with no signup required.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-download fa-3x mb-3"></i>
-                    <h3>Download Movies</h3>
-                    <p>Download your favorite movies and series for offline viewing, either directly or using download managers for faster access.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-tv fa-3x mb-3"></i>
-                    <h3>Vast Library</h3>
-                    <p>Explore an extensive collection of movies, TV series, and shows across genres, languages, and countries.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-clock fa-3x mb-3"></i>
-                    <h3>Watch Anytime</h3>
-                    <p>Stream content on any device—phones, tablets, laptops, or smart TVs—anytime you like.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-ad fa-3x mb-3"></i>
-                    <h3>Ad-Supported</h3>
-                    <p>Access free movies and shows with occasional ads to support FlickRift’s smooth operation.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-globe fa-3x mb-3"></i>
-                    <h3>Global Selection</h3>
-                    <p>Discover movies and series from around the world, all curated in one convenient platform.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card ">
-                    <i class="fas fa-mobile-alt fa-3x mb-3"></i>
-                    <h3>Device Flexibility</h3>
-                    <p>Stream or download content on any device, from phones and tablets to laptops and smart TVs.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12 col-xl-4 col-lg-3 animate__animated animate__fadeInUp wow animate__delay-1s">
-                <div class="card why-card">
-                    <i class="fas fa-sync-alt fa-3x mb-3"></i>
-                    <h3>Fresh Content</h3>
-                    <p>New movies and TV shows added regularly, ensuring there’s always something new to watch.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-    <hr>
-<section id="for-kids" class="container-fluid px-3 py-3">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 mb-4">
-                <div class="kid-image float-left">
-                    <img src="./Assets/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png" 
-                         alt="Kids watching fun and educational movies on FlickRift" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="kid-text">
-                    <p>
-                        FlickRift is the ultimate destination for <strong>kids’ entertainment</strong>. Enjoy a curated collection of <strong>fun, educational, and age-appropriate movies and TV shows</strong> designed to engage and inspire children of all ages.
-                    </p>
-                    <p>
-                        Our <strong>safe, kid-friendly streaming environment</strong> ensures that all content, including occasional ads, is family-appropriate, giving parents peace of mind.
-                    </p>
-                    <p>
-                        Discover movies and shows that combine <strong>learning and fun</strong>, sparking curiosity and creativity while keeping children entertained.
+
+            <!-- LEFT CONTENT -->
+            <div class="col-md-6 text-white" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-content-container">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Discover the Magic of Movies with Flickrift
+                    </h1>
+
+                    <p class="lead mt-4">
+                        Your Ultimate Movie Companion for Reviews, Recommendations, and More!
                     </p>
 
-                    <!-- Hidden Extra Content -->
-                    <div id="extraContent" style="display: none;">
-                        <p>
-                            With FlickRift, kids can explore a growing library of <strong>free educational movies</strong> and <strong>TV shows</strong> that celebrate diversity, empathy, and imagination.
-                        </p>
-                        <p>
-                            Smart suggestions personalize content by age and interest, providing a thoughtful, parent-approved experience without overwhelming children.
-                        </p>
-                        <p>
-                            Families worldwide enjoy high-quality kids’ content free of subscription fees, fostering safe, enriching, and accessible entertainment.
-                        </p>
+                    <a href="./App.html" class="btn btn-primary btn-lg mt-3">
+                        Use App
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT SWIPER SLIDER -->
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+
+                <div class="swiper myHeroSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="./Assets/Img10/28-Days-Later-Cover.webp" class="img-fluid rounded-4 shadow-lg" alt="Slide 1">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./Assets/Img13/Industry-Cover.webp" class="img-fluid rounded-4 shadow-lg" alt="Slide 2">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./Assets/Img10/Abduction-Cover.webp" class="img-fluid rounded-4 shadow-lg" alt="Slide 3">
+                        </div>
+
+                           <div class="swiper-slide">
+                            <img src="./Assets/Img10/Bonnie-And-Bonnie-Cover.webp" class="img-fluid rounded-4 shadow-lg" alt="Slide 3">
+                        </div>
+
                     </div>
 
-                    <!-- Read More Button -->
-                    <button id="readMoreBtn" class="btn btn-primary mt-3">Read More</button>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination mt-3"></div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next text-white"></div>
+                    <div class="swiper-button-prev text-white"></div>
                 </div>
+
             </div>
+
         </div>
     </div>
 
-    <script>
-        document.getElementById("readMoreBtn").addEventListener("click", function() {
-            const extraContent = document.getElementById("extraContent");
-            if (extraContent.style.display === "none") {
-                extraContent.style.display = "block";
-                this.textContent = "Read Less";
-            } else {
-                extraContent.style.display = "none";
-                this.textContent = "Read More";
-            }
-        });
-    </script>
+</section>
+<main>
+ 
+
+<section class="container-fluid px-2 py-2" id="about-us"> 
+    <div class="container about-head-container" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="text-white mb-4">About Us</h1>
+    </div>
+    <div class="container" id="about-us-container">
+        <div class="row justify-content-center g-4">
+            
+            <!-- LEFT IMAGE -->
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+                <div class="about-image-container">
+                    <img src="./Assets/Logo.jpeg" alt="Flickrift Logo" class="img-fluid" id="logo-image">
+                </div>
+            </div>
+            
+            <!-- RIGHT CONTENT -->
+            <div class="col-lg-6" id="about-us-content-container" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+                <p class="text-white mb-3">
+                    Flickrift is your free streaming website for free movies across all genres including action movies, adventure, horror, indie, documentaries, romance, thriller, drama, comedy, animated, Bollywood, and Pakistani movies. 
+                </p>
+
+                <p class="text-white mb-3">
+                    Enjoy a seamless experience discovering new releases, hidden gems, and classic favorites—all without any subscription fees. Flickrift makes it easy to watch free movies anytime, anywhere. 
+                </p>
+
+                <a href="./about-us.html" class="btn btn-primary btn-lg mt-3">
+                    Learn More
+                </a>
+            </div>
+            
+        </div>
+    </div>
 </section>
 
-<section class="container-fluid px-2 py-2" id="flickrift-faq-section">
-    <h1 class="text-center mb-4" id="text-head">Frequently Asked Questions (FAQ'S)</h1>
-    <div class="container" id="faq-divider">
-        <div class="container-faq">
-            <div class="accordion" id="flickriftFAQ">
-  <!-- FAQ 1 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading1">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
-        Can I watch movies on Flickrift for free?
-      </button>
-    </h2>
-    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes, Flickrift offers a wide range of movies and TV shows available to stream online completely free, with no subscription required.
-      </div>
+<section class="container-fluid px-2 py-2" id="why-us"> 
+    <div class="container why-us-head-container" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-white mb-4 why-heading">
+            Why Choose Flickrift?
+        </h2>
     </div>
-  </div>
+    <div class="row justify-content-center g-4">
 
-  <!-- FAQ 2 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading2">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-        Do I need an account to watch movies?
-      </button>
-    </h2>
-    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        No, you can watch movies on Flickrift without creating an account. Simply browse and click to watch.
-      </div>
-    </div>
-  </div>
+        <!-- Card 1: Free Streaming -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-film fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Free Streaming</h3>
+                    <p>Enjoy unlimited HD movies and TV shows online for free, no signup required.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 3 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading3">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-        Is Flickrift available worldwide?
-      </button>
-    </h2>
-    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes, Flickrift is accessible globally. You can stream content from anywhere in the world using an internet connection.
-      </div>
-    </div>
-  </div>
+        <!-- Card 2: Download Movies -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-download fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Download Movies</h3>
+                    <p>Download your favorite movies and series for offline viewing easily.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 4 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading4">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-        What types of movies are available on Flickrift?
-      </button>
-    </h2>
-    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Flickrift features a variety of genres including Action, Comedy, Drama, Horror, Adventure, Romance, Thriller, Kids, Documentaries, Animated, Indie, and TV Shows.
-      </div>
-    </div>
-  </div>
+        <!-- Card 3: Vast Library -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-tv fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Vast Library</h3>
+                    <p>Explore movies, TV series, and shows across genres and countries.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 5 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading5">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-        Can I watch Flickrift on mobile devices?
-      </button>
-    </h2>
-    <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes, Flickrift is fully responsive and works on smartphones, tablets, and desktops without requiring any downloads or apps.
-      </div>
-    </div>
-  </div>
+        <!-- Card 4: Watch Anytime -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-clock fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Watch Anytime</h3>
+                    <p>Stream content on any device—phones, tablets, laptops, or smart TVs.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 6 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading6">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-        Are there ads on Flickrift?
-      </button>
-    </h2>
-    <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Flickrift includes minimal, non-intrusive ads to support the free streaming service, ensuring a smooth viewing experience.
-      </div>
-    </div>
-  </div>
+        <!-- Card 5: Ad-Supported -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-ad fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Ad-Supported</h3>
+                    <p>Access free movies and shows with occasional ads to support the platform.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 7 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading7">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
-        Can I suggest movies to be added on Flickrift?
-      </button>
-    </h2>
-    <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes! You can submit your suggestions through our contact page and we review requests regularly to update our library.
-      </div>
-    </div>
-  </div>
+        <!-- Card 6: Global Selection -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-globe fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Global Selection</h3>
+                    <p>Discover movies and series from around the world, curated in one platform.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 8 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading8">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
-        Do I need a VPN to watch Flickrift abroad?
-      </button>
-    </h2>
-    <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        No VPN is required. Flickrift is accessible worldwide without restrictions, so you can stream from any location.
-      </div>
-    </div>
-  </div>
+        <!-- Card 7: Device Flexibility -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Device Flexibility</h3>
+                    <p>Stream or download content on phones, tablets, laptops, or smart TVs.</p>
+                </div>
+            </div>
+        </div>
 
-  <!-- FAQ 9 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading9">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
-        How often is new content added?
-      </button>
-    </h2>
-    <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Flickrift updates its movie library weekly, including the latest indie films, TV shows, and trending content.
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ 10 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading10">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
-        Can I stream Flickrift on my smart TV?
-      </button>
-    </h2>
-    <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes, you can access Flickrift using the browser on smart TVs or by connecting a streaming device with internet access.
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ 11 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading11">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11" aria-expanded="false" aria-controls="faqCollapse11">
-        Is registration completely free?
-      </button>
-    </h2>
-    <div id="faqCollapse11" class="accordion-collapse collapse" aria-labelledby="faqHeading11" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes, all features on Flickrift are free. You can watch and explore movies without any payment or registration.
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ 12 -->
- <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading12">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12" aria-expanded="false" aria-controls="faqCollapse12">
-        Can I download movies from Flickrift?
-      </button>
-    </h2>
-    <div id="faqCollapse12" class="accordion-collapse collapse" aria-labelledby="faqHeading12" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes! Flickrift allows you to download movies and TV shows for offline viewing. You can download directly from the site or use tools like Internet Download Manager (IDM) for faster downloads. Enjoy your favorite content anytime, even without an internet connection.
-      </div>
-    </div>
-</div>
-
-
-  <!-- FAQ 13 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading13">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13" aria-expanded="false" aria-controls="faqCollapse13">
-        What video quality does Flickrift support?
-      </button>
-    </h2>
-    <div id="faqCollapse13" class="accordion-collapse collapse" aria-labelledby="faqHeading13" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Flickrift supports multiple video resolutions, including 720p and 1080p, to provide high-quality streaming for all devices.
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ 14 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading14">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse14" aria-expanded="false" aria-controls="faqCollapse14">
-        Is Flickrift safe to use?
-      </button>
-    </h2>
-    <div id="faqCollapse14" class="accordion-collapse collapse" aria-labelledby="faqHeading14" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        Yes, Flickrift is safe to use. We do not ask for personal payment info or sensitive data, ensuring secure streaming.
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ 15 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="faqHeading15">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse15" aria-expanded="false" aria-controls="faqCollapse15">
-        How do I report a technical issue on Flickrift?
-      </button>
-    </h2>
-    <div id="faqCollapse15" class="accordion-collapse collapse" aria-labelledby="faqHeading15" data-bs-parent="#flickriftFAQ">
-      <div class="accordion-body">
-        You can report technical issues via the contact page. Our support team responds quickly to ensure uninterrupted streaming.
-      </div>
-    </div>
-  </div>
-</div>
-
-
+        <!-- Card 8: Fresh Content -->
+        <div class="col-sm-12 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+            <div class="card why-card text-center p-3">
+                <div class="why-icon mb-3">
+                    <i class="fas fa-sync-alt fa-3x text-primary"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-2">Fresh Content</h3>
+                    <p>New movies and TV shows added regularly to keep your entertainment fresh.</p>
+                </div>
+            </div>
         </div>
 
     </div>
 </section>
+<section class="container-fluid px-2 py-2" id="faq-section"> <div class="container faq-header-container"> <h3 class="text-center mb-4 faq-heading"> Frequently Asked Questions </h3> </div> <div class="container faq-container"> <div class="accordion" id="flickriftFAQ"> <!-- FAQ 1 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading1"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1"> Can I watch movies on Flickrift for free? </button> </h2> <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes, Flickrift offers a wide range of movies and TV shows available to stream online completely free, with no subscription required. </div> </div> </div> <!-- FAQ 2 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading2"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2"> Do I need an account to watch movies? </button> </h2> <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> No, you can watch movies on Flickrift without creating an account. Simply browse and click to watch. </div> </div> </div> <!-- FAQ 3 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading3"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3"> Is Flickrift available worldwide? </button> </h2> <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes, Flickrift is accessible globally. You can stream content from anywhere in the world using an internet connection. </div> </div> </div> <!-- FAQ 4 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading4"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4"> What types of movies are available on Flickrift? </button> </h2> <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Flickrift features a variety of genres including Action, Comedy, Drama, Horror, Adventure, Romance, Thriller, Kids, Documentaries, Animated, Indie, and TV Shows. </div> </div> </div> <!-- FAQ 5 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading5"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5"> Can I watch Flickrift on mobile devices? </button> </h2> <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes, Flickrift is fully responsive and works on smartphones, tablets, and desktops without requiring any downloads or apps. </div> </div> </div> <!-- FAQ 6 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading6"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6"> Are there ads on Flickrift? </button> </h2> <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Flickrift includes minimal, non-intrusive ads to support the free streaming service, ensuring a smooth viewing experience. </div> </div> </div> <!-- FAQ 7 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading7"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7"> Can I suggest movies to be added on Flickrift? </button> </h2> <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes! You can submit your suggestions through our contact page and we review requests regularly to update our library. </div> </div> </div> <!-- FAQ 8 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading8"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8"> Do I need a VPN to watch Flickrift abroad? </button> </h2> <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> No VPN is required. Flickrift is accessible worldwide without restrictions, so you can stream from any location. </div> </div> </div> <!-- FAQ 9 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading9"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9"> How often is new content added? </button> </h2> <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Flickrift updates its movie library weekly, including the latest indie films, TV shows, and trending content. </div> </div> </div> <!-- FAQ 10 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading10"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10"> Can I stream Flickrift on my smart TV? </button> </h2> <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes, you can access Flickrift using the browser on smart TVs or by connecting a streaming device with internet access. </div> </div> </div> <!-- FAQ 11 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading11"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11" aria-expanded="false" aria-controls="faqCollapse11"> Is registration completely free? </button> </h2> <div id="faqCollapse11" class="accordion-collapse collapse" aria-labelledby="faqHeading11" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes, all features on Flickrift are free. You can watch and explore movies without any payment or registration. </div> </div> </div> <!-- FAQ 12 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading12"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12" aria-expanded="false" aria-controls="faqCollapse12"> Can I download movies from Flickrift? </button> </h2> <div id="faqCollapse12" class="accordion-collapse collapse" aria-labelledby="faqHeading12" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes! Flickrift allows you to download movies and TV shows for offline viewing. You can download directly from the site or use tools like Internet Download Manager (IDM) for faster downloads. Enjoy your favorite content anytime, even without an internet connection. </div> </div> </div> <!-- FAQ 13 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading13"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13" aria-expanded="false" aria-controls="faqCollapse13"> What video quality does Flickrift support? </button> </h2> <div id="faqCollapse13" class="accordion-collapse collapse" aria-labelledby="faqHeading13" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Flickrift supports multiple video resolutions, including 720p and 1080p, to provide high-quality streaming for all devices. </div> </div> </div> <!-- FAQ 14 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading14"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse14" aria-expanded="false" aria-controls="faqCollapse14"> Is Flickrift safe to use? </button> </h2> <div id="faqCollapse14" class="accordion-collapse collapse" aria-labelledby="faqHeading14" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> Yes, Flickrift is safe to use. We do not ask for personal payment info or sensitive data, ensuring secure streaming. </div> </div> </div> <!-- FAQ 15 --> <div class="accordion-item"> <h2 class="accordion-header" id="faqHeading15"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse15" aria-expanded="false" aria-controls="faqCollapse15"> How do I report a technical issue on Flickrift? </button> </h2> <div id="faqCollapse15" class="accordion-collapse collapse" aria-labelledby="faqHeading15" data-bs-parent="#flickriftFAQ"> <div class="accordion-body"> You can report technical issues via the contact page. Our support team responds quickly to ensure uninterrupted streaming. </div> </div> </div> </div> </div> </section>
 
-<!-- <section id="contact-us" class="container-fluid px-3 py-5 my-4">
-    <div class="container animate__animated animate__fadeInUp wow animate__delay-1s" id="contact-container">
-        <h2 class="text-center mb-5" id="contact-head">Contact Us</h2>
-
-        <div class="row justify-content-center align-items-start">
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="contact-section p-4">
-                    <h3 class="mb-3">Get in Touch</h3>
-                    <p>
-                        Have questions, suggestions, or want to request a movie or TV show?  
-                        Email us directly at:
-                    </p>
-                    <a href="mailto:flickrift1997@gmail.com" class="btn btn-primary btn-lg mb-3">Email us</a>
-                    <p>
-                        We aim to respond to all inquiries promptly. Your feedback helps us improve FlickRift and provide a better streaming experience for everyone.
-                    </p>
+<section class="container-fluid px-2 py-2" id="for-kids-section">
+    <div class="container for-kids-header" data-aos="fade-up" data-aos-duration="1000">
+        <h4 class="text-center mb-4 for-kids-heading">For Kids</h4>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center g-4 align-items-center">
+            
+            <!-- LEFT IMAGE -->
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+                <div class="for-kids-image-container container">
+                    <img src="./Assets/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.webp" 
+                         alt="For Kids Movies" 
+                         class="rounded img-fluid kids-image">
                 </div>
             </div>
-
-            <div class="line-div-vertical"></div>
-
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="contact-section p-4">
-                    <h3 class="mb-3">Submit Your Request</h3>
-                    <p>
-                        Want to suggest a specific movie or TV show?  
-                        Click the button below to fill out our request form.
+            
+            <!-- RIGHT CONTENT -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+                <div class="for-kids-content-container container p-4 rounded" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(15px);">
+                    <p class="text-white mb-3">
+                        Flickrift brings a special section just for kids! Enjoy free animated movies, educational shows, and family-friendly content designed to entertain and inspire young minds. From hilarious comedies to magical adventures, everything is safe and fun.
                     </p>
-                    <a href="./Request-Form.html" class="btn btn-primary btn-lg mt-2">Submit Movie Request</a>
+                    <p class="text-white mb-3">
+                        Explore colorful worlds, inspiring stories, and beloved characters without any subscription. Flickrift ensures kids can watch their favorite shows anytime, anywhere, on all devices.
+                    </p>
+                    <a href="./for-kids.html" class="btn btn-primary btn-lg mt-3">Learn More</a>
                 </div>
             </div>
+            
         </div>
     </div>
-</section> -->
+</section>
 
 <section class="container-fluid px-2 py-2" id="contact-us">
-  <h3 class=" text-center mb-3">Get in Touch</h3>
-  <div class="container" id="contact-us-wrapper-1">
-          <div class="row  g-4 justify-content-center animate__animated animate__fadeInUp wow animate__delay-1s" >
-            <div class="col-lg-6 col-sm-12">
-             <p>
-                        Have questions, suggestions, or want to request a movie or TV show?  
-                        Email us directly at:
-                    </p>
-                    <a href="mailto:flickrift1997@gmail.com" class="btn btn-primary btn-lg mb-3">Email us</a>
-                    <p>
-                        We aim to respond to all inquiries promptly. Your feedback helps us improve FlickRift and provide a better streaming experience for everyone.
-                    </p>
-            </div>
-                   
-            <div class="col-lg-6 col-sm-12">
-              <h3 class="mb-3">Submit Your Request</h3>
-                    <p>
-                        Want to suggest a specific movie or TV show?  
-                        Click the button below to fill out our request form.
-                    </p>
-                    <a href="./Request-Form.html" class="btn btn-primary btn-lg mt-2">Submit Movie Request</a>
-            </div>
-            </div>
-  </div>
-  
-
-
-  </section>
-
-     
+    <div class="contact-us-head container">
+        <h1 class="text-center mb-4 contact-heading">Contact Us</h1>
+    </div>
+    <div class="container" id="contact-container">
+    <div class="row justify-content-center g-4">
+     <div class="col-lg-6" 
+     style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YrchwHj-p0VfMsGXlNKpzNLhK_X9aTgU09zBrzfnOJvpEdiP9H9RStsUOLxx8Mg-_Pc&usqp=CAU');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 300px;">
+</div>
+        <div class="col-lg-6">
+            <div class="card contact-card p-4 rounded" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(15px);">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Get in Touch</h3>
+                    <p class="text-white mb-3">Have questions or feedback? We'd love to hear from you!</p>
+                    <a href="./contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+        </div>
+    </div>
+    </div>
+</section>
 </main>
-<footer class="container-fluid">
-    <div class="foot row">
-      <!-- Footer Logo -->
-      <div class="col-12 col-md-4 footer-logo text-center text-md-start">
-        <img src="./Assets/Logo.png" alt="I-Flixx Logo" class="img-fluid">
-      </div>
-      
-      <!-- Footer Links -->
-      <div class="col-12 col-md-4 footer-links text-center text-md-start">
-        <ul class="list-unstyled">
-          <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="./terms-of-services.html">Terms of Service</a></li>
-        </ul>
-      </div>
-    
-      <!-- Footer Social Links -->
-      <div class="col-12 col-md-4 footer-social-link text-center text-md-start">
-        <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-          <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
-          <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-          <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
-          <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-          
-        </ul>
-      </div>
-    </div>
-    
-    <!-- Footer Copyright -->
-    <div class="foot-cpyrht text-center">
-      <p>all ©️ reserved by I-Flixx 
-        <span id="power">Powered by <a class="nex" href="https://nexonix.netlify.app/">Nexonix</a></span>
-      </p>
-    </div>
-  </footer>
-
 </body>
 </html>
