@@ -61,12 +61,7 @@
 </script>
 
    
-    <!-- 1. Bootstrap CSS -->
-<link rel="preload" href="../Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="../Assets/css/bootstrap.min.css"></noscript>
-
-<!-- 2. Theme CSS -->
-<li<!-- 1. Bootstrap CSS -->
+ <!-- 1. Bootstrap CSS -->
 <link rel="preload" href="../Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
@@ -91,6 +86,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
 </noscript>
 
+<!-- 5. Swiper CSS -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+</noscript>
+
 <!-- 5. Additional page CSS -->
 <link rel="preload" href="../Assets/css/cast.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -102,6 +103,10 @@
     <link rel="stylesheet" href="../Assets/css/buttons.css">
 </noscript>
 
+<link rel="preload" href="../Assets/css/faq.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/faq.css">
+</noscript>
 
 <link rel="preload" href="../Assets/css/feature-slide.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -117,43 +122,93 @@
 <!-- 8. AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
 
-<!-- 9. Font Awesome 7 JS (defer) -->
+<!-- 9. Swiper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" defer></script>
+
+<!-- 10. Font Awesome 7 JS (defer) -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
         integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- 10. Your custom JS -->
+<!-- 11. Your custom JS -->
 <script src="../Assets/js/custom.js" defer></script>
 <script src="../Assets/js/custom2.js" defer></script>
+<script src="../Assets/js/App-bar.js"></script>
 </head>
 <body>
-   <header id="nav-header">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+   <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+    <div class="container">
+      
       <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="../Assets/Logo.webp" alt="Logo" class="img-logo">
+      <a class="navbar-brand" href="./index.html">
+        <img src="../Assets/Logo.webp" alt="Flickrift Logo" class="img-logo">
       </a>
 
-      <!-- Mobile Offcanvas Toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
       </button>
 
       <!-- Desktop Navbar Links -->
-      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
-        <ul class="navbar-nav ">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          
+          <!-- Search Link -->
           <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-              <i class="bi bi-search"></i> Search
+            <a class="nav-link d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="fas fa-search"></i> 
+              <span class="d-none d-md-inline">Search</span>
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <!-- Genres Dropdown -->
+          <li class="nav-item dropdown ms-lg-4">
+            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Genres
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../Action.html">Action</a></li>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-animate" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-start bg-dark-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <img src="../Assets/Logo.webp" alt="Logo" height="30"> 
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-3">
+          <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fas fa-search me-2"></i> Search
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link fs-5 dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genres
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-black rounded-0 border-0">
+               <li><a class="dropdown-item" href="../Action.html">Action</a></li>
               <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
               <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
               <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
@@ -165,43 +220,6 @@
               <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
               <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
               <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Offcanvas Menu for Mobile -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <i class="bi bi-search"></i> Search
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Genres
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="offcanvasDropdown">
-            <li><a class="dropdown-item" href="../Action.html">Action</a></li>
-            <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
-            <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
-            <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
-            <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
-            <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
-            <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
-            <li><a class="dropdown-item" href="../Thriller.html">Thriller</a></li>
-            <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
-            <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
-            <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
-            <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
           </ul>
         </li>
       </ul>
@@ -262,36 +280,23 @@
   </div>
   <script src="./season.js"></script>
 </section> -->
-<section class="container-fluid" id="Episodes" data-season="1">
+<section id="Episodes-1" class="my-5 py-4" data-season="1">
+  <div class="container" id="episode-btn-wrapper-1">
+    <h1 class="text-center text-primary fw-bold">Season 1:</h1>
+    <div id="ep-btns" class="d-flex flex-wrap gap-3 justify-content-center">
 
-  <!-- Heading Wrapper -->
-  <div class="container btn-head-wrapper">
-    <h2 class="text-center mb-4" id="episode-header">Season 1:</h2>
-  </div>
-
-  <!-- Button Outer Wrapper -->
-  <div class="container-fluid px-2 py-3" id="btn">
-
-    <div class="container btn-wrapper">
-
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-
-        <button id="s1-ep-1" class="btn btn-outline-dark custom-ep-btn ep-1" data-src="https://short.icu/OOfpaW69u">Episode 1</button>
-        <button id="s1-ep-2" class="btn btn-outline-dark custom-ep-btn ep-2" data-src="https://short.icu/nuRNn04P2">Episode 2</button>
-        <button id="s1-ep-3" class="btn btn-outline-dark custom-ep-btn ep-3" data-src="https://short.icu/BYxen7uEI">Episode 3</button>
-        <button id="s1-ep-4" class="btn btn-outline-dark custom-ep-btn ep-4" data-src="https://short.icu/ebPT1fJIlY">Episode 4</button>
-        <button id="s1-ep-5" class="btn btn-outline-dark custom-ep-btn ep-5" data-src="https://short.icu/fTT5Iv_Pu">Episode 5</button>
-        <button id="s1-ep-6" class="btn btn-outline-dark custom-ep-btn ep-6" data-src="https://short.icu/WIl8PWGEX">Episode 6</button>
-        <button id="s1-ep-7" class="btn btn-outline-dark custom-ep-btn ep-7" data-src="https://short.icu/ve5GE7Sfh">Episode 7</button>
-        <button id="s1-ep-8" class="btn btn-outline-dark custom-ep-btn ep-8" data-src="https://short.icu/WIGiBepv_">Episode 8</button>
-
-      </div>
-
+      <button id="s1-ep-1" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/OOfpaW69u">Episode 1</button>
+      <button id="s1-ep-2" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/nuRNn04P2">Episode 2</button>
+      <button id="s1-ep-3" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/BYxen7uEI">Episode 3</button>
+      <button id="s1-ep-4" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/ebPT1fJIlY">Episode 4</button>
+      <button id="s1-ep-5" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/fTT5Iv_Pu">Episode 5</button>
+      <button id="s1-ep-6" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/WIl8PWGEX">Episode 6</button>
+      <button id="s1-ep-7" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/ve5GE7Sfh">Episode 7</button>
+      <button id="s1-ep-8" class="btn btn-outline-dark custom-ep-btn" data-src="https://short.icu/WIGiBepv_">Episode 8</button>
+      
     </div>
   </div>
-
 </section>
-
 
       
     
@@ -322,12 +327,11 @@
         </section>
 
 
-<section id="casts" class="container-fluid py-5">
+<!-- <section id="casts" class="container-fluid py-5">
   <h2 class="text-center mb-5">Cast</h2>
   <div class="casts container">
     <div class="row justify-content-center">
 
-      <!-- Zoe Saldaña -->
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Zoe-Saldana.jpg" alt="Zoe Saldaña" class="card-img-top-pf">
@@ -338,7 +342,7 @@
         </div>
       </div>
 
-      <!-- Laysla De Oliveira -->
+
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Laysla-De-Oliveira.jpg" alt="Laysla De Oliveira" class="card-img-top-pf">
@@ -349,7 +353,6 @@
         </div>
       </div>
 
-      <!-- Nicole Kidman -->
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Nicole-Kidman.jpg" alt="Nicole Kidman" class="card-img-top-pf">
@@ -360,7 +363,6 @@
         </div>
       </div>
 
-      <!-- Morgan Freeman -->
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Morgan-Freeman.jpg" alt="Morgan Freeman" class="card-img-top-pf">
@@ -371,7 +373,6 @@
         </div>
       </div>
 
-      <!-- Michael Kelly -->
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Michael-Kelly.jpg" alt="Michael Kelly" class="card-img-top-pf">
@@ -382,7 +383,6 @@
         </div>
       </div>
 
-      <!-- Dave Annable -->
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Dave-Annable.jpg" alt="Dave Annable" class="card-img-top-pf">
@@ -393,7 +393,6 @@
         </div>
       </div>
 
-      <!-- Stephanie Nur -->
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Stephanie-Nur.jpg" alt="Stephanie Nur" class="card-img-top-pf">
@@ -404,7 +403,7 @@
         </div>
       </div>
 
-      <!-- Sam Asghari -->
+
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/Sam-Asghari.jpg" alt="Sam Asghari" class="card-img-top-pf">
@@ -415,7 +414,7 @@
         </div>
       </div>
 
-      <!-- LaMonica Garrett -->
+
       <div class="cast-card col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card casted-card">
           <img src="../Assets/Img2/LaMonica-Garrett.jpg" alt="LaMonica Garrett" class="card-img-top-pf">
@@ -428,8 +427,124 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
+<section id="casts" class="container-fluid px-2 py-2">
+    <div class="cast-head-container container">
+        <h3 class="text-center cast-heading mb-4 text-danger">Special Ops: Lioness Cast</h3>
+    </div>
+
+    <div class="cast-container container">
+        <div class="row justify-content-center g-4">
+
+            <!-- Zoe Saldaña as Joe -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img2/Zoe-Saldana.jpg" alt="Zoe Saldaña" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Zoe Saldaña</h3>
+                            <p class="card-text">as Joe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laysla De Oliveira as Cruz Manuelos -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img2/Laysla-De-Oliveira.jpg" alt="Laysla De Oliveira" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Laysla De Oliveira</h3>
+                            <p class="card-text">as Cruz Manuelos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nicole Kidman as Kaitlyn Meade -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img2/Nicole-Kidman.jpg" alt="Nicole Kidman" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Nicole Kidman</h3>
+                            <p class="card-text">as Kaitlyn Meade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Morgan Freeman as Edwin Mullins -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img2/Morgan-Freeman.jpg" alt="Morgan Freeman" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Morgan Freeman</h3>
+                            <p class="card-text">as Edwin Mullins</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Michael Kelly as Byron Westfield -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img2/Michael-Kelly.jpg" alt="Michael Kelly" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Michael Kelly</h3>
+                            <p class="card-text">as Byron Westfield</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jill Wagner as Bobby -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img2/Jill-Wagner.jpg" alt="Jill Wagner" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Jill Wagner</h3>
+                            <p class="card-text">as Bobby</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LaMonica Garrett as Tucker -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img8/LaMonica-Garrett.webp" alt="LaMonica Garrett" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">LaMonica Garrett</h3>
+                            <p class="card-text">as Tucker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 
