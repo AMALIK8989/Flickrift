@@ -585,18 +585,7 @@ cardWrappers.forEach(wrapper => {
 
 console.log('Bootstrap column classes updated for all card wrappers.');
 
-document.addEventListener("DOMContentLoaded", () => {
-    const logoImg = document.querySelector(".navbar-brand .img-logo");
-    if (!logoImg) return;
 
-    // Remove the existing src
-    logoImg.removeAttribute("src");
-
-    // Assign the new src
-    logoImg.src = "https://flickrift.netlify.app/Assets/Logo.webp";
-
-    console.log("✅ Navbar logo updated to new source!");
-});
 
 (function() {
     // 1️⃣ Find the old script
