@@ -1,32 +1,154 @@
- @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Space Grotesk', sans-serif !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 :root {
-  --secondary-color: rgb(114, 18, 23);
-  --background-color: #000000;
-  --text-color: #fff;
-  --offcanvs-bg-image: url('../abstract-bg.webp');
+      --bg-dark: #0a0a0c;
+      --bg-card: #131316;
+      --accent: #1db954;
+      --accent-glow: rgba(29, 185, 84, 0.4);
+      --text-primary: #ffffff;
+      --text-muted: #8a8a8f;
+      --danger: #e50914;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+       font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+    
+   /* =========================================
+   PREMIUM NAVBAR STYLES
+   ========================================= */
+
+/* 1. Navbar Base */
+#mainNav {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    background: transparent;
+    z-index: 1000; /* Higher than slider elements */
+    margin-bottom: 50px !important;
 }
 
-
-/* Just in case you ever want to style/hide it differently */
-.legacy-nav {
-  display: none !important;
+/* 2. "Scrolled" State - Solid Background */
+#mainNav.navbar-scrolled {
+/* From https://css.glass */
+background: rgba(236, 120, 120, 0.09);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.9px);
+-webkit-backdrop-filter: blur(4.9px);
+border: 1px solid rgba(236, 120, 120, 0.52);
 }
 
-body {
-  background-color: black !important;
-  overflow-x: hidden !important;
-  font-family: 'Space Grotesk', sans-serif !important;
+/* 3. Logo Sizing */
+.img-logo {
+    height: 45px; /* Adjust based on your logo */
+    background: rgba(255, 255, 255, 0.596);
+    transition: height 0.3s ease;
 }
 
+#mainNav.navbar-scrolled .img-logo {
+    height: 38px;
+}
 
-main{
-    margin-top: 30px !important;
+/* 4. Nav Links */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--accent); /* Uses your green accent variable */
+}
+
+/* 5. Dropdown Menu (Desktop) */
+.dropdown-menu-dark {
+    background: rgba(20, 20, 25, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    animation: fadeDown 0.2s ease forwards;
+}
+
+/* Dropdown Arrow (Optional visual indicator) */
+.dropdown-menu-dark::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Items */
+.dropdown-menu-dark .dropdown-item {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.dropdown-menu-dark .dropdown-item:hover,
+.dropdown-menu-dark .dropdown-item:focus {
+    background: var(--accent);
+    color: #000;
+    padding-left: 25px; /* Slide effect */
+}
+
+/* 6. Mobile Offcanvas Styling */
+.bg-dark-offcanvas {
+    background-image: url(https://nerdizmo.ig.com.br/wp-content/uploads/2023/04/assinantes-de-streaming.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 280px;
+}
+
+.offcanvas-body .nav-link {
+    font-family: 'Bebas Neue', sans-serif; /* Big headers for mobile */
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* 7. Animations */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hamburger Icon Styling */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Desktop */
+main {
+    margin-top: 30px !important; /* Match navbar height */
     padding: 60px !important;
     width: 100% !important;
     overflow: hidden !important;
@@ -35,236 +157,22 @@ main{
 /* Mobile devices (xs) */
 @media (max-width: 575.98px) {
     main {
-        margin-top: 15px !important;
-        padding: 0px !important;
+        margin-top: 120px !important; /* Mobile nav is usually taller */
+        padding: 20px !important;
     }
 }
 
 /* Tablets (sm + md) */
 @media (min-width: 576px) and (max-width: 991.98px) {
     main {
-        margin-top: 20px !important;
-        padding: 0px !important;
+        margin-top: 110px !important;
+        padding: 30px !important;
     }
 }
-
-/* =======================
-   Nav Header
-======================= */
-#nav-header {
-    display: block !important;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--background-color);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    height: auto;       /* fit content */
-    min-height: 0;
-    padding: 0;
-    position: relative;
-    z-index: 1100;
-}
-/* =======================
-   Navbar
-======================= */
-.navbar {
-    width: 100% !important;
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: transparent !important;
-}
-
-/* Logo */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand img.img-logo {
-    width: 100px;
-    height: 90px;
-    background: rgba(255, 255, 255, 0.678);
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand img.img-logo:hover {
-    transform: scale(1.1);
-}
-
-/* Navbar Toggler */
-.navbar-toggler {
-    border: none;
-    background-color: transparent;
-}
-
-.navbar-toggler-icon {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    display: block;
-    position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: '';
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    transition: 0.3s;
-}
-
-.navbar-toggler-icon::before { top: -8px; }
-.navbar-toggler-icon::after { top: 8px; }
-
-/* Navbar Links */
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-link {
-    color: var(--text-color) !important;
-    font-weight: 600;
-    padding: 8px 12px !important;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--secondary-color) !important;
-}
-
-.nav-link i {
-    margin-right: 6px;
-}
-
-/* Dropdown Menus */
-.nav-item .dropdown-menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    position: relative;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    padding: 15px;
-    border-radius: 8px;
-    min-width: 300px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.nav-item .dropdown-menu.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-item {
-    padding: 8px 10px;
-    color: #fff;
-    background-color: #222;
-    border-radius: 5px;
-    text-align: center;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.dropdown-item:hover {
-    background-color: var(--secondary-color);
-    color: #000;
-}
-
-/* =======================
-   Offcanvas Mobile Menu
-======================= */
-.offcanvas {
-    position: fixed !important;       /* overlay, doesn’t push content */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;      /* scroll if content exceeds screen */
-    color: var(--text-color);
-    z-index: 1050;
-    background-color: transparent; /* handled by pseudo-element */
-}
-
-.offcanvas::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--offcanvs-bg-image);
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.6) blur(2px);
-    z-index: 0;
-}
-
-.offcanvas * {
-    position: relative;
-    z-index: 1;
-}
-
-.offcanvas .nav-link {
-    color: var(--text-color);
-    padding: 10px 15px;
-}
-
-.offcanvas .nav-link:hover {
-    color: var(--secondary-color);
-}
-
-.offcanvas .dropdown-menu {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    grid-template-columns: 1fr;
-    border-radius: 6px;
-    background-color: #222;
-    padding: 10px 0;
-    display: none; /* hidden by default */
-}
-
-.offcanvas .dropdown-menu.show {
-    display: block !important; /* force visible */
-    position: relative;        /* relative so it stacks inside offcanvas */
-    width: 100%;
-}
-.btn-close{
-    color: white !important;
-}
-
-/* =======================
-   Responsive Adjustments
-======================= */
-@media (max-width: 991px) {
-   
-
-    .offcanvas .dropdown-item {
-        text-align: left;
-        padding: 10px 15px;
-    }
-}
-
-
 /* ---------- Movie Player Section ---------- */
 #movie-pals {
     position: relative; /* for pseudo-elements */
-    padding: 80px 20px;
+    padding: 150px 0 150px 0;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;
@@ -490,6 +398,22 @@ main{
   font-weight: bold !important;
 }
 
+.movie-tag {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.2);
+}
 
-
-
+.movie-tag:hover {
+  background: #ffffff;
+  color: #000;
+  transform: translateY(-3px);
+}

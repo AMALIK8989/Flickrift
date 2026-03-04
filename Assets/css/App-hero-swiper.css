@@ -1,0 +1,388 @@
+/* 2. Slider Section Base */
+#slider-section {
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  position: relative; /* Context for z-index */
+}
+
+/* 3. Background Swiper */
+.bgSwiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bgSwiper .swiper-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bgSwiper .swiper-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 12, 0.95) 0%,
+    rgba(10, 10, 12, 0.7) 50%,
+    rgba(10, 10, 12, 0.4) 100%
+  );
+}
+
+/* 4. Atmospheric Elements */
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 8s ease-in-out infinite;
+}
+
+.glow-orb-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent);
+  top: -100px;
+  right: 10%;
+}
+
+.glow-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: #0d47a1;
+  bottom: -50px;
+  left: 5%;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* 5. FIX: Container & Content Layer (Rendering Fix) */
+/* Force the container to sit above background/atmosphere and fill height */
+#slider-section > .container {
+  height: 100%;
+  z-index: 10; /* Higher than atmosphere (z-2) */
+  position: relative;
+}
+
+/* Ensure the row stretches to center content vertically */
+#slider-section > .container > .row {
+  height: 100%;
+}
+
+/* 6. Content Styling */
+#movieTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#movieDesc {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+/* Buttons */
+.btn-danger {
+  background: var(--danger);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-danger:hover {
+  background: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* 7. Poster Swiper (Critical for 'slidesPerView: auto') */
+.posterSwiper {
+  perspective: 1000px;
+}
+
+/* IMPORTANT: Width and Height required for 'slidesPerView: auto' to work */
+.posterSwiper .swiper-slide {
+  width: 300px;
+  height: 450px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative; 
+}
+
+.posterSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.posterSwiper .swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+.posterSwiper .swiper-slide-active {
+  transform: rotateY(-5deg) scale(1.02);
+  box-shadow: 
+      0 35px 60px rgba(0, 0, 0, 0.6),
+      0 0 60px var(--accent-glow),
+      0 0 0 1px rgba(29, 185, 84, 0.2);
+}
+
+/* Poster Badge & Rating */
+.poster-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--accent);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.poster-rating {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.poster-rating svg {
+  color: #fbbf24;
+}
+
+/* 8. Navigation & Pagination */
+.slider-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.slide-counter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.slide-counter .current {
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+/* 9. Progress Bar */
+.progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #4ade80);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* 10. Content Animation */
+.content-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* Genre Tags */
+.genre-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.genre-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* 11. Responsive */
+@media (max-width: 991px) {
+  #slider-section {
+    min-height: auto;
+    padding: 100px 0;
+  }
+  
+  /* Fix container height for mobile */
+  #slider-section > .container {
+    height: auto;
+  }
+
+  .row.align-items-center {
+    flex-direction: column-reverse;
+  }
+  
+  .col-lg-6 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  #movieDesc {
+    margin: 0 auto;
+  }
+  
+  .d-flex.gap-3 {
+    justify-content: center;
+  }
+  
+  .posterSwiper {
+    width: 80% !important;
+    max-width: 300px;
+  }
+
+  .posterSwiper .swiper-slide {
+    width: 250px !important;
+    height: 375px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .genre-tags {
+    justify-content: center;
+  }
+  
+  #movieTitle {
+    font-size: 3.5rem;
+  }
+  
+  .slider-nav {
+    bottom: 20px;
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
