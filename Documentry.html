@@ -58,6 +58,7 @@
 <!-- 10. Your custom JS -->
 <script src="./Assets/js/custom.js" defer></script>
 <script src="./Assets/js/custom2.js" defer></script>
+<script src="./Assets/js/app-bar.js" defer></script>
 
 
 
@@ -155,38 +156,40 @@
 </header>
     <main>
 <section class="container-fluid px-2 py-2" id="Card-hold">
-<p class="text-center text-white">
-    FlickRift brings together the finest Documentaries that inform, inspire, and captivate. From eye-opening true stories and historical explorations to nature specials and cultural deep dives, our curated collection lets you explore the world from every angle. Stream your favorite documentaries in HD online and discover stories that expand your mind.
-</p>
-    <div class="container" id="card-container">
-        <div class="row justify-content-center g-4" id="card-place">
-            
-            <!-- Salam -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-1">
-                <div class="card h-100" id="movie-card-1">
-                    <div class="card-img-container ">
-                        <a href="./Documentary/Salam.html" class="d-block">
-                            <img src="./Assets/Img8/Salam-Info-Card.webp" alt="Salam" class="card-img-top w-100 card-img-top-af" id="movie-img-1">
-                            <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
-                                <h3 class="movie-title text-white mb-2">Salam</h3>
-                                <div class="movie-rating d-flex align-items-center">
-                                    <div class="rating-stars text-warning me-2">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <span class="rating-value text-white-50">8.1/10</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+   <div class="container movie-para-container" id="movie-container" data-aos="fade-up">
+      <p class="text-center text-white">
+         FlickRift brings together the finest Documentaries that inform, inspire, and captivate. From eye-opening true stories and historical explorations to nature specials and cultural deep dives, our curated collection lets you explore the world from every angle. Stream your favorite documentaries in HD online and discover stories that expand your mind.
+      </p>
+   </div>
+   <div class="container" id="card-container">
+      <div class="row justify-content-center g-4" id="card-place">
+
+         <!-- Salam -->
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-1" data-aos="fade-up" data-aos-delay="0">
+            <div class="card h-100" id="movie-card-1">
+               <div class="card-img-container ">
+                  <a href="./Documentary/Salam.html" class="d-block">
+                     <img src="./Assets/Img8/Salam-Info-Card.webp" alt="Salam" class="card-img-top w-100 card-img-top-af" id="movie-img-1">
+                     <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                        <h3 class="movie-title text-white mb-2">Salam</h3>
+                        <div class="movie-rating d-flex align-items-center">
+                           <div class="rating-stars text-warning me-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <span class="rating-value text-white-50">8.1/10</span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
             </div>
-            
-        </div>
-    </div>
+         </div>
+
+      </div>
+   </div>
 </section>
  <section class="container-fluid px-2 py-2" id="pagination-section">
   <div class="container">
