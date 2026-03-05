@@ -311,4 +311,18 @@ if (container) {
                 spaceBetween: 30
             }
         }
+
     });
+
+// Inside custom.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if AOS exists before initializing
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+    } else {
+        console.error('AOS library not loaded');
+    }
+});
