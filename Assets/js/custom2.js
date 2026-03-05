@@ -314,15 +314,26 @@ if (container) {
 
     });
 
-// Inside custom.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if AOS exists before initializing
-    if (typeof AOS !== 'undefined') {
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof AOS !== "undefined") {
+
         AOS.init({
             duration: 1000,
-            once: false
+            once: false,
+            disable: false,
+            startEvent: 'load',
+            offset: 120,
+            mirror: true
         });
+
+        window.addEventListener("load", function () {
+            AOS.refreshHard();
+        });
+
     } else {
-        console.error('AOS library not loaded');
+        console.error("AOS library not loaded");
     }
+
 });
+
