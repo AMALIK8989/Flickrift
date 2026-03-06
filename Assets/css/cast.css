@@ -1,121 +1,165 @@
-/* =========================
+/* /* =========================
    CAST SECTION GLASS BACKDROP
 ========================= */
 #casts {
   background: transparent !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  padding: 3.5rem 0 !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 4rem 0 !important;
   color: #fff !important;
+  position: relative;
+  z-index: 1;
+}
+
+.cast-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff !important;
+  margin-bottom: 3rem !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Helper to ensure Bootstrap cols don't collapse too small */
+.cast-container .col-6, 
+.cast-container .col-md-4, 
+.cast-container .col-lg-3 {
+  margin-bottom: 2rem; /* Adds vertical spacing between rows */
 }
 
 /* =========================
-   ENSURE CARDS DON'T SHRINK
+   PROFESSIONAL STREAMING CARD
 ========================= */
-.cast-container {
-  width: 100% !important;
-}
-
-.cast-heading{
-   text-align: center;
-    color: #ff2525c5 !important;
-}
 .casted-card {
   width: 100% !important;
-  max-width: 420px !important;  /* stops shrinking */
+  height: auto !important; /* Allow height to be determined by content */
   display: flex !important;
   flex-direction: column !important;
-  border-radius: 16px !important;
+  border-radius: 12px !important; /* Slightly rounded, modern look */
   overflow: hidden !important;
   cursor: pointer !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-
+  
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  
+  /* Smooth Transitions */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease !important;
 }
 
 /* =========================
-   GLASSMORPH CARD STYLE
-========================= */
-.casted-card {
-  height: 550px !important;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.35) !important;
-  transition: box-shadow 0.35s ease, border 0.35s ease !important;
-}
-
-/* =========================
-   GLOW HOVER (NO SCALE)
+   HOVER EFFECTS (NETFLIX STYLE)
 ========================= */
 .casted-card:hover {
-  box-shadow:
-    0 0 20px rgba(0, 255, 255, 0.65),
-    0 0 40px rgba(255, 0, 255, 0.45),
-    0 0 55px rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  transform: translateY(-8px) scale(1.02) !important; /* Subtle lift */
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(229, 9, 20, 0.4) !important; /* Red glow accent */
 }
 
 /* =========================
-   CARD IMAGE
+   IMAGE AREA (RESPONSIVE)
 ========================= */
 .card-img-container {
+  position: relative !important;
   width: 100% !important;
-  height: 490px !important;
-  display: block !important;
+  /* 2:3 Aspect Ratio (Standard Poster) - Fixes all responsive issues */
+  aspect-ratio: 2/3 !important; 
+  overflow: hidden !important;
   padding: 0 !important;
+  background: #000 !important;
 }
 
 .card-img-top-pf {
   width: 100% !important;
-  height: 480px !important;
+  height: 100% !important;
   object-fit: cover !important;
-  border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+  object-position: center top !important; /* Focus on faces */
+  image-rendering: optimizeQuality !important;
+  
+  /* Zoom effect on hover */
+  transition: transform 0.5s ease !important;
+}
+
+.casted-card:hover .card-img-top-pf {
+  transform: scale(1.08) !important;
+}
+
+/* Gradient Overlay to make text readable */
+.card-img-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%) !important;
+  z-index: 1 !important;
 }
 
 /* =========================
    TEXT STYLING
 ========================= */
 .card-body {
-  padding: 1rem 0.8rem !important;
+  position: relative !important;
+  padding: 1rem !important;
+  background: transparent !important;
+  z-index: 2 !important;
+  /* Pull text up over the image bottom slightly if using overlay style */
+  margin-top: -40px; 
 }
 
-.card-details h3 {
-  font-size: 1.3rem !important;
-  font-weight: 600 !important;
+.card-title, .card-details h3 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
   color: #fff !important;
+  margin-bottom: 0.25rem !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+}
+
+.card-text, .card-details p {
+  font-size: 0.9rem !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin: 0 !important;
+  text-transform: uppercase;
   letter-spacing: 0.5px !important;
-  margin-bottom: 0.2rem !important;
+  font-weight: 500 !important;
 }
 
-.card-details p {
-  font-size: 1rem !important;
-  color: #d6d6d6 !important;
-  margin: 0 !important;
-}
-.card-title {
-  font-size: 1.2rem !important;
-  font-weight: 600 !important;
-  color: #fff !important;
-  margin-bottom: 0.3rem !important;
-}
-.card-text {
-  font-size: 1rem !important;
-  color: #d6d6d6 !important;
-  margin: 0 !important;
-}
 /* =========================
-   RESPONSIVE IMAGE FIX
+   RESPONSIVE FIXES
 ========================= */
 @media (max-width: 768px) {
-  .card-img-top-pf {
-    height: 480px !important;
+  .cast-heading {
+    font-size: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .card-body {
+    padding: 0.8rem !important;
+  }
+  
+  .card-title {
+    font-size: 1rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .card-img-top-pf {
-    height: 450px !important;
+  /* On mobile, Bootstrap cols usually span half width (col-6) */
+  /* Aspect ratio handles the height automatically, no fixed px needed */
+  .cast-container .col-6 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
- 
 }
