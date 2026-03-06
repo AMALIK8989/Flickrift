@@ -311,7 +311,6 @@ if (container) {
                 spaceBetween: 30
             }
         }
-
     });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -336,4 +335,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
