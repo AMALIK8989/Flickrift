@@ -243,6 +243,7 @@ main {
 #movie-player iframe {
     width: 100%;
     height: 100%;
+    border-radius: 30px;
 }
 
 /* ---------- Description Section ---------- */
@@ -416,4 +417,5 @@ main {
   background: #ffffff;
   color: #000;
   transform: translateY(-3px);
+
 }
