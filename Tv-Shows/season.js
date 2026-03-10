@@ -7,9 +7,12 @@
   $(function () {
     console.log('✅ jQuery loaded, running Season/Episode script...');
 
+    // 🔑 Create page-specific storage keys
+    const PAGE_ID = window.location.pathname;
+
     const STORAGE_KEYS = {
-      season: 'selectedSeason',
-      episode: 'selectedEpisodeSrc'
+      season: `selectedSeason_${PAGE_ID}`,
+      episode: `selectedEpisodeSrc_${PAGE_ID}`
     };
 
     // Ensure iframe exists
@@ -34,15 +37,16 @@
 
     $allSeasons.hide();
 
-    // 🔥 Restore Saved State OR Load Season 1 Initially
+    // Restore saved state for THIS series page
     let savedSeason = localStorage.getItem(STORAGE_KEYS.season);
     let savedEpisode = localStorage.getItem(STORAGE_KEYS.episode);
 
     if (!savedSeason) {
-      savedSeason = '1'; // Only default if nothing saved
+      savedSeason = '1';
     }
 
     let $activeSection = $(`section.Episodes[data-season='${savedSeason}']`);
+
     if (!$activeSection.length) {
       savedSeason = '1';
       $activeSection = $("section.Episodes[data-season='1']");
@@ -63,7 +67,7 @@
       }
     }
 
-    // 🎯 Season Change
+    // Season Change
     $('#season-selector').off('change').on('change', function () {
       let selectedSeason = $(this).val();
       let $section = $(`section.Episodes[data-season='${selectedSeason}']`);
@@ -76,17 +80,21 @@
       localStorage.setItem(STORAGE_KEYS.season, selectedSeason);
 
       let $firstEpisode = $section.find('.custom-ep-btn').first();
+
       if ($firstEpisode.length) {
         let src = $firstEpisode.data('src');
+
         $iframe.attr('src', src);
         localStorage.setItem(STORAGE_KEYS.episode, src);
+
         showToast('success', `Season ${selectedSeason} - Episode 1 Loaded`);
       }
     });
 
-    // 🎬 Episode Click
+    // Episode Click
     $(document).off('click', 'section.Episodes button.custom-ep-btn')
       .on('click', 'section.Episodes button.custom-ep-btn', function () {
+
         let $btn = $(this);
         let season = $btn.closest('section.Episodes').data('season');
         let epNumber = $btn.text().trim();
@@ -100,8 +108,9 @@
         showToast('success', `Season ${season} - ${epNumber} is now playing`);
       });
 
-    // 🔔 Toast
+    // Toast
     function showToast(type, message) {
+
       let toastClass = type === 'success'
         ? 'bg-success'
         : 'bg-warning text-dark';
@@ -121,6 +130,7 @@
       `);
 
       $('body').append(toast);
+
       let bsToast = new bootstrap.Toast(toast[0]);
       bsToast.show();
 
@@ -128,4 +138,5 @@
     }
 
   });
+
 })();
