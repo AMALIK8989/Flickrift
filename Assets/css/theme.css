@@ -51,6 +51,9 @@ header {
     backdrop-filter: blur(10px);
 }
 
+.navbar-collapse{
+    background: white !important;
+}
 /* ======== HERO SECTION ======== */
 #hero-section {
     position: relative;
