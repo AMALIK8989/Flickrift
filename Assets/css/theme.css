@@ -51,8 +51,17 @@ header {
     backdrop-filter: blur(10px);
 }
 
-.navbar-collapse{
-    background: white !important;
+/* Mobile and tablet screens */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #000;
+    }
 }
 /* ======== HERO SECTION ======== */
 #hero-section {
