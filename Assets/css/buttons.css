@@ -1,9 +1,9 @@
 /* Section heading */
 #Episodes h2#episode-header {
-  color: red !important;                 /* Heading in red */
+  color: red !important;
   font-weight: bold !important;
-  margin-bottom: 1.5rem !important;      /* Spacing below heading */
-  text-transform: uppercase !important;  /* Optional: uppercase text */
+  margin-bottom: 1.5rem !important;
+  text-transform: uppercase !important;
 }
 
 /* Container holding buttons */
@@ -13,22 +13,25 @@
 
 /* Base style for all episode buttons */
 .custom-ep-btn {
-  position: relative !important;             /* Needed for before/after pseudo-elements */
-  background-color: red !important;          /* Red background */
-  color: white !important;                   /* White text */
-  border: none !important;                   /* Remove default border */
-  border-radius: 0 !important;               /* No rounded corners */
-  padding: 0.5rem 1.2rem !important;         /* Padding for button size */
-  margin: 0.5rem !important;                 /* Space between buttons */
-  overflow: hidden !important;               /* Hide pseudo-elements outside button */
-  cursor: pointer !important;                /* Pointer on hover */
+  position: relative !important;
+  background-color: red !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.5rem 1.2rem !important;
+  
+  /* REMOVED margin: 0.5rem !important; */
+  /* Let Bootstrap's 'gap-3' handle the spacing instead */
+  
+  overflow: hidden !important;
+  cursor: pointer !important;
   font-weight: bold !important;
-  z-index: 0 !important;                     /* Ensure text is above pseudo-elements */
-  text-transform: uppercase !important;      /* Optional: make text uppercase */
-  transition: color 0.3s ease !important;    /* Smooth text color transition */
+  z-index: 0 !important;
+  text-transform: uppercase !important;
+  transition: color 0.3s ease !important;
 }
 
-/* Pseudo-elements for before/after hover effect */
+/* Pseudo-elements for hover effect */
 .custom-ep-btn::before,
 .custom-ep-btn::after {
   content: "" !important;
@@ -36,28 +39,24 @@
   top: 0 !important;
   height: 100% !important;
   width: 0 !important;
-  background-color: #cc0000 !important;     /* Slightly darker red */
-  z-index: -1 !important;                    /* Behind button text */
+  background-color: #cc0000 !important;
+  z-index: -1 !important;
   transition: width 0.4s ease !important;
 }
 
-/* Left-to-right effect */
 .custom-ep-btn::before {
   left: 0 !important;
 }
 
-/* Right-to-left effect */
 .custom-ep-btn::after {
   right: 0 !important;
 }
 
-/* On hover, expand both pseudo-elements to cover button */
 .custom-ep-btn:hover::before,
 .custom-ep-btn:hover::after {
-  width: 50% !important;                     /* Together, they cover full width */
+  width: 50% !important;
 }
 
-/* Ensure text stays readable on hover */
 .custom-ep-btn:hover {
   color: white !important;
 }
