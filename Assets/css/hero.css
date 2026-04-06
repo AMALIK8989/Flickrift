@@ -155,39 +155,204 @@
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
 
-    /* Responsive */
-    @media (max-width: 991px) {
-        #slider-section { height: auto; padding: 80px 0; }
-        .row.align-items-center { flex-direction: column-reverse; }
-        #poster-carousel { height: 350px; }
-        .poster-card { width: 220px; height: 330px; }
-        /* Adjust transforms for mobile */
-        .poster-card.active { transform: translate(-50%, -50%) scale(1.05); }
-        .poster-card.prev { transform: translate(-120%, -50%) rotateY(15deg) scale(0.8); }
-        .poster-card.next { transform: translate(20%, -50%) rotateY(-15deg) scale(0.8); }
-        
-        #movieDesc { margin: 0 auto 2rem auto; }
-        .col-lg-6 { text-align: center; margin-top: 2rem; }
+  /* ===============================
+   🔥 EXTRA LARGE (Desktops ≥1400px)
+================================= */
+@media (max-width: 1400px) {
+    #poster-carousel {
+        height: 420px;
     }
 
-    @media (max-width: 576px) {
- .cta-btn-container { justify-content: center; 
-               }
-               
-  .genre-tags {
-    justify-content: center;
-  }
-  
-  #movieTitle {
-    font-size: 3.5rem;
-  }
-  
-  .slider-nav {
-    bottom: 20px;
-  }
-  
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-  }
+    .poster-card {
+        width: 280px;
+        height: 420px;
+    }
+}
+
+/* ===============================
+   💻 LARGE (Laptops ≤1200px)
+================================= */
+@media (max-width: 1200px) {
+    #movieTitle {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+
+    #poster-carousel {
+        height: 400px;
+    }
+
+    .poster-card {
+        width: 260px;
+        height: 400px;
+    }
+
+    .poster-card.prev {
+        transform: translate(-130%, -50%) rotateY(20deg) scale(0.85);
+    }
+
+    .poster-card.next {
+        transform: translate(30%, -50%) rotateY(-20deg) scale(0.85);
+    }
+}
+
+/* ===============================
+   📱 MEDIUM (Tablets ≤991px)
+================================= */
+@media (max-width: 991px) {
+    #slider-section {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .row.align-items-center {
+        flex-direction: column-reverse;
+    }
+
+    #poster-carousel {
+        height: 350px;
+    }
+
+    .poster-card {
+        width: 220px;
+        height: 330px;
+    }
+
+    .poster-card.active {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .poster-card.prev {
+        transform: translate(-120%, -50%) rotateY(15deg) scale(0.8);
+    }
+
+    .poster-card.next {
+        transform: translate(20%, -50%) rotateY(-15deg) scale(0.8);
+    }
+
+    .col-lg-6 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #movieDesc {
+        margin: 0 auto 2rem auto;
+    }
+
+    .genre-tags {
+        justify-content: center;
+    }
+}
+
+/* ===============================
+   📲 SMALL (Tablets/Big Phones ≤768px)
+================================= */
+@media (max-width: 768px) {
+    #movieTitle {
+        font-size: 3rem;
+    }
+
+    #movieDesc {
+        font-size: 0.95rem;
+        max-width: 90%;
+    }
+
+    #poster-carousel {
+        height: 320px;
+    }
+
+    .poster-card {
+        width: 200px;
+        height: 300px;
+    }
+
+    .poster-card.prev {
+        transform: translate(-110%, -50%) rotateY(12deg) scale(0.75);
+    }
+
+    .poster-card.next {
+        transform: translate(15%, -50%) rotateY(-12deg) scale(0.75);
+    }
+
+    .slider-nav {
+        gap: 15px;
+    }
+}
+
+/* ===============================
+   📱 EXTRA SMALL (Phones ≤576px)
+================================= */
+@media (max-width: 576px) {
+    #movieTitle {
+        font-size: 2.5rem;
+    }
+
+    #poster-carousel {
+        height: 280px;
+    }
+
+    .poster-card {
+        width: 170px;
+        height: 260px;
+    }
+
+    .poster-card.prev {
+        transform: translate(-100%, -50%) rotateY(10deg) scale(0.7);
+    }
+
+    .poster-card.next {
+        transform: translate(10%, -50%) rotateY(-10deg) scale(0.7);
+    }
+
+    .slider-nav {
+        bottom: 20px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cta-btn-container {
+        justify-content: center;
+    }
+
+    .genre-tags {
+        justify-content: center;
+    }
+}
+
+/* ===============================
+   📱 ULTRA SMALL (Tiny Phones ≤400px)
+================================= */
+@media (max-width: 400px) {
+    #movieTitle {
+        font-size: 2rem;
+    }
+
+    #movieDesc {
+        font-size: 0.85rem;
+    }
+
+    #poster-carousel {
+        height: 240px;
+    }
+
+    .poster-card {
+        width: 150px;
+        height: 220px;
+    }
+
+    .poster-card.prev,
+    .poster-card.next {
+        opacity: 0.5;
+        transform: translate(-90%, -50%) scale(0.65);
+    }
+
+    .slider-nav {
+        gap: 10px;
+    }
+
+    .slide-counter {
+        font-size: 1rem;
+    }
 }
