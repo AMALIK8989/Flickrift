@@ -346,3 +346,122 @@
         justify-content: center !important;
     }
 }
+
+@media (min-width: 350px) and (max-width: 500px) {
+
+    /* =========================
+       HARD STACKING RESET
+    ========================= */
+
+    #slider-section {
+        position: relative;
+        z-index: 0;
+        min-height: 100svh; /* fixes mobile vh bug */
+        height: auto;
+        padding-top: 85px;
+        overflow: visible;
+    }
+
+    /* force hero background behind everything */
+    #bg-container,
+    .atmosphere {
+        z-index: 0 !important;
+    }
+
+    /* content layer always above bg */
+    #slider-section > .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* =========================
+       FIX NAV OVERLAP TRICK
+       (WITHOUT TOUCHING NAVBAR)
+    ========================= */
+
+    #slider-section::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px; /* navbar safe zone */
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* =========================
+       LAYOUT FIX
+    ========================= */
+
+    .row.align-items-center {
+        flex-direction: column-reverse;
+        gap: 18px;
+        text-align: center;
+    }
+
+    /* =========================
+       CAROUSEL STABILITY FIX
+    ========================= */
+
+    #poster-carousel {
+        height: 220px;
+        perspective: 700px;
+        overflow: visible;
+        z-index: 1;
+    }
+
+    .poster-card {
+        width: 140px;
+        height: 200px;
+    }
+
+    .poster-card.active {
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 3;
+    }
+
+    .poster-card.prev {
+        transform: translate(-120%, -50%) scale(0.7);
+        opacity: 0.45;
+    }
+
+    .poster-card.next {
+        transform: translate(20%, -50%) scale(0.7);
+        opacity: 0.45;
+    }
+
+    /* =========================
+       TEXT FIX
+    ========================= */
+
+    #movieTitle {
+        font-size: 2.1rem;
+        line-height: 1;
+    }
+
+    #movieDesc {
+        max-width: 100%;
+        margin: 0 auto 10px;
+    }
+
+    .genre-tags {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    /* =========================
+       NAV SAFETY
+    ========================= */
+
+    .slider-nav {
+        bottom: 12px;
+        gap: 10px;
+        z-index: 2;
+    }
+
+    .nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
