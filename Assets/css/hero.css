@@ -275,93 +275,7 @@
     justify-content: flex-start;
 }
 
-@media (max-width: 500px) {
 
-    /* 🔥 Section stability */
-    #slider-section {
-        height: auto !important;
-        min-height: 100vh;
-        padding: 60px 15px;
-        overflow: visible;
-    }
-
-    /* 🔥 Force vertical safe layout */
-    .row.align-items-center {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 20px;
-    }
-
-    /* 🔥 Prevent 3D overflow breaking layout */
-    #poster-carousel {
-        width: 100%;
-        height: 240px;
-        perspective: 800px;
-        overflow: visible;
-    }
-
-    /* 🔥 Simplify cards on very small screens */
-    .poster-card {
-        width: 140px;
-        height: 200px;
-        left: 50%;
-        top: 50%;
-        transform-origin: center;
-    }
-
-    /* 🔥 REMOVE heavy 3D shifting (this is what breaks everything) */
-    .poster-card.active {
-        transform: translate(-50%, -50%) scale(1);
-        z-index: 10;
-    }
-
-    .poster-card.prev {
-        transform: translate(-120%, -50%) scale(0.75);
-        opacity: 0.5;
-        filter: brightness(0.5);
-    }
-
-    .poster-card.next {
-        transform: translate(20%, -50%) scale(0.75);
-        opacity: 0.5;
-        filter: brightness(0.5);
-    }
-
-    /* 🔥 Text fixes */
-    #movieTitle {
-        font-size: 2.2rem;
-        line-height: 1;
-    }
-
-    #movieDesc {
-        max-width: 100%;
-        margin: 0 auto 15px;
-    }
-
-    /* 🔥 Center tags */
-    .genre-tags {
-        justify-content: center !important;
-        flex-wrap: wrap;
-    }
-
-    /* 🔥 Buttons spacing fix */
-    .cta-btn-container {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    /* 🔥 Navigation safety */
-    .slider-nav {
-        bottom: 10px;
-        gap: 10px;
-    }
-
-    .nav-btn {
-        width: 36px;
-        height: 36px;
-    }
-}
 /* Center on tablets and below */
 @media (max-width: 991px) {
     .genre-tags {
@@ -436,5 +350,94 @@
     .nav-btn {
         width: 38px;
         height: 38px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 500px) {
+
+    /* 🔥 Section stability */
+    #slider-section {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 60px 15px;
+        overflow: visible;
+    }
+
+    /* 🔥 Force vertical safe layout */
+    .row.align-items-center {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* 🔥 Prevent 3D overflow breaking layout */
+    #poster-carousel {
+        width: 100%;
+        height: 240px;
+        perspective: 800px;
+        overflow: visible;
+    }
+
+    /* 🔥 Simplify cards */
+    .poster-card {
+        width: 140px;
+        height: 200px;
+        left: 50%;
+        top: 50%;
+        transform-origin: center;
+    }
+
+    /* 🔥 Active card */
+    .poster-card.active {
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 10;
+    }
+
+    /* 🔥 Side cards */
+    .poster-card.prev {
+        transform: translate(-120%, -50%) scale(0.75);
+        opacity: 0.5;
+        filter: brightness(0.5);
+    }
+
+    .poster-card.next {
+        transform: translate(20%, -50%) scale(0.75);
+        opacity: 0.5;
+        filter: brightness(0.5);
+    }
+
+    /* 🔥 Typography */
+    #movieTitle {
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    #movieDesc {
+        max-width: 100%;
+        margin: 0 auto 15px;
+    }
+
+    /* 🔥 Center tags */
+    .genre-tags {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    /* 🔥 Buttons */
+    .cta-btn-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* 🔥 Navigation */
+    .slider-nav {
+        bottom: 10px;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        width: 36px;
+        height: 36px;
     }
 }
