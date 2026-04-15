@@ -268,7 +268,27 @@
     background: var(--accent);
     color: #000;
 }
+.genre-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+}
 
+/* Center on tablets and below */
+@media (max-width: 991px) {
+    .genre-tags {
+        justify-content: center !important;
+    }
+}
+
+/* Extra tight screens (optional reinforcement) */
+@media (max-width: 576px) {
+    .genre-tags {
+        justify-content: center !important;
+        text-align: center;
+    }
+}
 /* ANIMATION */
 .content-animate {
     opacity: 0;
