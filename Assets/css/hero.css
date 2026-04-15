@@ -7,37 +7,27 @@
 }
 
 /* =========================
-   GLOBAL FIX (NAVBAR SAFETY)
-========================= */
-
-body {
-    overflow-x: hidden;
-}
-
-/* Ensure navbar always wins */
-#mainNav {
-    position: relative;
-    z-index: 99999;
-}
-
-/* =========================
-   HERO SECTION
+   HERO SECTION BASE
+   (SAFE UNDER NAVBAR)
 ========================= */
 
 #slider-section {
+    position: relative;
+    z-index: 0;
     height: 100vh;
     min-height: 600px;
     background: var(--bg-dark);
-    position: relative;
     overflow: hidden;
-    z-index: 1;
 }
 
-/* BACKGROUND */
+/* =========================
+   BACKGROUND LAYER
+========================= */
+
 #bg-container {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 .bg-slide {
@@ -57,19 +47,24 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg,
+    background: linear-gradient(
+        90deg,
         rgba(10,10,12,0.95),
         rgba(10,10,12,0.7),
         rgba(10,10,12,0.2)
     );
 }
 
-/* ATMOSPHERE */
+/* =========================
+   ATMOSPHERE EFFECTS
+========================= */
+
 .atmosphere {
     position: absolute;
     inset: 0;
-    z-index: 2;
+    z-index: 0;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .glow-orb {
@@ -103,14 +98,16 @@ body {
 }
 
 /* =========================
-   LAYOUT
+   CONTENT LAYER
 ========================= */
 
-#slider-section > .container,
+#slider-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
 #slider-section > .container > .row {
     height: 100%;
-    position: relative;
-    z-index: 10;
 }
 
 /* =========================
@@ -119,7 +116,7 @@ body {
 
 #movieTitle {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-size: clamp(2.2rem, 6vw, 6rem);
     line-height: 0.9;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -135,7 +132,10 @@ body {
     line-height: 1.7;
 }
 
-/* TAGS */
+/* =========================
+   GENRE TAGS
+========================= */
+
 .genre-tags {
     display: flex;
     flex-wrap: wrap;
@@ -154,22 +154,23 @@ body {
 }
 
 /* =========================
-   CAROUSEL
+   CAROUSEL CORE
 ========================= */
 
 #poster-carousel {
     position: relative;
     width: 100%;
-    height: clamp(260px, 40vw, 450px);
+    height: clamp(240px, 40vw, 450px);
     perspective: 1000px;
+    z-index: 1;
 }
 
 .poster-card {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: clamp(160px, 22vw, 300px);
-    height: clamp(240px, 32vw, 450px);
+    width: clamp(140px, 22vw, 300px);
+    height: clamp(200px, 32vw, 450px);
     background: #141416;
     border-radius: 12px;
     overflow: hidden;
@@ -186,16 +187,17 @@ body {
     object-fit: cover;
 }
 
-/* STATES */
+/* ACTIVE */
 .poster-card.active {
     transform: translate(-50%,-50%) scale(1.05);
     opacity: 1;
-    z-index: 10;
+    z-index: 5;
     pointer-events: auto;
     border: 1px solid var(--accent);
     box-shadow: 0 0 30px var(--accent-glow);
 }
 
+/* SIDE */
 .poster-card.prev {
     transform: translate(-130%,-50%) rotateY(20deg) scale(0.85);
     opacity: 0.8;
@@ -206,7 +208,10 @@ body {
     opacity: 0.8;
 }
 
-/* NAV */
+/* =========================
+   NAVIGATION
+========================= */
+
 .slider-nav {
     position: absolute;
     bottom: 30px;
@@ -214,7 +219,7 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
-    z-index: 20;
+    z-index: 3;
 }
 
 .nav-btn {
@@ -231,7 +236,7 @@ body {
 }
 
 /* =========================
-   ANIMATION
+   ANIMATIONS
 ========================= */
 
 .content-animate {
@@ -246,7 +251,7 @@ body {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE FIXES
 ========================= */
 
 /* TABLET */
@@ -262,8 +267,12 @@ body {
         text-align: center;
     }
 
+    .genre-tags {
+        justify-content: center;
+    }
+
     #poster-carousel {
-        height: 350px;
+        height: 320px;
     }
 
     .poster-card.prev {
@@ -273,25 +282,16 @@ body {
     .poster-card.next {
         transform: translate(10%,-50%) rotateY(-15deg) scale(0.8);
     }
-
-    .genre-tags {
-        justify-content: center;
-    }
 }
 
 /* MOBILE */
 @media (max-width: 576px) {
     #movieTitle {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     #poster-carousel {
         height: 260px;
-    }
-
-    .poster-card {
-        width: 150px;
-        height: 220px;
     }
 
     .slider-nav {
@@ -305,13 +305,12 @@ body {
     }
 }
 
-/* SMALL MOBILE FIX (375–500px) */
+/* SMALL MOBILE (375–500px) */
 @media (min-width: 375px) and (max-width: 500px) {
 
     #slider-section {
         padding-top: 80px;
         min-height: 100vh;
-        overflow: visible;
     }
 
     .row.align-items-center {
@@ -320,27 +319,17 @@ body {
     }
 
     #poster-carousel {
-        height: 240px;
+        height: 220px;
         perspective: 800px;
     }
 
-    .poster-card {
-        width: 140px;
-        height: 200px;
+    .poster-card.prev,
+    .poster-card.next {
+        opacity: 0.5;
     }
 
     .poster-card.active {
         transform: translate(-50%,-50%) scale(1);
-    }
-
-    .poster-card.prev {
-        transform: translate(-120%,-50%) scale(0.75);
-        opacity: 0.5;
-    }
-
-    .poster-card.next {
-        transform: translate(20%,-50%) scale(0.75);
-        opacity: 0.5;
     }
 
     .slider-nav {
