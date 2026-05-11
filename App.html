@@ -233,81 +233,70 @@
   </div>
 </header>
 
-<section id="slider-section" class="position-relative">
-    
-    <!-- Background Images Container -->
-    <div id="bg-container"></div>
-    
-    <!-- Atmospheric Effects -->
-    <div class="atmosphere">
-        <div class="glow-orb glow-orb-1"></div>
-        <div class="glow-orb glow-orb-2"></div>
+<section id="slider-section">
+ 
+  <!-- Background Swiper -->
+  <div id="bg-swiper" class="swiper">
+    <div class="swiper-wrapper" id="bgWrapper"></div>
+  </div>
+ 
+  <!-- Atmospheric Effects -->
+  <div class="atmosphere">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+  </div>
+  <div class="noise"></div>
+ 
+  <!-- Two-Column Body -->
+  <div class="ms-body">
+ 
+    <!-- LEFT: Text Content -->
+    <div class="ms-left">
+      <div class="genre-tags ca d1" id="genreTags"></div>
+      <h1 class="ms-title ca d2" id="movieTitle"></h1>
+      <p class="ms-desc ca d3" id="movieDesc"></p>
+      <div class="ms-btns ca d4">
+        <a id="watchBtn" class="btn-watch" href="#">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Watch Now
+        </a>
+        <a id="trailerBtn" class="btn-trailer" href="#" target="_blank">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+          Watch Trailer
+        </a>
+      </div>
     </div>
-    <div class="noise"></div>
-    
-    <!-- Foreground Content -->
-    <div class="container h-100 position-relative z-3">
-        <div class="row align-items-center h-100 py-5">
-            
-            <!-- LEFT TEXT -->
-            <div class="col-lg-6 text-white">
-                <div class="genre-tags content-animate delay-1" id="genreTags"></div>
-                
-                <h1 id="movieTitle" class="display-3 fw-light content-animate delay-1"></h1>
-                
-                <p id="movieDesc" class="lead mt-3 content-animate delay-2"></p>
-
-                <div class="mt-4 d-flex gap-3 content-animate delay-3 cta-btn-container">
-                    <a id="watchBtn" class="btn btn-danger px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2">
-                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        Watch Now
-                    </a>
-                    <a id="trailerBtn" target="_blank" class="btn btn-outline-light px-4 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
-                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                        </svg>
-                        Watch Trailer
-                    </a>
-                </div>
-            </div>
-
-            <!-- RIGHT POSTER (Custom Carousel) -->
-            <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                <div id="poster-carousel">
-                    <!-- Slides will be injected here by JS -->
-                </div>
-            </div>
-
-        </div>
+ 
+    <!-- RIGHT: Poster Carousel -->
+    <div class="ms-right">
+      <div id="poster-swiper" class="swiper">
+        <div class="swiper-wrapper" id="posterWrapper"></div>
+      </div>
     </div>
-    
-    <!-- Navigation -->
-    <div class="slider-nav">
-        <button class="nav-btn" id="prevBtn" aria-label="Previous slide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-        </button>
-        <div class="slide-counter">
-            <span class="current">01</span>
-            <span>/</span>
-            <span class="total">05</span>
-        </div>
-        <button class="nav-btn" id="nextBtn" aria-label="Next slide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-        </button>
+ 
+  </div><!-- /.ms-body -->
+ 
+  <!-- Bottom Nav -->
+  <div class="ms-bottom">
+    <button class="nav-btn" id="prevBtn" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <span class="slide-counter">
+      <span class="cur" id="curNum">01</span> / <span id="totNum">05</span>
+    </span>
+    <div class="progress-wrap">
+      <div class="progress-fill" id="progressBar"></div>
     </div>
-    
-    <!-- Progress Bar -->
-    <div class="progress-bar-container">
-        <div class="progress-bar-fill" id="progressBar"></div>
-    </div>
-    
+    <button class="nav-btn" id="nextBtn" aria-label="Next slide">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+ 
 </section>
   <main>
  <!-- Genre Section -->
@@ -861,13 +850,13 @@
         <div class="swiper-slide">
           <div class="genre-card">
             <div class="card-image-container">
-              <img src="./Assets/Img/Rebecca Info-card.webp" alt="Rebecca" class="card-img-top">
+              <img src="./Assets/Img13/Crawl-Info-Card.webp" alt="Crawl" class="card-img-top">
               <div class="genre-card-overlay">
                 <div class="overlay-content-inner">
-                  <h3 class="overlay-title">Rebecca</h3>
+                  <h3 class="overlay-title">Crawl</h3>
                   <div class="overlay-buttons">
                     <a href="https://youtu.be/0Dtc66F5ZTc" class="overlay-btn trailer"><i class="fas fa-play"></i></a>
-                    <a href="./Thriller/Rebecca.html" class="overlay-btn watch"><i class="fas fa-film"></i></a>
+                    <a href="./Thriller/Crawl.html" class="overlay-btn watch"><i class="fas fa-film"></i></a>
                   </div>
                 </div>
               </div>
@@ -879,13 +868,13 @@
         <div class="swiper-slide">
           <div class="genre-card">
             <div class="card-image-container">
-              <img src="./Assets/Img/The-Voyeurs-Info-Card.webp" alt="The Voyeurs" class="card-img-top">
+              <img src="./Assets/Img13/Sliver-Info-Card.webp" alt="Sliver" class="card-img-top">
               <div class="genre-card-overlay">
                 <div class="overlay-content-inner">
-                  <h3 class="overlay-title">The Voyeurs</h3>
+                  <h3 class="overlay-title">Sliver</h3>
                   <div class="overlay-buttons">
                     <a href="https://www.youtube.com/watch?v=_fiCdELSwwI" class="overlay-btn trailer"><i class="fas fa-play"></i></a>
-                    <a href="./Thriller/The-Voyeurs.html" class="overlay-btn watch"><i class="fas fa-film"></i></a>
+                    <a href="./Thriller/Sliver.html" class="overlay-btn watch"><i class="fas fa-film"></i></a>
                   </div>
                 </div>
               </div>
