@@ -16,6 +16,7 @@
       min-height: 100svh;
       position: relative;
       overflow: hidden;
+     padding-top: clamp(90px, 14vw, 116px);
       display: flex;
       flex-direction: column;
     }
