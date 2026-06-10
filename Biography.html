@@ -1,237 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FlickRift | Watch Free, No Strings Attached</title>
-    
- <!-- 1. Bootstrap CSS -->
-<link rel="preload" href="./Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/bootstrap.min.css"></noscript>
-
-<!-- 2. Theme CSS -->
-<link rel="preload" href="./Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/theme2.css"></noscript>
-
-<link rel="preload" href="./Assets/css/movie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/movie.css"></noscript>
-
-<link rel="preload" href="./Assets/css/pagination.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/pagination.css"></noscript>
-
-<!-- 3. Font Awesome v7 -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
-
-<!-- 4. AOS CSS -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"></noscript>
-
-
-
-<link rel="preload" href="./Assets/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./Assets/css/footer.css"></noscript>
-
-<!-- 6. jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-
-<!-- 7. Bootstrap JS (first bundle) -->
-<script src="./Assets/js/bootstrap.bundle.min.js" defer></script>
-
-
-
-<!-- 9. Font Awesome 7 JS (defer) -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
-        integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- 9. AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
-
-<!-- 10. Your custom JS -->
-<script src="./Assets/js/custom.js" defer></script>
-<script src="./Assets/js/custom2.js" defer></script>
-<script src="./Assets/js/app-bar.js" defer></script>
-
-
-
-
-  </head>
-  <body>
-    <header class="site-header">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
-    <div class="container">
-      
-      <!-- Logo -->
-      <a class="navbar-brand" href="./index.html">
-        <img src="./Assets/Logo.webp" alt="Flickrift Logo" class="img-logo">
-      </a>
-
-      <!-- Mobile Toggle -->
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
-        <i class="fas fa-bars text-white"></i>
-      </button>
-
-      <!-- Desktop Navbar Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-          
-          <!-- Search Link -->
-          <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-              <i class="fas fa-search"></i> 
-              <span class="d-none d-md-inline">Search</span>
-            </a>
-          </li>
-
-          <!-- Genres Dropdown -->
-          <li class="nav-item dropdown ms-lg-4">
-            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Genres
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-animate" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./Action.html">Action</a></li>
-              <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
-              <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
-              <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
-              <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
-              <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
-              <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
-              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
-              <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
-              <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
-              <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
-              <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
-            </ul>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Offcanvas Menu for Mobile -->
-  <div class="offcanvas offcanvas-start bg-dark-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header border-bottom border-secondary">
-      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
-        <img src="./Assets/Logo.webp" alt="Logo" height="30"> 
-      </h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-4">
-      <ul class="navbar-nav">
-        <li class="nav-item mb-3">
-          <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <i class="fas fa-search me-2"></i> Search
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link fs-5 dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Genres
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark bg-black rounded-0 border-0">
-               <li><a class="dropdown-item" href="./Action.html">Action</a></li>
-              <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
-              <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
-              <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
-              <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
-              <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
-              <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
-              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
-              <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
-              <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
-              <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
-              <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
-     <main>
-<section class="container-fluid px-2 py-2" id="Card-hold">
-   <div class="container movie-para-container" id="movie-container" data-aos="fade-up">
-      <p class="text-center text-white">
-         FlickRift brings a fun-filled collection of Kids movies for young viewers of all ages. From magical adventures and animated favorites to educational stories and lovable characters, our curated selection entertains, inspires, and sparks imagination. Stream your favorite kids’ films in HD online and enjoy endless fun for the whole family.
-      </p>
-   </div>
-   <div class="container" id="card-container">
-      <div class="row justify-content-center g-4" id="card-place">
-
-         <!-- Baby's Day Out -->
-         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-1" data-aos="fade-up" data-aos-delay="0">
-            <div class="card h-100" id="movie-card-1">
-               <div class="card-img-container ">
-                  <a href="./Biography/Blonde.html" class="d-block">
-                     <img src="./Assets/Img14/Blonde-Info-Card.webp" alt="Blonde" class="card-img-top w-100 card-img-top-af" id="movie-img-1">
-                     <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
-                        <h3 class="movie-title text-white mb-2">Blonde</h3>
-                        <div class="movie-rating d-flex align-items-center">
-                           <div class="rating-stars text-warning me-2">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
-                              <i class="far fa-star"></i>
-                           </div>
-                           <span class="rating-value text-white-50">6.2/10</span>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-            </div>
-         </div>
-
-      </div>
-   </div>
-</section>
-
-<section class="container-fluid px-2 py-2" id="pagination-section">
-  <div class="container">
-    <!-- Pagination -->
-    <nav aria-label="Movie Page Navigation" id="pagination-nav">
-      <ul class="pagination justify-content-center" id="pagination-list">
-
-        <!-- Previous Page -->
-        <li class="page-item" id="pagination-prev">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-
-        <!-- Page Numbers -->
-        <li class="page-item" id="page-1">
-          <a class="page-link" href="../../Indie.html">1</a>
-        </li>
-        <li class="page-item active" id="page-2">
-          <a class="page-link" href="./2.html">2</a>
-        </li>
-        <li class="page-item" id="page-3">
-          <a class="page-link" href="#">3</a>
-        </li>
-
-        <!-- Next Page -->
-        <li class="page-item" id="pagination-next">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-
-      </ul>
-    </nav>
-  </div>
-</section>
-
-      </main>
-          
-      <footer class="container-fluid">
-        <div class="foot row">
-          <!-- Footer Logo -->
-          <div class="col-12 col-md-4 footer-logo text-center text-md-start">
-            <img src="./Assets/Logo.png" alt="I-Flixx Logo" class="img-fluid">
-          </div>
-          <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
-      
-          </div>
-          <!-- Footer Links -->
-          <div class="col-12 col-md-4 foot
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlickRift | Watch Free, No Strings Attached</title>
+    
+ <!-- 1. Bootstrap CSS -->
+<link rel="preload" href="./Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/bootstrap.min.css"></noscript>
+
+<!-- 2. Theme CSS -->
+<link rel="preload" href="./Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/theme2.css"></noscript>
+
+<link rel="preload" href="./Assets/css/movie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/movie.css"></noscript>
+
+<link rel="preload" href="./Assets/css/pagination.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/pagination.css"></noscript>
+
+<!-- 3. Font Awesome v7 -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+
+<!-- 4. AOS CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"></noscript>
+
+
+
+<link rel="preload" href="./Assets/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./Assets/css/footer.css"></noscript>
+
+<!-- 6. jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+
+<!-- 7. Bootstrap JS (first bundle) -->
+<script src="./Assets/js/bootstrap.bundle.min.js" defer></script>
+
+
+
+<!-- 9. Font Awesome 7 JS (defer) -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous"></script></script>
+
+<!-- 9. AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+
+<!-- 10. Your custom JS -->
+<script src="./Assets/js/custom.js" defer></script>
+<script src="./Assets/js/custom2.js" defer></script>
+<script src="./Assets/js/app-bar.js" defer></script>
+
+
+
+
+  </head>
+  <body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+    <div class="container">
+      
+      <!-- Logo -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./Assets/Logo.webp" alt="Flickrift Logo" class="img-logo">
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+
+      <!-- Desktop Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          
+          <!-- Search Link -->
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="fas fa-search"></i> 
+              <span class="d-none d-md-inline">Search</span>
+            </a>
+          </li>
+
+          <!-- Genres Dropdown -->
+          <li class="nav-item dropdown ms-lg-4">
+            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genres
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-animate" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-start bg-dark-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <img src="./Assets/Logo.webp" alt="Logo" height="30"> 
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-3">
+          <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fas fa-search me-2"></i> Search
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link fs-5 dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genres
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-black rounded-0 border-0">
+               <li><a class="dropdown-item" href="./Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="./Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="./Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="./Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="./Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="./Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="./Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="./Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="./Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="./Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="./Tv-shows.html">TV Shows</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+     <main>
+<section class="container-fluid px-2 py-2" id="Card-hold">
+   <div class="container movie-para-container" id="movie-container" data-aos="fade-up">
+      <p class="text-center text-white">
+         FlickRift brings a fun-filled collection of Kids movies for young viewers of all ages. From magical adventures and animated favorites to educational stories and lovable characters, our curated selection entertains, inspires, and sparks imagination. Stream your favorite kids’ films in HD online and enjoy endless fun for the whole family.
+      </p>
+   </div>
+   <div class="container" id="card-container">
+      <div class="row justify-content-center g-4" id="card-place">
+
+         <!-- Baby's Day Out -->
+         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4" id="card-wrapper-1" data-aos="fade-up" data-aos-delay="0">
+            <div class="card h-100" id="movie-card-1">
+               <div class="card-img-container ">
+                  <a href="./Biography/Blonde.html" class="d-block">
+                     <img src="./Assets/Img14/Blonde-Info-Card.webp" alt="Blonde" class="card-img-top w-100 card-img-top-af" id="movie-img-1">
+                     <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3">
+                        <h3 class="movie-title text-white mb-2">Blonde</h3>
+                        <div class="movie-rating d-flex align-items-center">
+                           <div class="rating-stars text-warning me-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                              <i class="far fa-star"></i>
+                           </div>
+                           <span class="rating-value text-white-50">6.2/10</span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</section>
+
+<section class="container-fluid px-2 py-2" id="pagination-section">
+  <div class="container">
+    <!-- Pagination -->
+    <nav aria-label="Movie Page Navigation" id="pagination-nav">
+      <ul class="pagination justify-content-center" id="pagination-list">
+
+        <!-- Previous Page -->
+        <li class="page-item" id="pagination-prev">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+
+        <!-- Page Numbers -->
+        <li class="page-item" id="page-1">
+          <a class="page-link" href="../../Indie.html">1</a>
+        </li>
+        <li class="page-item active" id="page-2">
+          <a class="page-link" href="./2.html">2</a>
+        </li>
+        <li class="page-item" id="page-3">
+          <a class="page-link" href="#">3</a>
+        </li>
+
+        <!-- Next Page -->
+        <li class="page-item" id="pagination-next">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</section>
+
+      </main>
+          
+      <footer class="container-fluid">
+        <div class="foot row">
+          <!-- Footer Logo -->
+          <div class="col-12 col-md-4 footer-logo text-center text-md-start">
+            <img src="./Assets/Logo.png" alt="FlickRift Logo" class="img-fluid">
+          </div>
+          <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
+      
+          </div>
+          <!-- Footer Links -->
+          <div class="col-12 col-md-4 foot

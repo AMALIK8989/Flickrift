@@ -1,563 +1,561 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Title -->
-<title>Batman: Gotham by Gaslight (2018) — A Victorian Gothic Thriller</title>
-
-<!-- Meta Description -->
-<meta name="description" content="Batman: Gotham by Gaslight (2018) reimagines the Dark Knight in Victorian-era Gotham, hunting Jack the Ripper in a dark, atmospheric animated thriller.">
-
-<!-- Meta Keywords -->
-<meta name="keywords" content="Batman Gotham by Gaslight, Gotham by Gaslight 2018, Batman animated movie, Victorian Batman, DC animated thriller, Jack the Ripper Batman, gothic superhero film">
-
-<!-- Robots -->
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph Tags -->
-<meta property="og:title" content="Batman: Gotham by Gaslight — Darkness Has a New Era">
-<meta property="og:description" content="In Victorian Gotham, Batman hunts a serial killer stalking the city’s shadows in this gothic reimagining of the Dark Knight.">
-<meta property="og:image" content="https://flickrift.netlify.app/Assets/Img12/Gotham-By-Gaslight-Info-Card.webp">
-<meta property="og:url" content="https://flickrift.netlify.app/animated/gotham-by-gaslight">
-<meta property="og:type" content="video.movie">
-<meta property="og:site_name" content="FlickRift">
-
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Batman: Gotham by Gaslight (2018) — A Dark Victorian Mystery">
-<meta name="twitter:description" content="A gothic Batman tale where gaslit streets, fear, and murder collide in Victorian Gotham City.">
-<meta name="twitter:image" content="https://flickrift.netlify.app/Assets/Img12/Gotham-By-Gaslight-Info-Card.webp">
-<meta name="twitter:url" content="https://flickrift.netlify.app/animated/gotham-by-gaslight">
-
-<!-- Canonical Link -->
-<link rel="canonical" href="https://flickrift.netlify.app/animated/gotham-by-gaslight">
-
-<!-- JSON-LD Structured Data for Movie -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Movie",
-  "name": "Batman: Gotham by Gaslight",
-  "image": "https://flickrift.netlify.app/Assets/Img12/Gotham-By-Gaslight-Info-Card.webp",
-  "description": "Batman: Gotham by Gaslight (2018) is an animated gothic thriller that reimagines Batman in Victorian-era Gotham City as he hunts a serial killer inspired by Jack the Ripper.",
-  "datePublished": "2018-01-23",
-  "director": { "@type": "Person", "name": "Sam Liu" },
-  "actor": [
-    { "@type": "Person", "name": "Bruce Greenwood" },
-    { "@type": "Person", "name": "Jennifer Carpenter" },
-    { "@type": "Person", "name": "Anthony Head" }
-  ],
-  "genre": ["Animation", "Thriller", "Mystery", "Superhero"],
-  "countryOfOrigin": { "@type": "Country", "name": "United States" },
-  "inLanguage": "English",
-  "url": "https://flickrift.netlify.app/animated/gotham-by-gaslight",
-  "contentRating": "R"
-}
-</script>
-
-<!-- JSON-LD Structured Data for FAQ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Batman: Gotham by Gaslight about?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The film reimagines Batman in Victorian-era Gotham as he hunts a serial killer terrorizing the city, inspired by the legend of Jack the Ripper."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Gotham by Gaslight a horror or thriller?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It is primarily a gothic thriller with mystery and horror elements set in a dark, atmospheric version of Gotham City."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this part of the main DC animated timeline?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, Gotham by Gaslight is an Elseworlds story, offering an alternate, standalone version of Batman."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who should watch Gotham by Gaslight?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fans of dark Batman stories, gothic mysteries, Victorian horror, and DC animated films."
-      }
-    }
-  ]
-}
-</script>
-
-
-   
-
-  <!-- 1. Bootstrap CSS -->
-<link rel="preload" href="../Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
-</noscript>
-
-<!-- 2. Theme CSS -->
-<link rel="preload" href="../Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="../Assets/css/theme2.css">
-</noscript>
-
-<!-- 3. Font Awesome 7 CSS (preload) -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-      as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-</noscript>
-
-<!-- 4. AOS CSS -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
-</noscript>
-
-<!-- 5. Swiper CSS -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
-</noscript>
-
-<!-- 5. Additional page CSS -->
-<link rel="preload" href="../Assets/css/cast.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="../Assets/css/cast.css">
-</noscript>
-
-<link rel="preload" href="../Assets/css/buttons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="../Assets/css/buttons.css">
-</noscript>
-
-<link rel="preload" href="../Assets/css/faq.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="../Assets/css/faq.css">
-</noscript>
-
-<link rel="preload" href="../Assets/css/feature-slide.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="../Assets/css/feature-slide.css">
-</noscript>
-
-<!-- 6. jQuery (before custom scripts) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-
-<!-- 7. Bootstrap JS -->
-<script src="../Assets/js/bootstrap.bundle.min.js" defer></script>
-
-<!-- 8. AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
-
-<!-- 9. Swiper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" defer></script>
-
-<!-- 10. Font Awesome 7 JS (defer) -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
-        integrity="sha512-Kv1/KvQ6r+J76p77ZzR1+jo3e2nC9VvIo5c5j7jW9xE3YROzhxKq2phxTrgX/1VfM8MKEo2tKzA9Y3Xek5ZfVA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- 11. Your custom JS -->
-<script src="../Assets/js/custom.js" defer></script>
-<script src="../Assets/js/custom2.js" defer></script>
-<script src="../Assets/js/App-bar.js"></script>
-
-</head>
-<body>
-    <header class="site-header">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
-    <div class="container">
-      
-      <!-- Logo -->
-      <a class="navbar-brand" href="./index.html">
-        <img src="../Assets/Logo.webp" alt="Flickrift Logo" class="img-logo">
-      </a>
-
-      <!-- Mobile Toggle -->
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
-        <i class="fas fa-bars text-white"></i>
-      </button>
-
-      <!-- Desktop Navbar Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-          
-          <!-- Search Link -->
-          <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-              <i class="fas fa-search"></i> 
-              <span class="d-none d-md-inline">Search</span>
-            </a>
-          </li>
-
-          <!-- Genres Dropdown -->
-          <li class="nav-item dropdown ms-lg-4">
-            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Genres
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-animate" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="../Action.html">Action</a></li>
-              <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
-              <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
-              <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
-              <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
-              <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
-              <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
-              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
-              <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
-              <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
-              <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
-              <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
-            </ul>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Offcanvas Menu for Mobile -->
-  <div class="offcanvas offcanvas-start bg-dark-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header border-bottom border-secondary">
-      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
-        <img src="../Assets/Logo.webp" alt="Logo" height="30"> 
-      </h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-4">
-      <ul class="navbar-nav">
-        <li class="nav-item mb-3">
-          <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <i class="fas fa-search me-2"></i> Search
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link fs-5 dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Genres
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark bg-black rounded-0 border-0">
-               <li><a class="dropdown-item" href="../Action.html">Action</a></li>
-              <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
-              <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
-              <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
-              <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
-              <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
-              <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
-              <li><a class="dropdown-item" href="../Thriller.html">Thriller</a></li>
-              <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
-              <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
-              <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
-              <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
-
-      <main>
-        <!-- <section id="movie-pals" class="container-fluid text-center text-white" style="background-image: url('../Assets/Img/Batman-The-Killing-Joke.jpg'); background-repeat: no-repeat; background-size: cover;">
-            <h2 class="display-4"> Batman The Killing Joke  : 2016 </h2>
-            <div id="movie-player" class="container mt-4">
-                <iframe src="https://short.icu/SJTgjTkN2" frameborder="0" scrolling="0" allowfullscreen width="710px"></iframe>
-            </div>
-        </section>
-        
-        <section id="description" class="container-fluid py-5 px-5">
-            <div class="description-content container">
-                <h2 class="text-center mb-4">Description</h2>
-                <p class="lead">As Batman hunts for the escaped Joker, the Clown Prince of Crime attacks the Gordon family to prove a diabolical point mirroring his own fall into madness.</p>
-            </div>
-        </section> -->
-
-              <section id="movie-pals" class="container-fluid text-center text-white" style="background-image: url('../Assets/Img12/Gotham-By-Gaslight-Cover.webp'); background-repeat: no-repeat; background-size: cover;">
-           <div class="container" id="main-wrapper">
-      <div class="container head-container">
-            <h2 class="display-4"> Gotham By Gaslight : 2018 </h2>
-            </div>
-            <div id="movie-player" class="container mt-4">
-                <iframe src="https://short.icu/7JA7fJwJR" frameborder="0" scrolling="0" allowfullscreen width="710px"></iframe>
-            </div>
-            </div>
-        </section>
-        
-        <section id="description" class="container-fluid py-5 px-5">
-     
-                <h2 class="text-center mb-4">Description</h2>
-                <div class="description-content container">
-    
-<div class="container para-container">
-                <p class="lead">Bruce Wayne comes to know that a relic that caused the mysterious disappearance of his martial arts teacher is in the possession of a megalomaniac. He teams up with his old classmates to stop him.</p>
-            </div>
-            </div>
-        </section>
-
-        
-        
-       <section id="casts" class="container-fluid px-2 py-2">
-    <div class="cast-head-container container">
-        <h3 class="text-center cast-heading mb-4 text-danger">Batman: The Killing Joke Cast</h3>
-    </div>
-
-    <div class="cast-container container">
-        <div class="row justify-content-center g-4">
-
-            <!-- Kevin Conroy as Batman / Bruce Wayne -->
-            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
-                <div class="card casted-card">
-                    <div class="card-img-container container">
-                        <img src="../Assets/Img11/Kevin-Conroy.jpg" alt="Kevin Conroy" class="card-img-top-pf">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-details text-center">
-                            <h3 class="card-title">Kevin Conroy</h3>
-                            <p class="card-text">as Batman / Bruce Wayne</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mark Hamill as Joker -->
-            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
-                <div class="card casted-card">
-                    <div class="card-img-container container">
-                        <img src="../Assets/Img11/Mark-Hamill.jpg" alt="Mark Hamill" class="card-img-top-pf">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-details text-center">
-                            <h3 class="card-title">Mark Hamill</h3>
-                            <p class="card-text">as Joker</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tara Strong as Barbara Gordon / Batgirl -->
-            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
-                <div class="card casted-card">
-                    <div class="card-img-container container">
-                        <img src="../Assets/Img/Tara Strong.jpg" alt="Tara Strong" class="card-img-top-pf">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-details text-center">
-                            <h3 class="card-title">Tara Strong</h3>
-                            <p class="card-text">as Barbara Gordon / Batgirl</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ray Wise as Commissioner Gordon -->
-            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
-                <div class="card casted-card">
-                    <div class="card-img-container container">
-                        <img src="../Assets/Img11/Ray-Wise.jpg" alt="Ray Wise" class="card-img-top-pf">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-details text-center">
-                            <h3 class="card-title">Ray Wise</h3>
-                            <p class="card-text">as Commissioner Gordon</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-        <section id="movie-faq-section" class="container my-5 faq-benedetta-section">
-  <div class="row">
-    <div class="col-lg-10 mx-auto">
-      
-      <h2 id="faq-movie-title" class="mb-4 text-center faq-benedetta-title">
-        Gotham by Gaslight Movie – Frequently Asked Questions
-      </h2>
-
-      <div class="accordion" id="faq-benedetta-accordion">
-
-        <!-- Q1 -->
-        <div class="accordion-item movie-item" id="faq-benedetta-item-1">
-          <h3 class="accordion-header" id="faq-benedetta-heading-1 faq-movie-heading">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq-benedetta-collapse-1" aria-expanded="true"
-              aria-controls="faq-benedetta-collapse-1">
-              What is the movie Gotham by Gaslight about?
-            </button>
-          </h3>
-          <div id="faq-benedetta-collapse-1" class="accordion-collapse collapse show"
-            aria-labelledby="faq-benedetta-heading-1 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
-            <div class="accordion-body">
-              <p>
-                <strong>Gotham by Gaslight</strong> is an animated DC Elseworlds film that reimagines
-                Batman in a Victorian-era Gotham City. As a serial killer inspired by Jack the Ripper
-                terrorizes the city, Bruce Wayne must uncover the truth while navigating corruption,
-                class struggle, and the dark underbelly of 19th-century society.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="accordion-item movie-item" id="faq-benedetta-item-2">
-          <h3 class="accordion-header" id="faq-benedetta-heading-2 faq-movie-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq-benedetta-collapse-2" aria-expanded="false"
-              aria-controls="faq-benedetta-collapse-2">
-              Where can I watch Gotham by Gaslight movie online?
-            </button>
-          </h3>
-          <div id="faq-benedetta-collapse-2" class="accordion-collapse collapse"
-            aria-labelledby="faq-benedetta-heading-2 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
-            <div class="accordion-body">
-              <p>
-                You can watch <strong>Gotham by Gaslight movie online</strong> on major digital platforms
-                that offer DC animated films for rental or purchase. Streaming availability depends on
-                region and licensing.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="accordion-item movie-item" id="faq-benedetta-item-3">
-          <h3 class="accordion-header" id="faq-benedetta-heading-3 faq-movie-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq-benedetta-collapse-3" aria-expanded="false"
-              aria-controls="faq-benedetta-collapse-3">
-              Is Gotham by Gaslight free movie watch online legally?
-            </button>
-          </h3>
-          <div id="faq-benedetta-collapse-3" class="accordion-collapse collapse"
-            aria-labelledby="faq-benedetta-heading-3 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
-            <div class="accordion-body">
-              <p>
-                Legal options for <strong>Gotham by Gaslight free movie watch online</strong> may appear
-                through limited-time promotions or ad-supported services. Most viewers will need to
-                rent or purchase the film from licensed platforms.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Q4 -->
-        <div class="accordion-item movie-item" id="faq-benedetta-item-4">
-          <h3 class="accordion-header" id="faq-benedetta-heading-4 faq-movie-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq-benedetta-collapse-4" aria-expanded="false"
-              aria-controls="faq-benedetta-collapse-4">
-              Is Gotham by Gaslight part of the main DC timeline?
-            </button>
-          </h3>
-          <div id="faq-benedetta-collapse-4" class="accordion-collapse collapse"
-            aria-labelledby="faq-benedetta-heading-4 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
-            <div class="accordion-body">
-              <p>
-                No. <strong>Gotham by Gaslight</strong> is part of DC’s Elseworlds series, meaning it exists
-                outside the main DC continuity and offers an alternate version of Batman’s origin story.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Q5 -->
-        <div class="accordion-item movie-item" id="faq-benedetta-item-5">
-          <h3 class="accordion-header" id="faq-benedetta-heading-5 faq-movie-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq-benedetta-collapse-5" aria-expanded="false"
-              aria-controls="faq-benedetta-collapse-5">
-              What genre is Gotham by Gaslight?
-            </button>
-          </h3>
-          <div id="faq-benedetta-collapse-5" class="accordion-collapse collapse"
-            aria-labelledby="faq-benedetta-heading-5 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
-            <div class="accordion-body">
-              <p>
-                <strong>Gotham by Gaslight</strong> blends superhero action with mystery, horror,
-                and Victorian crime drama, making it one of the darker and more atmospheric
-                Batman adaptations.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Q6 -->
-        <div class="accordion-item movie-item" id="faq-benedetta-item-6">
-          <h3 class="accordion-header" id="faq-benedetta-heading-6 faq-movie-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#faq-benedetta-collapse-6" aria-expanded="false"
-              aria-controls="faq-benedetta-collapse-6">
-              Is Gotham by Gaslight suitable for all audiences?
-            </button>
-          </h3>
-          <div id="faq-benedetta-collapse-6" class="accordion-collapse collapse"
-            aria-labelledby="faq-benedetta-heading-6 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
-            <div class="accordion-body">
-              <p>
-                <strong>Gotham by Gaslight</strong> is rated R due to violence, disturbing themes,
-                and mature content, making it more appropriate for adult viewers and fans of darker
-                animated films.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-          
-        </main>
-        <footer class="container-fluid">
-          <div class="foot row">
-            <!-- Footer Logo -->
-            <div class="col-12 col-md-4 footer-logo text-center text-md-start">
-              <img src="../Assets/Logo.png" alt="I-Flixx Logo" class="img-fluid">
-            </div>
-            <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
-        
-            </div>
-            <!-- Footer Links -->
-            <div class="col-12 col-md-4 footer-links text-center text-md-start">
-              <ul class="list-unstyled">
-                <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="../terms-of-services.html">Terms of Service</a></li>
-              </ul>
-            </div>
-            
-            <!-- Footer Social Links -->
-            <div class="col-12 col-md-4 footer-social-link text-center text-md-start">
-              <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-                <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
-                <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
-                <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Footer Copyright -->
-          <div class="foot-cpyrht text-center">
-            <p>all ©️ reserved by I-Flixx 
-              <span id="power">Powered by <a class="nex" href="https://nexonix.netlify.app/">Nexonix</a></span>
-            </p>
-          </div>
-        </footer>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Title -->
+<title>Batman: Gotham by Gaslight (2018) — A Victorian Gothic Thriller</title>
+
+<!-- Meta Description -->
+<meta name="description" content="Batman: Gotham by Gaslight (2018) reimagines the Dark Knight in Victorian-era Gotham, hunting Jack the Ripper in a dark, atmospheric animated thriller.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="Batman Gotham by Gaslight, Gotham by Gaslight 2018, Batman animated movie, Victorian Batman, DC animated thriller, Jack the Ripper Batman, gothic superhero film">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Batman: Gotham by Gaslight — Darkness Has a New Era">
+<meta property="og:description" content="In Victorian Gotham, Batman hunts a serial killer stalking the city’s shadows in this gothic reimagining of the Dark Knight.">
+<meta property="og:image" content="https://flickrift.netlify.app/Assets/Img12/Gotham-By-Gaslight-Info-Card.webp">
+<meta property="og:url" content="https://flickrift.netlify.app/animated/gotham-by-gaslight">
+<meta property="og:type" content="video.movie">
+<meta property="og:site_name" content="FlickRift">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Batman: Gotham by Gaslight (2018) — A Dark Victorian Mystery">
+<meta name="twitter:description" content="A gothic Batman tale where gaslit streets, fear, and murder collide in Victorian Gotham City.">
+<meta name="twitter:image" content="https://flickrift.netlify.app/Assets/Img12/Gotham-By-Gaslight-Info-Card.webp">
+<meta name="twitter:url" content="https://flickrift.netlify.app/animated/gotham-by-gaslight">
+
+<!-- Canonical Link -->
+<link rel="canonical" href="https://flickrift.netlify.app/animated/gotham-by-gaslight">
+
+<!-- JSON-LD Structured Data for Movie -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "Batman: Gotham by Gaslight",
+  "image": "https://flickrift.netlify.app/Assets/Img12/Gotham-By-Gaslight-Info-Card.webp",
+  "description": "Batman: Gotham by Gaslight (2018) is an animated gothic thriller that reimagines Batman in Victorian-era Gotham City as he hunts a serial killer inspired by Jack the Ripper.",
+  "datePublished": "2018-01-23",
+  "director": { "@type": "Person", "name": "Sam Liu" },
+  "actor": [
+    { "@type": "Person", "name": "Bruce Greenwood" },
+    { "@type": "Person", "name": "Jennifer Carpenter" },
+    { "@type": "Person", "name": "Anthony Head" }
+  ],
+  "genre": ["Animation", "Thriller", "Mystery", "Superhero"],
+  "countryOfOrigin": { "@type": "Country", "name": "United States" },
+  "inLanguage": "English",
+  "url": "https://flickrift.netlify.app/animated/gotham-by-gaslight",
+  "contentRating": "R"
+}
+</script>
+
+<!-- JSON-LD Structured Data for FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Batman: Gotham by Gaslight about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The film reimagines Batman in Victorian-era Gotham as he hunts a serial killer terrorizing the city, inspired by the legend of Jack the Ripper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Gotham by Gaslight a horror or thriller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is primarily a gothic thriller with mystery and horror elements set in a dark, atmospheric version of Gotham City."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this part of the main DC animated timeline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Gotham by Gaslight is an Elseworlds story, offering an alternate, standalone version of Batman."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should watch Gotham by Gaslight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fans of dark Batman stories, gothic mysteries, Victorian horror, and DC animated films."
+      }
+    }
+  ]
+}
+</script>
+
+
+   
+
+  <!-- 1. Bootstrap CSS -->
+<link rel="preload" href="../Assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+</noscript>
+
+<!-- 2. Theme CSS -->
+<link rel="preload" href="../Assets/css/theme2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/theme2.css">
+</noscript>
+
+<!-- 3. Font Awesome 7 CSS (preload) -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</noscript>
+
+<!-- 4. AOS CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
+</noscript>
+
+<!-- 5. Swiper CSS -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+</noscript>
+
+<!-- 5. Additional page CSS -->
+<link rel="preload" href="../Assets/css/cast.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/cast.css">
+</noscript>
+
+<link rel="preload" href="../Assets/css/buttons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/buttons.css">
+</noscript>
+
+<link rel="preload" href="../Assets/css/faq.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/faq.css">
+</noscript>
+
+<link rel="preload" href="../Assets/css/feature-slide.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../Assets/css/feature-slide.css">
+</noscript>
+
+<!-- 6. jQuery (before custom scripts) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+<!-- 7. Bootstrap JS -->
+<script src="../Assets/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- 8. AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+
+<!-- 9. Swiper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" defer></script>
+
+<!-- 10. Font Awesome 7 JS (defer) -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous"></script></script>
+
+<!-- 11. Your custom JS -->
+<script src="../Assets/js/custom.js" defer></script>
+<script src="../Assets/js/custom2.js" defer></script>
+<script src="../Assets/js/App-bar.js"></script>
+
+</head>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+    <div class="container">
+      
+      <!-- Logo -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="../Assets/Logo.webp" alt="Flickrift Logo" class="img-logo">
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+
+      <!-- Desktop Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          
+          <!-- Search Link -->
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="fas fa-search"></i> 
+              <span class="d-none d-md-inline">Search</span>
+            </a>
+          </li>
+
+          <!-- Genres Dropdown -->
+          <li class="nav-item dropdown ms-lg-4">
+            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genres
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-animate" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="./Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-start bg-dark-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <img src="../Assets/Logo.webp" alt="Logo" height="30"> 
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-3">
+          <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fas fa-search me-2"></i> Search
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link fs-5 dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Genres
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-black rounded-0 border-0">
+               <li><a class="dropdown-item" href="../Action.html">Action</a></li>
+              <li><a class="dropdown-item" href="../Comedy.html">Comedy</a></li>
+              <li><a class="dropdown-item" href="../Drama.html">Drama</a></li>
+              <li><a class="dropdown-item" href="../Horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="../Adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="../Romance.html">Romance</a></li>
+              <li><a class="dropdown-item" href="../Kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="../Thriller.html">Thriller</a></li>
+              <li><a class="dropdown-item" href="../Documentry.html">Documentry</a></li>
+              <li><a class="dropdown-item" href="../Animated.html">Animated</a></li>
+              <li><a class="dropdown-item" href="../Indie.html">Indie</a></li>
+              <li><a class="dropdown-item" href="../Tv-shows.html">TV Shows</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+      <main>
+        <!-- <section id="movie-pals" class="container-fluid text-center text-white" style="background-image: url('../Assets/Img/Batman-The-Killing-Joke.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <h2 class="display-4"> Batman The Killing Joke  : 2016 </h2>
+            <div id="movie-player" class="container mt-4">
+                <iframe src="https://short.icu/SJTgjTkN2" frameborder="0" scrolling="0" allowfullscreen width="710px"></iframe>
+            </div>
+        </section>
+        
+        <section id="description" class="container-fluid py-5 px-5">
+            <div class="description-content container">
+                <h2 class="text-center mb-4">Description</h2>
+                <p class="lead">As Batman hunts for the escaped Joker, the Clown Prince of Crime attacks the Gordon family to prove a diabolical point mirroring his own fall into madness.</p>
+            </div>
+        </section> -->
+
+              <section id="movie-pals" class="container-fluid text-center text-white" style="background-image: url('../Assets/Img12/Gotham-By-Gaslight-Cover.webp'); background-repeat: no-repeat; background-size: cover;">
+           <div class="container" id="main-wrapper">
+      <div class="container head-container">
+            <h2 class="display-4"> Gotham By Gaslight : 2018 </h2>
+            </div>
+            <div id="movie-player" class="container mt-4">
+                <iframe src="https://short.icu/7JA7fJwJR" frameborder="0" scrolling="0" allowfullscreen width="710px"></iframe>
+            </div>
+            </div>
+        </section>
+        
+        <section id="description" class="container-fluid py-5 px-5">
+     
+                <h2 class="text-center mb-4">Description</h2>
+                <div class="description-content container">
+    
+<div class="container para-container">
+                <p class="lead">Bruce Wayne comes to know that a relic that caused the mysterious disappearance of his martial arts teacher is in the possession of a megalomaniac. He teams up with his old classmates to stop him.</p>
+            </div>
+            </div>
+        </section>
+
+        
+        
+       <section id="casts" class="container-fluid px-2 py-2">
+    <div class="cast-head-container container">
+        <h3 class="text-center cast-heading mb-4 text-danger">Batman: The Killing Joke Cast</h3>
+    </div>
+
+    <div class="cast-container container">
+        <div class="row justify-content-center g-4">
+
+            <!-- Kevin Conroy as Batman / Bruce Wayne -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img11/Kevin-Conroy.jpg" alt="Kevin Conroy" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Kevin Conroy</h3>
+                            <p class="card-text">as Batman / Bruce Wayne</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mark Hamill as Joker -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img11/Mark-Hamill.jpg" alt="Mark Hamill" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Mark Hamill</h3>
+                            <p class="card-text">as Joker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tara Strong as Barbara Gordon / Batgirl -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img/Tara Strong.jpg" alt="Tara Strong" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Tara Strong</h3>
+                            <p class="card-text">as Barbara Gordon / Batgirl</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ray Wise as Commissioner Gordon -->
+            <div class="cast-card-wrapper col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4 mb-4">
+                <div class="card casted-card">
+                    <div class="card-img-container container">
+                        <img src="../Assets/Img11/Ray-Wise.jpg" alt="Ray Wise" class="card-img-top-pf">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-details text-center">
+                            <h3 class="card-title">Ray Wise</h3>
+                            <p class="card-text">as Commissioner Gordon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <section id="movie-faq-section" class="container my-5 faq-benedetta-section">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      
+      <h2 id="faq-movie-title" class="mb-4 text-center faq-benedetta-title">
+        Gotham by Gaslight Movie – Frequently Asked Questions
+      </h2>
+
+      <div class="accordion" id="faq-benedetta-accordion">
+
+        <!-- Q1 -->
+        <div class="accordion-item movie-item" id="faq-benedetta-item-1">
+          <h3 class="accordion-header" id="faq-benedetta-heading-1 faq-movie-heading">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-benedetta-collapse-1" aria-expanded="true"
+              aria-controls="faq-benedetta-collapse-1">
+              What is the movie Gotham by Gaslight about?
+            </button>
+          </h3>
+          <div id="faq-benedetta-collapse-1" class="accordion-collapse collapse show"
+            aria-labelledby="faq-benedetta-heading-1 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
+            <div class="accordion-body">
+              <p>
+                <strong>Gotham by Gaslight</strong> is an animated DC Elseworlds film that reimagines
+                Batman in a Victorian-era Gotham City. As a serial killer inspired by Jack the Ripper
+                terrorizes the city, Bruce Wayne must uncover the truth while navigating corruption,
+                class struggle, and the dark underbelly of 19th-century society.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item movie-item" id="faq-benedetta-item-2">
+          <h3 class="accordion-header" id="faq-benedetta-heading-2 faq-movie-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-benedetta-collapse-2" aria-expanded="false"
+              aria-controls="faq-benedetta-collapse-2">
+              Where can I watch Gotham by Gaslight movie online?
+            </button>
+          </h3>
+          <div id="faq-benedetta-collapse-2" class="accordion-collapse collapse"
+            aria-labelledby="faq-benedetta-heading-2 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
+            <div class="accordion-body">
+              <p>
+                You can watch <strong>Gotham by Gaslight movie online</strong> on major digital platforms
+                that offer DC animated films for rental or purchase. Streaming availability depends on
+                region and licensing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item movie-item" id="faq-benedetta-item-3">
+          <h3 class="accordion-header" id="faq-benedetta-heading-3 faq-movie-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-benedetta-collapse-3" aria-expanded="false"
+              aria-controls="faq-benedetta-collapse-3">
+              Is Gotham by Gaslight free movie watch online legally?
+            </button>
+          </h3>
+          <div id="faq-benedetta-collapse-3" class="accordion-collapse collapse"
+            aria-labelledby="faq-benedetta-heading-3 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
+            <div class="accordion-body">
+              <p>
+                Legal options for <strong>Gotham by Gaslight free movie watch online</strong> may appear
+                through limited-time promotions or ad-supported services. Most viewers will need to
+                rent or purchase the film from licensed platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item movie-item" id="faq-benedetta-item-4">
+          <h3 class="accordion-header" id="faq-benedetta-heading-4 faq-movie-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-benedetta-collapse-4" aria-expanded="false"
+              aria-controls="faq-benedetta-collapse-4">
+              Is Gotham by Gaslight part of the main DC timeline?
+            </button>
+          </h3>
+          <div id="faq-benedetta-collapse-4" class="accordion-collapse collapse"
+            aria-labelledby="faq-benedetta-heading-4 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
+            <div class="accordion-body">
+              <p>
+                No. <strong>Gotham by Gaslight</strong> is part of DC’s Elseworlds series, meaning it exists
+                outside the main DC continuity and offers an alternate version of Batman’s origin story.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item movie-item" id="faq-benedetta-item-5">
+          <h3 class="accordion-header" id="faq-benedetta-heading-5 faq-movie-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-benedetta-collapse-5" aria-expanded="false"
+              aria-controls="faq-benedetta-collapse-5">
+              What genre is Gotham by Gaslight?
+            </button>
+          </h3>
+          <div id="faq-benedetta-collapse-5" class="accordion-collapse collapse"
+            aria-labelledby="faq-benedetta-heading-5 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
+            <div class="accordion-body">
+              <p>
+                <strong>Gotham by Gaslight</strong> blends superhero action with mystery, horror,
+                and Victorian crime drama, making it one of the darker and more atmospheric
+                Batman adaptations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item movie-item" id="faq-benedetta-item-6">
+          <h3 class="accordion-header" id="faq-benedetta-heading-6 faq-movie-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-benedetta-collapse-6" aria-expanded="false"
+              aria-controls="faq-benedetta-collapse-6">
+              Is Gotham by Gaslight suitable for all audiences?
+            </button>
+          </h3>
+          <div id="faq-benedetta-collapse-6" class="accordion-collapse collapse"
+            aria-labelledby="faq-benedetta-heading-6 faq-movie-heading" data-bs-parent="#faq-benedetta-accordion">
+            <div class="accordion-body">
+              <p>
+                <strong>Gotham by Gaslight</strong> is rated R due to violence, disturbing themes,
+                and mature content, making it more appropriate for adult viewers and fans of darker
+                animated films.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+          
+        </main>
+        <footer class="container-fluid">
+          <div class="foot row">
+            <!-- Footer Logo -->
+            <div class="col-12 col-md-4 footer-logo text-center text-md-start">
+              <img src="../Assets/Logo.png" alt="FlickRift Logo" class="img-fluid">
+            </div>
+            <div class="celebration-images col-12 col-md-4 ext-center text-md-start ">
+        
+            </div>
+            <!-- Footer Links -->
+            <div class="col-12 col-md-4 footer-links text-center text-md-start">
+              <ul class="list-unstyled">
+                <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="../terms-of-services.html">Terms of Service</a></li>
+              </ul>
+            </div>
+            
+            <!-- Footer Social Links -->
+            <div class="col-12 col-md-4 footer-social-link text-center text-md-start">
+              <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
+                <li><a href="https://www.quora.com" target="_blank"><i class="fa-brands fa-quora"></i></a></li>
+                <li><a href="https://bsky.app/profile/iflixx.bsky.social" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.reddit.com" target="_blank"><i class="fa-brands fa-reddit"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Footer Copyright -->
+          <div class="foot-cpyrht text-center">
+            <p>all ©️ reserved by FlickRift 
+              <span id="power">Powered by <a class="nex" href="https://nexonix.netlify.app/">Nexonix</a></span>
+            </p>
+          </div>
+        </footer>
+</body>
+</html>
